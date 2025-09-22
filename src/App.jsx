@@ -1,76 +1,90 @@
+// src/App.jsx
 import React from "react";
 
 function App() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-700 text-white text-center px-6">
+      <section
+        id="hero"
+        className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-50"
+      >
         <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
-        <h2 className="text-2xl mb-6">Principal UX Designer + AI-Augmented Experience Designer</h2>
-        <p className="max-w-2xl text-lg mb-8">
-          Designing intuitive, human-centered experiences with a focus on
-          AI-driven innovation.
+        <h2 className="text-2xl text-gray-600 mb-6">
+          Principal UX Designer · AI-Augmented Experience Designer
+        </h2>
+        <p className="max-w-xl text-lg text-gray-700 mb-8">
+          I design seamless, human-centered digital experiences that merge UX
+          craft with the power of AI. Explore my portfolio to see my projects
+          and design philosophy.
         </p>
         <a
           href="#projects"
-          className="bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-200"
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
         >
           View My Work
         </a>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <p className="text-lg leading-relaxed">
-          With over a decade of experience in UX design, I specialize in
-          creating seamless user journeys that bridge technology and human
-          needs. My recent work focuses on **AI-augmented design systems** and
-          **next-gen interfaces** for global brands like Google and Amazon.
-        </p>
-      </section>
-
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-12">Selected Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">AI-Augmented Design Tool</h3>
-            <p className="text-gray-600">
-              Led the UX for an AI-powered prototyping tool, cutting design
-              iteration times by 40%. Integrated NLP-driven insights for
-              designers.
+      <section id="projects" className="py-20 px-6 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-12">Selected Projects</h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Example Project Card */}
+          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">AI-Enhanced Search</h3>
+            <p className="text-gray-600 mb-4">
+              Redefined enterprise search with conversational AI, improving
+              discoverability by 40%.
             </p>
+            <a href="#" className="text-blue-600 font-medium hover:underline">
+              Case Study →
+            </a>
           </div>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">Voice-First Experience</h3>
-            <p className="text-gray-600">
-              Designed multimodal experiences for voice assistants used by
-              millions daily. Balanced accessibility and usability.
+
+          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">Design System 2.0</h3>
+            <p className="text-gray-600 mb-4">
+              Led the evolution of a scalable design system used by 10+ teams,
+              ensuring accessibility and consistency.
             </p>
+            <a href="#" className="text-blue-600 font-medium hover:underline">
+              Case Study →
+            </a>
           </div>
-          {/* Add more projects */}
+
+          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">
+              Voice-Guided Workflows
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Designed AI-powered voice interactions for field workers,
+              increasing efficiency in complex workflows.
+            </p>
+            <a href="#" className="text-blue-600 font-medium hover:underline">
+              Case Study →
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Experience</h2>
-        <ul className="space-y-6">
-          <li>
-            <h3 className="text-xl font-semibold">Principal UX Designer — Google</h3>
-            <p className="text-gray-600">
-              Driving AI-augmented experience design across core products.
-            </p>
-          </li>
-          <li>
-            <h3 className="text-xl font-semibold">Lead UX Designer — Amazon</h3>
-            <p className="text-gray-600">
-              Designed large-scale e-commerce flows with AI personalization.
-            </p>
-          </li>
-        </ul>
-      </section>
-
       {/* Contact Section */}
-      <section id="
+      <section id="contact" className="py-20 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
+        <p className="text-lg text-gray-600 mb-4">
+          I’m always open to new opportunities, collaborations, and design
+          conversations.
+        </p>
+        <a
+          href="mailto:your-email@example.com"
+          className="text-blue-600 text-lg font-medium hover:underline"
+        >
+          your-email@example.com
+        </a>
+      </section>
+    </div>
+  );
+}
+
+export default App;
