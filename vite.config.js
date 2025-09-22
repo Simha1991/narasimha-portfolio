@@ -1,9 +1,8 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages needs the base path set to your repo name
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/narasimha-portfolio/', 
+  base: '/narasimha-portfolio/', // 👈 MUST match your GitHub repo name
 })
