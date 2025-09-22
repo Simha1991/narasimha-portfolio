@@ -28,4 +28,23 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm instal
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload dist folder for deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist   # 👈 only deploy the build output, not the root files
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
