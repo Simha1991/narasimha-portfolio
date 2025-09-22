@@ -4,12 +4,47 @@ import React from "react";
 function App() {
   return (
     <div className="font-sans text-gray-900">
+      {/* Navbar */}
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+          <a href="#hero" className="text-lg font-bold text-blue-700">
+            NB
+          </a>
+          <div className="space-x-6 text-gray-700 font-medium">
+            <a href="#about" className="hover:text-blue-600 transition">
+              About
+            </a>
+            <a href="#skills" className="hover:text-blue-600 transition">
+              Skills
+            </a>
+            <a href="#experience" className="hover:text-blue-600 transition">
+              Experience
+            </a>
+            <a href="#projects" className="hover:text-blue-600 transition">
+              Projects
+            </a>
+            <a href="#testimonials" className="hover:text-blue-600 transition">
+              Testimonials
+            </a>
+            <a href="#contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section
         id="hero"
         className="min-h-screen flex flex-col items-center justify-center text-center 
-                   bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white px-6"
+                   bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white px-6 pt-24"
       >
+        {/* Headshot */}
+        <img
+          src="/headshot.jpg"
+          alt="Narasimha Bhat headshot"
+          className="w-40 h-40 rounded-full border-4 border-white shadow-xl mb-6 object-cover"
+        />
         <h1 className="text-6xl font-extrabold mb-4 drop-shadow-lg">
           Narasimha Bhat
         </h1>
@@ -75,18 +110,25 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 bg-gradient-to-b from-white to-gray-100 text-center">
+      <section
+        id="experience"
+        className="py-20 px-6 bg-gradient-to-b from-white to-gray-100 text-center"
+      >
         <h2 className="text-4xl font-bold mb-12 text-blue-700">Experience</h2>
         <div className="max-w-4xl mx-auto space-y-8 text-left">
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800">Principal UX Designer</h3>
+            <h3 className="text-2xl font-semibold text-gray-800">
+              Principal UX Designer
+            </h3>
             <p className="text-gray-500">Company Name · 2020 – Present</p>
             <p className="text-gray-700 mt-2">
               Leading design for AI-augmented enterprise experiences.
             </p>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800">Senior UX Designer</h3>
+            <h3 className="text-2xl font-semibold text-gray-800">
+              Senior UX Designer
+            </h3>
             <p className="text-gray-500">Company Name · 2016 – 2020</p>
             <p className="text-gray-700 mt-2">
               Designed design systems and enterprise applications.
@@ -97,7 +139,9 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-gray-50 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-blue-700">Selected Projects</h2>
+        <h2 className="text-4xl font-bold mb-12 text-blue-700">
+          Selected Projects
+        </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
             {
@@ -130,7 +174,10 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-6 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 text-center">
+      <section
+        id="testimonials"
+        className="py-20 px-6 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 text-center"
+      >
         <h2 className="text-4xl font-bold mb-12 text-blue-700">Testimonials</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-md">
@@ -152,7 +199,10 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-center text-white">
+      <section
+        id="contact"
+        className="py-20 bg-gray-900 text-center text-white"
+      >
         <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
         <p className="text-lg text-gray-300 mb-6">
           I’m always open to new opportunities, collaborations, and design
