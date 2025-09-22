@@ -3,88 +3,72 @@ import React from "react";
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans text-gray-800">
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-50"
+        className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6"
       >
         <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
-        <h2 className="text-2xl text-gray-600 mb-6">
-          Principal UX Designer · AI-Augmented Experience Designer
+        <h2 className="text-2xl mb-6">
+          Principal UX Designer · AI-Augmented Experience Strategist
         </h2>
-        <p className="max-w-xl text-lg text-gray-700 mb-8">
+        <p className="max-w-2xl text-lg mb-8">
           I design seamless, human-centered digital experiences that merge UX
-          craft with the power of AI. Explore my portfolio to see my projects
-          and design philosophy.
+          craft with the power of AI. Explore my portfolio to see award-winning
+          projects, leadership, and my design philosophy.
         </p>
         <a
           href="#projects"
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          className="px-8 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition"
         >
           View My Work
         </a>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-12">Selected Projects</h2>
+      {/* About Section */}
+      <section id="about" className="py-20 px-6 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-6">About Me</h2>
+        <p className="max-w-3xl mx-auto text-lg text-gray-700">
+          I am a Principal UX Designer at Dell Technologies, specializing in
+          AI-augmented experiences, enterprise-scale design, and customer-first
+          digital transformations. Recognized as a Figma guru and design mentor,
+          I thrive on solving complex problems with simple, human-centered
+          solutions. I’ve led multiple award-winning projects, driving millions
+          in savings while elevating customer satisfaction and efficiency.
+        </p>
+      </section>
 
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-6 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-12">Skills</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Example Project Card */}
-          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold mb-2">AI-Enhanced Search</h3>
-            <p className="text-gray-600 mb-4">
-              Redefined enterprise search with conversational AI, improving
-              discoverability by 40%.
-            </p>
-            <a href="#" className="text-blue-600 font-medium hover:underline">
-              Case Study →
-            </a>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Core UX Expertise</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Designing with AI expertise</li>
+              <li>User research & prototyping</li>
+              <li>Information architecture</li>
+              <li>Usability testing</li>
+              <li>Interaction design</li>
+            </ul>
           </div>
-
-          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold mb-2">Design System 2.0</h3>
-            <p className="text-gray-600 mb-4">
-              Led the evolution of a scalable design system used by 10+ teams,
-              ensuring accessibility and consistency.
-            </p>
-            <a href="#" className="text-blue-600 font-medium hover:underline">
-              Case Study →
-            </a>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Special Strengths</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Figma Guru & Design Mentor</li>
+              <li>Agile Coach (Kanban)</li>
+            </ul>
           </div>
-
-          <div className="bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold mb-2">
-              Voice-Guided Workflows
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Designed AI-powered voice interactions for field workers,
-              increasing efficiency in complex workflows.
-            </p>
-            <a href="#" className="text-blue-600 font-medium hover:underline">
-              Case Study →
-            </a>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Tools</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Figma</li>
+              <li>Emergent</li>
+              <li>Adobe CC (XD, Premiere Pro, Express)</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50 text-center">
-        <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
-        <p className="text-lg text-gray-600 mb-4">
-          I’m always open to new opportunities, collaborations, and design
-          conversations.
-        </p>
-        <a
-          href="mailto:your-email@example.com"
-          className="text-blue-600 text-lg font-medium hover:underline"
-        >
-          your-email@example.com
-        </a>
-      </section>
-    </div>
-  );
-}
-
-export default App;
+      {/* Experience Section */}
