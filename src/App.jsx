@@ -57,9 +57,9 @@ function App() {
         className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6"
       >
         <img
-          src="/images/headshot.jpg"
+          src="/narasimha-portfolio/images/headshot.jpg"
           alt="Narasimha Bhat"
-          className="w-40 h-40 rounded-full shadow-lg mb-6 border-4 border-white"
+          className="w-60 h-80 rounded-full shadow-lg mb-6 border-4 border-white object-cover"
         />
         <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
         <h2 className="text-2xl text-indigo-100 mb-6">
