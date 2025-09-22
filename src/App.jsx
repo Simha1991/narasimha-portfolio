@@ -59,7 +59,7 @@ function App() {
         <img
           src="/narasimha-portfolio/images/headshot.jpg"
           alt="Narasimha Bhat"
-          className="w-60 h-80 rounded-full shadow-lg mb-6 border-4 border-white object-cover"
+          className="w-60 h-60 rounded-full shadow-lg mb-6 border-4 border-white object-cover"
         />
         <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
         <h2 className="text-2xl text-indigo-100 mb-6">
