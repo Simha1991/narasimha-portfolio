@@ -20,38 +20,36 @@ function App() {
     <div className="font-sans scroll-smooth">
       {/* Navbar */}
       <header
-        className={`fixed w-full z-50 transition duration-300 ${
-          scrolled
-            ? "bg-white shadow"
-            : "bg-white/30 backdrop-blur-md shadow-sm"
-        }`}
-      >
-        <nav className="max-w-6xl mx-auto flex justify-center items-center p-4">
-          <div className="space-x-6 font-medium">
-            <a href="#about" className="text-gray-700 hover:text-blue-600">
-              About
-            </a>
-            <a href="#skills" className="text-gray-700 hover:text-blue-600">
-              Skills
-            </a>
-            <a href="#experience" className="text-gray-700 hover:text-blue-600">
-              Experience
-            </a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-600">
-              Projects
-            </a>
-            <a
-              href="#testimonials"
-              className="text-gray-700 hover:text-blue-600"
-            >
-              Testimonials
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600">
-              Contact
-            </a>
-          </div>
-        </nav>
-      </header>
+  className={`fixed w-full z-50 transition-all duration-500 ${
+    scrolled
+      ? "bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg"
+      : "bg-transparent"
+  }`}
+>
+  <nav className="max-w-6xl mx-auto flex justify-center items-center p-4">
+    <div className="space-x-6 font-medium">
+      <a href="#about" className="text-white hover:text-gray-200 transition">
+        About
+      </a>
+      <a href="#skills" className="text-white hover:text-gray-200 transition">
+        Skills
+      </a>
+      <a href="#experience" className="text-white hover:text-gray-200 transition">
+        Experience
+      </a>
+      <a href="#projects" className="text-white hover:text-gray-200 transition">
+        Projects
+      </a>
+      <a href="#testimonials" className="text-white hover:text-gray-200 transition">
+        Testimonials
+      </a>
+      <a href="#contact" className="text-white hover:text-gray-200 transition">
+        Contact
+      </a>
+    </div>
+  </nav>
+</header>
+
 
       {/* Hero Section */}
       <section
