@@ -1,218 +1,193 @@
 // src/App.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="font-sans text-gray-900">
+    <div className="font-sans scroll-smooth">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
-          <a href="#hero" className="text-lg font-bold text-blue-700">
-            NB
-          </a>
-          <div className="space-x-6 text-gray-700 font-medium">
-            <a href="#about" className="hover:text-blue-600 transition">
-              About
-            </a>
-            <a href="#skills" className="hover:text-blue-600 transition">
-              Skills
-            </a>
-            <a href="#experience" className="hover:text-blue-600 transition">
-              Experience
-            </a>
-            <a href="#projects" className="hover:text-blue-600 transition">
-              Projects
-            </a>
-            <a href="#testimonials" className="hover:text-blue-600 transition">
-              Testimonials
-            </a>
-            <a href="#contact" className="hover:text-blue-600 transition">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <header
+  className={`fixed w-full z-50 transition-all duration-500 ${
+    scrolled
+      ? "bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg"
+      : "bg-transparent"
+  }`}
+>
+  <nav className="max-w-6xl mx-auto flex justify-center items-center p-4">
+    <div className="space-x-6 font-medium">
+      <a href="#about" className="text-white hover:text-gray-200 transition">
+        About
+      </a>
+      <a href="#skills" className="text-white hover:text-gray-200 transition">
+        Skills
+      </a>
+      <a href="#experience" className="text-white hover:text-gray-200 transition">
+        Experience
+      </a>
+      <a href="#projects" className="text-white hover:text-gray-200 transition">
+        Projects
+      </a>
+      <a href="#testimonials" className="text-white hover:text-gray-200 transition">
+        Testimonials
+      </a>
+      <a href="#contact" className="text-white hover:text-gray-200 transition">
+        Contact
+      </a>
+    </div>
+  </nav>
+</header>
+
 
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-screen flex flex-col items-center justify-center text-center 
-                   bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white px-6 pt-24"
+        className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6"
       >
-        {/* Headshot */}
         <img
-          src="/headshot.jpg"
-          alt="Narasimha Bhat headshot"
-          className="w-40 h-40 rounded-full border-4 border-white shadow-xl mb-6 object-cover"
+          src="/images/headshot.jpg"
+          alt="Narasimha Bhat"
+          className="w-40 h-40 rounded-full shadow-lg mb-6 border-4 border-white"
         />
-        <h1 className="text-6xl font-extrabold mb-4 drop-shadow-lg">
-          Narasimha Bhat
-        </h1>
-        <h2 className="text-2xl text-blue-100 mb-6">
+        <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
+        <h2 className="text-2xl text-indigo-100 mb-6">
           Principal UX Designer · AI-Augmented Experience Designer
         </h2>
-        <p className="max-w-2xl text-lg text-blue-50 mb-8 leading-relaxed">
+        <p className="max-w-xl text-lg text-indigo-50 mb-8">
           I design seamless, human-centered digital experiences that merge UX
           craft with the power of AI. Explore my portfolio to see my projects
           and design philosophy.
         </p>
         <a
           href="#projects"
-          className="px-8 py-3 bg-white text-blue-700 rounded-lg shadow-lg font-semibold hover:bg-blue-50 transition"
+          className="px-6 py-3 bg-white text-blue-700 rounded-lg hover:bg-gray-100 transition font-semibold"
         >
           View My Work
         </a>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-6 text-blue-700">About Me</h2>
-        <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-          I am a design leader specializing in UX strategy, interaction design,
-          and AI-augmented experiences. Over the last decade, I’ve worked on
-          complex enterprise products, consumer applications, and design systems
-          that empower teams to build better products faster.
+      <section
+        id="about"
+        className="py-20 px-6 max-w-4xl mx-auto text-center bg-white"
+      >
+        <h2 className="text-4xl font-bold mb-6">About Me</h2>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          I’m a Principal UX Designer specializing in AI-augmented experiences.
+          With a strong background in human-centered design, I’ve led award-winning
+          projects that streamlined workflows, reduced costs, and created
+          delightful user experiences. My focus is bridging design and emerging
+          technologies to build scalable, future-ready digital products.
         </p>
       </section>
 
       {/* Skills Section */}
-      <section
-        id="skills"
-        className="py-20 px-6 bg-gray-50 text-center relative overflow-hidden"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-blue-700">Skills</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {[
-            {
-              title: "UX Strategy",
-              desc: "Driving vision, discovery, and product alignment.",
-            },
-            {
-              title: "Interaction Design",
-              desc: "Creating intuitive interfaces that simplify complexity.",
-            },
-            {
-              title: "AI & Design Systems",
-              desc: "Building scalable systems and AI-enhanced workflows.",
-            },
-          ].map((skill, idx) => (
-            <div
-              key={idx}
-              className="p-6 bg-white/70 backdrop-blur-md rounded-xl shadow-lg hover:shadow-xl transition"
-            >
-              <h3 className="text-xl font-semibold mb-2 text-blue-600">
-                {skill.title}
-              </h3>
-              <p className="text-gray-700">{skill.desc}</p>
-            </div>
-          ))}
+      <section id="skills" className="py-20 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-6">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="p-4 bg-white rounded-lg shadow">Designing with AI</div>
+          <div className="p-4 bg-white rounded-lg shadow">UX Strategy</div>
+          <div className="p-4 bg-white rounded-lg shadow">Prototyping</div>
+          <div className="p-4 bg-white rounded-lg shadow">Design Systems</div>
+          <div className="p-4 bg-white rounded-lg shadow">Agile Coach (Kanban)</div>
+          <div className="p-4 bg-white rounded-lg shadow">Figma Guru & Mentor</div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section
-        id="experience"
-        className="py-20 px-6 bg-gradient-to-b from-white to-gray-100 text-center"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-blue-700">Experience</h2>
-        <div className="max-w-4xl mx-auto space-y-8 text-left">
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              Principal UX Designer
+      <section id="experience" className="py-20 px-6 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-6">Experience</h2>
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          <div className="p-6 bg-gray-50 rounded-lg shadow">
+            <h3 className="text-2xl font-semibold">
+              Principal UX Designer — Dell Technologies
             </h3>
-            <p className="text-gray-500">Company Name · 2020 – Present</p>
-            <p className="text-gray-700 mt-2">
-              Leading design for AI-augmented enterprise experiences.
-            </p>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              Senior UX Designer
-            </h3>
-            <p className="text-gray-500">Company Name · 2016 – 2020</p>
-            <p className="text-gray-700 mt-2">
-              Designed design systems and enterprise applications.
+            <p className="text-gray-600 mt-2">
+              Led UX for enterprise-scale products including award-winning Digital
+              Entry Point, Unified Portal, and Virtual Assistant, delivering
+              measurable impact across efficiency, adoption, and cost savings.
             </p>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-gray-50 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-blue-700">
-          Selected Projects
-        </h2>
+      <section id="projects" className="py-20 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-12">Projects</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              title: "AI-Enhanced Search",
-              desc: "Redefined enterprise search with conversational AI, improving discoverability by 40%.",
-            },
-            {
-              title: "Design System 2.0",
-              desc: "Led the evolution of a scalable design system used by 10+ teams, ensuring accessibility and consistency.",
-            },
-            {
-              title: "Voice-Guided Workflows",
-              desc: "Designed AI-powered voice interactions for field workers, increasing efficiency in complex workflows.",
-            },
-          ].map((project, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-left"
-            >
-              <h3 className="text-2xl font-semibold mb-2 text-blue-600">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{project.desc}</p>
-              <a href="#" className="text-blue-700 font-medium hover:underline">
-                Case Study →
-              </a>
-            </div>
-          ))}
+          <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">Digital Entry Point</h3>
+            <p className="text-gray-600 mb-4">
+              Award-winning product saving $37M+ by revolutionizing device
+              registration & lifecycle.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">Unified Portal</h3>
+            <p className="text-gray-600 mb-4">
+              Unified experience for ISG customers with improved IA and
+              capability mapping.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-2">Virtual Assistant</h3>
+            <p className="text-gray-600 mb-4">
+              AI-powered conversational design reducing self-service start time
+              by 71%.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section
-        id="testimonials"
-        className="py-20 px-6 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 text-center"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-blue-700">Testimonials</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-md">
-            <p className="text-gray-700 italic mb-4">
-              “Narasimha is a design leader who brings clarity and innovation to
-              every project. His work with AI-augmented workflows has been
-              transformative.”
-            </p>
-            <h4 className="font-semibold text-blue-600">— Colleague, Company</h4>
-          </div>
-          <div className="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-md">
-            <p className="text-gray-700 italic mb-4">
-              “A brilliant UX strategist who knows how to balance user needs
-              with business goals.”
-            </p>
-            <h4 className="font-semibold text-blue-600">— Manager, Company</h4>
-          </div>
+      <section id="testimonials" className="py-20 bg-white text-center">
+        <h2 className="text-4xl font-bold mb-12">Testimonials</h2>
+        <div className="max-w-4xl mx-auto space-y-8">
+          <blockquote className="p-6 bg-gray-50 rounded-lg shadow italic">
+            "Narasimha consistently delivers high-quality design work—even on tight
+            timelines—without ever compromising on excellence."
+            <span className="block mt-2 font-semibold">— Todd Boyum</span>
+          </blockquote>
+          <blockquote className="p-6 bg-gray-50 rounded-lg shadow italic">
+            "Ambitious, dedicated, and loyal, Simha delivers excellence as an
+            individual contributor and thrives in leadership roles."
+            <span className="block mt-2 font-semibold">— Jason Cook</span>
+          </blockquote>
+          <blockquote className="p-6 bg-gray-50 rounded-lg shadow italic">
+            "Simha has a toolkit of UX best practices and rapid prototyping skills
+            that consistently impressed stakeholders."
+            <span className="block mt-2 font-semibold">— Gail Mitchell</span>
+          </blockquote>
         </div>
       </section>
 
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-20 bg-gray-900 text-center text-white"
+        className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center"
       >
         <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
-        <p className="text-lg text-gray-300 mb-6">
+        <p className="text-lg mb-4">
           I’m always open to new opportunities, collaborations, and design
           conversations.
         </p>
         <a
-          href="mailto:your-email@example.com"
-          className="text-lg font-medium bg-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-500 transition"
+          href="mailto:bhatnarasimha1991@gmail.com"
+          className="text-lg font-semibold hover:underline"
         >
-          your-email@example.com
+          bhatnarasimha1991@gmail.com
         </a>
       </section>
     </div>
