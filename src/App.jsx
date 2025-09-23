@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from "./sections/Skills";
+import Skills from "./components/Skills";
 
 import "./index.css"; // keep your global css import if present
 
