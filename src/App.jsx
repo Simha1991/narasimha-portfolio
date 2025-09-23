@@ -68,9 +68,9 @@ function App() {
         className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-teal-500 via-blue-600 to-purple-700 text-white px-6"
       >
         {/* Headshot with gradient ring */}
-        <div className="w-60 h-60 rounded-full mb-6">
+        <div className="w-40 h-40 rounded-full mb-6">
           <div className="p-1 rounded-full bg-gradient-to-tr from-teal-400 via-blue-500 to-purple-600">
-            <div className="w-60 h-60 rounded-full overflow-hidden bg-white/5">
+            <div className="w-40 h-40 rounded-full overflow-hidden bg-white/5">
               <img
                 src={headshotSrc}
                 alt="Narasimha Bhat"
@@ -79,6 +79,7 @@ function App() {
             </div>
           </div>
         </div>
+
 
         <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
         <h2 className="text-2xl text-blue-100 mb-6">
