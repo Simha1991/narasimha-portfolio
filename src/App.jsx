@@ -51,20 +51,19 @@ function App() {
 </header>
 
 
-      {/* Hero Section */}
+    {/* Hero Section */}
 <section
   id="hero"
   className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white px-6"
 >
-  <div className="w-60 h-60 rounded-full p-1 bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600">
-  <div className="w-full h-full rounded-full overflow-hidden bg-white">
+  {/* Headshot with gradient ring */}
+  <div className="w-60 h-60 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600 mb-6">
     <img
       src="/images/headshot.jpg"
       alt="Narasimha Bhat"
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover rounded-full"
     />
   </div>
-</div>
 
   <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
   <h2 className="text-2xl text-blue-200 mb-6">
@@ -77,27 +76,53 @@ function App() {
 
   {/* Social icons */}
   <div className="flex space-x-6 mb-8">
+    {/* LinkedIn */}
     <a
       href="https://www.linkedin.com/in/narasimha-bhat"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:scale-110 transform transition"
     >
-      <i className="fab fa-linkedin text-3xl text-blue-400 hover:text-white drop-shadow-lg"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-8 h-8 text-blue-400 hover:text-white drop-shadow-lg"
+      >
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z" />
+      </svg>
     </a>
+
+    {/* Twitter/X */}
     <a
       href="https://twitter.com/IaMSimha007"
       target="_blank"
       rel="noopener noreferrer"
       className="hover:scale-110 transform transition"
     >
-      <i className="fab fa-x-twitter text-3xl text-gray-300 hover:text-white drop-shadow-lg"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-8 h-8 text-gray-300 hover:text-white drop-shadow-lg"
+      >
+        <path d="M18.244 2.25h3.64l-7.93 9.09L24 21.75h-7.313l-5.73-7.357-6.56 7.357H.75l8.48-9.51L0 2.25h7.5l5.17 6.757L18.244 2.25z" />
+      </svg>
     </a>
+
+    {/* Email */}
     <a
       href="mailto:bhatnarasimha1991@gmail.com"
       className="hover:scale-110 transform transition"
     >
-      <i className="fas fa-envelope text-3xl text-red-400 hover:text-white drop-shadow-lg"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-8 h-8 text-red-400 hover:text-white drop-shadow-lg"
+      >
+        <path d="M12 13.065L.014 6h23.972L12 13.065zm0 2.021L.014 8.021V20h23.972V8.021L12 15.086z" />
+      </svg>
     </a>
   </div>
 
@@ -108,7 +133,8 @@ function App() {
     View My Work
   </a>
 </section>
-      {/* Hero section ends */}
+{/* Hero section ends */}
+
 
       {/* About Section */}
       <section
