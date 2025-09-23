@@ -156,19 +156,74 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section
-        id="about"
-        className="py-20 px-6 max-w-4xl mx-auto text-center bg-white"
-      >
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          I’m a Principal UX Designer specializing in AI-augmented experiences.
-          With a strong background in human-centered design, I’ve led award-winning
-          projects that streamlined workflows, reduced costs, and created delightful
-          user experiences. My focus is bridging design and emerging technologies to
-          build scalable, future-ready digital products.
-        </p>
-      </section>
+<section
+  id="about"
+  className="py-20 px-6 bg-white text-center"
+>
+  {/* Title + Description */}
+  <h2 className="text-4xl font-bold mb-8">About Me</h2>
+  <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6">
+    <p>
+      I’m a <span className="font-semibold">Principal UX Designer</span> specializing in
+      <span className="font-semibold"> AI-augmented experiences</span>. With a strong
+      background in human-centered design, I’ve led transformative initiatives at the
+      intersection of design, AI, and enterprise-scale systems.
+    </p>
+    <p>
+      I focus on bridging design and emerging technologies to build
+      <span className="font-semibold"> scalable, future-ready digital products</span> that
+      deliver measurable business impact.
+    </p>
+  </div>
+
+  {/* Split layout for cards */}
+  <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-16">
+    {/* Key Achievements Card */}
+    <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl shadow-lg p-8 text-left bg-gradient-to-br from-white/30 to-white/10">
+      <h3 className="text-2xl font-semibold mb-4 text-blue-900">Key Achievements</h3>
+      <ul className="list-disc list-inside space-y-3 text-gray-700">
+        <li>
+          <span className="font-medium">Digital Entry Point</span> — Award-winning product
+          that saved <span className="font-semibold">$37M+</span> and redefined the
+          customer device lifecycle.
+        </li>
+        <li>
+          <span className="font-medium">Unified Portal</span> — Led research and design for
+          a consolidated enterprise hub, simplifying customer experiences.
+        </li>
+        <li>
+          <span className="font-medium">Virtual Assistant</span> — Scaled Dell’s
+          AI-powered conversational design, reducing self-service start time by
+          <span className="font-semibold"> 71%</span>.
+        </li>
+      </ul>
+    </div>
+
+    {/* Recognition & Achievements Card */}
+    <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl shadow-lg p-8 text-left bg-gradient-to-br from-white/30 to-white/10">
+      <h3 className="text-2xl font-semibold mb-4 text-blue-900">Recognition & Achievements</h3>
+      <ul className="list-disc list-inside space-y-3 text-gray-700">
+        <li>
+          <span className="font-medium">President’s Award — Digital Entry Point (DEP)</span>  
+          Dell’s highest recognition for innovation and business impact.
+        </li>
+        <li>
+          <span className="font-medium">Dell Award for Innovation — Design Libraries</span>  
+          Recognized for creating scalable design systems.
+        </li>
+        <li>
+          <span className="font-medium">NN/g Certified UX Designer</span>  
+          Industry’s most respected UX certification.
+        </li>
+        <li>
+          <span className="font-medium">Rising Leader at Dell (RLD)</span>  
+          Selected for Dell’s high-potential leadership program.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      {/* End of about section*/}
 
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-gray-50 text-center">
