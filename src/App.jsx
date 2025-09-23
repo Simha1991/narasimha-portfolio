@@ -66,7 +66,7 @@ function App() {
               <img
                 src={headshotSrc}
                 alt="Narasimha Bhat"
-                className="w-full h-full object-cover object-top rounded-full"
+                className="w-full h-full object-cover object-center rounded-full scale-125"
               />
             </div>
           </div>
