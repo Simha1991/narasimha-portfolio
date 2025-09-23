@@ -56,13 +56,16 @@ function App() {
   id="hero"
   className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white px-6"
 >
-  <div className="w-60 h-60 rounded-full overflow-hidden ring-4 ring-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 mb-8">
+  <div className="w-60 h-60 rounded-full p-1 bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600">
+  <div className="w-full h-full rounded-full overflow-hidden bg-white">
     <img
       src="/images/headshot.jpg"
       alt="Narasimha Bhat"
       className="w-full h-full object-cover"
     />
   </div>
+</div>
+
   <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
   <h2 className="text-2xl text-blue-200 mb-6">
     Principal UX Designer · AI-Augmented Experience Designer
