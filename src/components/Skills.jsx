@@ -60,8 +60,7 @@ function Skills() {
             <li>Adobe CC</li>
             <li>Miro</li>
             <li>Jira / Confluence</li>
-            <li>GitHub / GitLab</li>
-            <li>Web Tech (React, Tailwind, HTML/CSS)</li>
+            <li>AI-Powered Design Tools</li>
           </ul>
         </div>
       </div>
