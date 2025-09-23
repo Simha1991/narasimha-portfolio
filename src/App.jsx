@@ -74,7 +74,7 @@ function App() {
               <img
                 src={headshotSrc}
                 alt="Narasimha Bhat"
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover rounded-full transform scale-125"
               />
             </div>
           </div>
@@ -90,72 +90,62 @@ function App() {
           complexity, drive measurable impact, and scale across global enterprises.
         </p>
 
-        {/* Social icons */}
-        <div className="flex space-x-6 mb-8">
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/narasimha-bhat"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="transform transition hover:scale-110"
-          >
-            <span className="p-0.5 rounded-full bg-gradient-to-tr from-blue-500 to-blue-700">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-7 h-7 text-white"
-                  fill="currentColor"
-                >
-                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z" />
-                </svg>
-              </span>
-            </span>
-          </a>
+       {/* Social icons */}
+<div className="flex space-x-8 mb-8">
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/narasimha-bhat"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="transform transition duration-300 ease-in-out hover:scale-125 hover:shadow-lg hover:shadow-blue-400/50 rounded-full"
+  >
+    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        className="w-7 h-7 text-white"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z"/>
+      </svg>
+    </div>
+  </a>
 
-          {/* X (Twitter) */}
-          <a
-            href="https://twitter.com/IaMSimha007"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X (Twitter)"
-            className="transform transition hover:scale-110"
-          >
-            <span className="p-0.5 rounded-full bg-gradient-to-tr from-gray-800 to-gray-900">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-7 h-7 text-white"
-                  fill="currentColor"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26L22.5 21.75h-6.594l-5.16-6.927-5.91 6.927H1.5l7.73-9.066L1.5 2.25h6.75l4.713 6.493L18.244 2.25z" />
-                </svg>
-              </span>
-            </span>
-          </a>
+  {/* X (Twitter) */}
+  <a
+    href="https://twitter.com/IaMSimha007"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X (Twitter)"
+    className="transform transition duration-300 ease-in-out hover:scale-125 hover:shadow-lg hover:shadow-gray-500/50 rounded-full"
+  >
+    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-tr from-gray-800 to-black">
+      <span className="text-white text-2xl font-bold">X</span>
+    </div>
+  </a>
 
-          {/* Gmail */}
-          <a
-            href="mailto:bhatnarasimha1991@gmail.com"
-            aria-label="Email"
-            className="transform transition hover:scale-110"
-          >
-            <span className="p-0.5 rounded-full bg-gradient-to-tr from-red-500 to-orange-500">
-              <span className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-7 h-7 text-white"
-                  fill="currentColor"
-                >
-                  <path d="M12 12.713l-11.99-7.713v13.5c0 .828.671 1.5 1.5 1.5h20.98c.829 0 1.5-.672 1.5-1.5v-13.5l-11.99 7.713zm0-2.426l11.99-7.713H.01l11.99 7.713z" />
-                </svg>
-              </span>
-            </span>
-          </a>
-        </div>
+  {/* Gmail */}
+  <a
+    href="mailto:bhatnarasimha1991@gmail.com"
+    aria-label="Gmail"
+    className="transform transition duration-300 ease-in-out hover:scale-125 hover:shadow-lg hover:shadow-red-400/50 rounded-full"
+  >
+    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-tr from-red-500 via-orange-500 to-yellow-500">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        className="w-7 h-7 text-white"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M12 13.065L.014 6h23.972L12 13.065zm0 2.021L.014 8.021V20h23.972V8.021L12 15.086z"/>
+      </svg>
+    </div>
+  </a>
+</div>
+
 
         <a
           href="#projects"
