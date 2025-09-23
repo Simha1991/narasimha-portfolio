@@ -52,31 +52,60 @@ function App() {
 
 
       {/* Hero Section */}
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6"
-      >
-        <img
-          src="/narasimha-portfolio/images/headshot.jpg"
-          alt="Narasimha Bhat"
-          className="w-60 h-60 rounded-full shadow-lg mb-6 border-4 border-white object-cover"
-        />
-        <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
-        <h2 className="text-2xl text-indigo-100 mb-6">
-          Principal UX Designer · AI-Augmented Experience Designer
-        </h2>
-        <p className="max-w-xl text-lg text-indigo-50 mb-8">
-          I design seamless, human-centered digital experiences that merge UX
-          craft with the power of AI. Explore my portfolio to see my projects
-          and design philosophy.
-        </p>
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-white text-blue-700 rounded-lg hover:bg-gray-100 transition font-semibold"
-        >
-          View My Work
-        </a>
-      </section>
+<section
+  id="hero"
+  className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white px-6"
+>
+  <div className="w-60 h-60 rounded-full overflow-hidden ring-4 ring-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 mb-8">
+    <img
+      src="/images/headshot.jpg"
+      alt="Narasimha Bhat"
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
+  <h2 className="text-2xl text-blue-200 mb-6">
+    Principal UX Designer · AI-Augmented Experience Designer
+  </h2>
+  <p className="max-w-xl text-lg text-gray-300 mb-8">
+    I design human-centered, AI-driven digital experiences that simplify
+    complexity, drive measurable impact, and scale across global enterprises.
+  </p>
+
+  {/* Social icons */}
+  <div className="flex space-x-6 mb-8">
+    <a
+      href="https://www.linkedin.com/in/narasimha-bhat"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:scale-110 transform transition"
+    >
+      <i className="fab fa-linkedin text-3xl text-blue-400 hover:text-white drop-shadow-lg"></i>
+    </a>
+    <a
+      href="https://twitter.com/IaMSimha007"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:scale-110 transform transition"
+    >
+      <i className="fab fa-x-twitter text-3xl text-gray-300 hover:text-white drop-shadow-lg"></i>
+    </a>
+    <a
+      href="mailto:bhatnarasimha1991@gmail.com"
+      className="hover:scale-110 transform transition"
+    >
+      <i className="fas fa-envelope text-3xl text-red-400 hover:text-white drop-shadow-lg"></i>
+    </a>
+  </div>
+
+  <a
+    href="#projects"
+    className="px-6 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-100 transition"
+  >
+    View My Work
+  </a>
+</section>
+      {/* Hero section ends */}
 
       {/* About Section */}
       <section
