@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Skills from "./components/Featured";
+import Featured from "./components/Featured";
 
 
 import "./index.css"; // keep your global css import if present
