@@ -155,74 +155,83 @@ function App() {
         </a>
       </section>
 
-     {/* About Section */}
+    {/* About Section */}
 <section
   id="about"
   className="py-20 px-6 max-w-6xl mx-auto text-center"
 >
-  <h2 className="text-4xl font-bold mb-6">About Me</h2>
+  <h2 className="text-4xl font-bold mb-6 text-gray-900">About Me</h2>
 
-  {/* Intro paragraphs */}
-  <div className="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed space-y-4 mb-12">
-    <p>
-      I’m a Principal UX Designer specializing in AI-augmented experiences. With
-      a strong background in human-centered design, I’ve led award-winning
-      projects that streamlined workflows, reduced costs, and created delightful
-      user experiences.
-    </p>
-    <p>
-      I’ve led transformative initiatives at the intersection of design, AI, and
-      enterprise-scale systems.
-    </p>
+  <p className="text-lg text-gray-700 leading-relaxed mb-4">
+    I’m a Principal UX Designer specializing in AI-augmented experiences. With a strong
+    background in human-centered design, I’ve led award-winning projects that streamlined
+    workflows, reduced costs, and created delightful user experiences.
+  </p>
+  <p className="text-lg text-gray-700 leading-relaxed mb-12">
+    I’ve led transformative initiatives at the intersection of design, AI, and enterprise-scale
+    systems.
+  </p>
+
+  {/* Two-column layout for cards */}
+  <div className="grid md:grid-cols-2 gap-8">
+    {/* Key Achievements Card */}
+    <div className="p-8 rounded-2xl shadow-lg backdrop-blur-lg bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 border border-white/40">
+      <h3 className="text-2xl font-semibold mb-4 text-gray-900">Key Achievements</h3>
+      <ul className="space-y-4 text-left">
+        <li>
+          <p className="font-bold text-gray-900">Digital Entry Point</p>
+          <p className="text-gray-700">
+            Award-winning product that saved <span className="font-semibold">$37M+</span> and redefined
+            the customer device lifecycle.
+          </p>
+        </li>
+        <li>
+          <p className="font-bold text-gray-900">Unified Portal</p>
+          <p className="text-gray-700">
+            Led research and design for a consolidated enterprise hub, simplifying customer
+            experiences.
+          </p>
+        </li>
+        <li>
+          <p className="font-bold text-gray-900">Virtual Assistant</p>
+          <p className="text-gray-700">
+            Scaled Dell’s AI-powered conversational design, reducing self-service start time by{" "}
+            <span className="font-semibold">71%</span>.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    {/* Recognition & Awards Card */}
+    <div className="p-8 rounded-2xl shadow-lg backdrop-blur-lg bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 border border-white/40">
+      <h3 className="text-2xl font-semibold mb-4 text-gray-900">Recognition & Awards</h3>
+      <ul className="space-y-4 text-left">
+        <li>
+          <p className="font-bold text-gray-900">President’s Award — Digital Entry Point (DEP)</p>
+          <p className="text-gray-700">
+            Dell’s highest recognition for innovation and business impact.
+          </p>
+        </li>
+        <li>
+          <p className="font-bold text-gray-900">Dell Award for Innovation — Design Libraries</p>
+          <p className="text-gray-700">Recognized for creating scalable design systems.</p>
+        </li>
+        <li>
+          <p className="font-bold text-gray-900">NN/g Certified UX Designer</p>
+          <p className="text-gray-700">Industry’s most respected UX certification.</p>
+        </li>
+        <li>
+          <p className="font-bold text-gray-900">Rising Leader at Dell (RLD)</p>
+          <p className="text-gray-700">
+            Selected for Dell’s high-potential leadership program.
+          </p>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  {/* Cards grid */}
-  <div className="grid md:grid-cols-2 gap-8 mt-12">
-  {/* Key Achievements */}
-  <div className="p-8 rounded-2xl shadow-lg bg-gradient-to-tr from-teal-500/30 to-purple-500/30 backdrop-blur-lg border border-white/20">
-    <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-md">Key Achievements</h3>
-    <ul className="space-y-4 text-left">
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">Digital Entry Point</p>
-        <p className="text-gray-100">Award-winning product that saved <strong>$37M+</strong> and redefined the customer device lifecycle.</p>
-      </li>
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">Unified Portal</p>
-        <p className="text-gray-100">Led research and design for a consolidated enterprise hub, simplifying customer experiences.</p>
-      </li>
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">Virtual Assistant</p>
-        <p className="text-gray-100">Scaled Dell’s AI-powered conversational design, reducing self-service start time by <strong>71%</strong>.</p>
-      </li>
-    </ul>
-  </div>
-
-  {/* Recognition & Awards */}
-  <div className="p-8 rounded-2xl shadow-lg bg-gradient-to-tr from-teal-500/30 to-purple-500/30 backdrop-blur-lg border border-white/20">
-    <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-md">Recognition & Awards</h3>
-    <ul className="space-y-4 text-left">
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">President’s Award — Digital Entry Point (DEP)</p>
-        <p className="text-gray-100">Dell’s highest recognition for innovation and business impact.</p>
-      </li>
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">Dell Award for Innovation — Design Libraries</p>
-        <p className="text-gray-100">Recognized for creating scalable design systems.</p>
-      </li>
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">NN/g Certified UX Designer</p>
-        <p className="text-gray-100">Industry’s most respected UX certification.</p>
-      </li>
-      <li>
-        <p className="font-semibold text-white drop-shadow-md">Rising Leader at Dell (RLD)</p>
-        <p className="text-gray-100">Selected for Dell’s high-potential leadership program.</p>
-      </li>
-    </ul>
-  </div>
-</div>
-
 </section>
-{/* About Section ends */}
+{/* About Section Ends */}
+
 
 
       {/* Skills Section */}
