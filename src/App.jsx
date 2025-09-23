@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Skills from "./components/Featured";
+
 
 import "./index.css"; // keep your global css import if present
 
@@ -27,8 +29,8 @@ export default function App() {
           <div className="space-x-8 font-medium">
             <a href="#about" className="text-white hover:text-gray-200 transition">About</a>
             <a href="#skills" className="text-white hover:text-gray-200 transition">Skills</a>
+            <a href="#featured" className="text-white hover:text-gray-200 transition">Featured work</a>
             <a href="#experience" className="text-white hover:text-gray-200 transition">Experience</a>
-            <a href="#projects" className="text-white hover:text-gray-200 transition">Projects</a>
             <a href="#testimonials" className="text-white hover:text-gray-200 transition">Testimonials</a>
             <a href="#contact" className="text-white hover:text-gray-200 transition">Contact</a>
           </div>
@@ -39,6 +41,7 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
+        <Featured />
 
         {/* Experience Section */}
         <section id="experience" className="py-20 px-6 bg-white text-center">
@@ -57,9 +60,9 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects */}
-        <section id="projects" className="py-20 bg-gray-50 text-center">
-          <h2 className="text-4xl font-bold mb-12">Projects</h2>
+        {/* Featured work */}
+        <section id="featured" className="py-20 bg-gray-50 text-center">
+          <h2 className="text-4xl font-bold mb-12">Featured work</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
               <h3 className="text-2xl font-semibold mb-2">Digital Entry Point</h3>
