@@ -56,11 +56,11 @@ function Skills() {
           </div>
           <ul className="space-y-2 text-gray-100">
             <li>Figma</li>
+            <li>Adobe CC</li>            
             <li>Emergent</li>
-            <li>Adobe CC</li>
+            <li>AI-Powered Design Tools</li>
             <li>Miro</li>
             <li>Jira / Confluence</li>
-            <li>AI-Powered Design Tools</li>
           </ul>
         </div>
       </div>
