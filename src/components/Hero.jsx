@@ -12,8 +12,10 @@ export default function Hero() {
       <section
         id="hero"
         className="min-h-screen flex flex-col items-center justify-center text-center
-                   bg-gradient-to-b from-teal-500 via-purple-600 to-indigo-700 text-white px-6"
-      >
+             bg-gradient-to-b from-teal-500 via-purple-600 to-indigo-700 text-white px-6
+             pt-32"
+        >
+
         {/* headshot + gradient ring */}
         <div className="mb-6">
           <div className="w-40 h-40 md:w-60 md:h-60 rounded-full p-1
