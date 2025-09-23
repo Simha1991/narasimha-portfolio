@@ -33,7 +33,7 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="pt-24">
+      <main>
         {/* Hero moved into its own component */}
         <Hero />
 
