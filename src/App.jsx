@@ -12,6 +12,10 @@ function App() {
         setScrolled(false);
       }
     };
+    // inside function App(), before return:
+    const headshotSrc = `${import.meta.env.BASE_URL}images/headshot.jpg`;
+
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -51,18 +55,22 @@ function App() {
 </header>
 
 
-    {/* Hero Section */}
+   {/* Hero Section */}
 <section
   id="hero"
   className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white px-6"
 >
   {/* Headshot with gradient ring */}
-  <div className="w-60 h-60 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600 mb-6">
-    <img
-      src="/images/headshot.jpg"
-      alt="Narasimha Bhat"
-      className="w-full h-full object-cover rounded-full"
-    />
+  <div className="w-60 h-60 rounded-full mb-6">
+    <div className="p-1 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600">
+      <div className="w-60 h-60 rounded-full overflow-hidden bg-white/5">
+        <img
+          src={headshotSrc}
+          alt="Narasimha Bhat"
+          className="w-full h-full object-cover rounded-full"
+        />
+      </div>
+    </div>
   </div>
 
   <h1 className="text-5xl font-bold mb-4">Narasimha Bhat</h1>
@@ -74,55 +82,56 @@ function App() {
     complexity, drive measurable impact, and scale across global enterprises.
   </p>
 
-  {/* Social icons */}
+  {/* Social icons (gradient ring + circular background) */}
   <div className="flex space-x-6 mb-8">
     {/* LinkedIn */}
     <a
       href="https://www.linkedin.com/in/narasimha-bhat"
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:scale-110 transform transition"
+      aria-label="LinkedIn"
+      className="transform transition hover:scale-110"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="w-8 h-8 text-blue-400 hover:text-white drop-shadow-lg"
-      >
-        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z" />
-      </svg>
+      <span className="p-0.5 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-600">
+        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z"/>
+          </svg>
+        </span>
+      </span>
     </a>
 
-    {/* Twitter/X */}
+    {/* X / Twitter */}
     <a
       href="https://twitter.com/IaMSimha007"
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:scale-110 transform transition"
+      aria-label="X (Twitter)"
+      className="transform transition hover:scale-110"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="w-8 h-8 text-gray-300 hover:text-white drop-shadow-lg"
-      >
-        <path d="M18.244 2.25h3.64l-7.93 9.09L24 21.75h-7.313l-5.73-7.357-6.56 7.357H.75l8.48-9.51L0 2.25h7.5l5.17 6.757L18.244 2.25z" />
-      </svg>
+      <span className="p-0.5 rounded-full bg-gradient-to-tr from-white/5 to-white/5"> 
+        {/* subtle outer ring for X so glow can be white/blue on hover */}
+        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-white/6 ring-1 ring-white/6 hover:bg-white/12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor" aria-hidden="true">
+            <path d="M23.643 4.937c-.8.36-1.66.6-2.56.71a4.48 4.48 0 0 0 1.96-2.47 8.9 8.9 0 0 1-2.83 1.08 4.46 4.46 0 0 0-7.6 4.06A12.65 12.65 0 0 1 3.15 3.16a4.46 4.46 0 0 0 1.38 5.95 4.39 4.39 0 0 1-2.02-.56v.06c0 2.08 1.48 3.82 3.44 4.21a4.44 4.44 0 0 1-2.01.08 4.47 4.47 0 0 0 4.17 3.1A8.95 8.95 0 0 1 1.1 19.54a12.61 12.61 0 0 0 6.84 2.01c8.2 0 12.7-6.8 12.7-12.7 0-.19 0-.39-.01-.58a9.1 9.1 0 0 0 2.24-2.33z"/>
+          </svg>
+        </span>
+      </span>
     </a>
 
     {/* Email */}
     <a
       href="mailto:bhatnarasimha1991@gmail.com"
-      className="hover:scale-110 transform transition"
+      aria-label="Email"
+      className="transform transition hover:scale-110"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        className="w-8 h-8 text-red-400 hover:text-white drop-shadow-lg"
-      >
-        <path d="M12 13.065L.014 6h23.972L12 13.065zm0 2.021L.014 8.021V20h23.972V8.021L12 15.086z" />
-      </svg>
+      <span className="p-0.5 rounded-full bg-gradient-to-tr from-yellow-400 via-orange-400 to-rose-400">
+        <span className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor" aria-hidden="true">
+            <path d="M12 13.065L.014 6h23.972L12 13.065zm0 2.021L.014 8.021V20h23.972V8.021L12 15.086z"/>
+          </svg>
+        </span>
+      </span>
     </a>
   </div>
 
@@ -134,6 +143,7 @@ function App() {
   </a>
 </section>
 {/* Hero section ends */}
+
 
 
       {/* About Section */}
