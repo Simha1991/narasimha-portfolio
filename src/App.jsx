@@ -177,70 +177,50 @@ function App() {
   </div>
 
   {/* Cards grid */}
-  <div className="grid md:grid-cols-2 gap-8">
-    {/* Key Achievements card */}
-    <div className="p-6 rounded-xl shadow-lg text-left 
-      bg-gradient-to-tr from-teal-500/30 to-purple-600/30 
-      backdrop-blur-md border border-white/20">
-      <h3 className="text-2xl font-semibold mb-6 text-white">Key Achievements</h3>
-      <ul className="space-y-6 text-gray-100">
-        <li>
-          <p className="font-semibold">Digital Entry Point</p>
-          <p className="text-sm text-gray-200">
-            Award-winning product that saved <strong>$37M+</strong> and redefined
-            the customer device lifecycle.
-          </p>
-        </li>
-        <li>
-          <p className="font-semibold">Unified Portal</p>
-          <p className="text-sm text-gray-200">
-            Led research and design for a consolidated enterprise hub, simplifying
-            customer experiences.
-          </p>
-        </li>
-        <li>
-          <p className="font-semibold">Virtual Assistant</p>
-          <p className="text-sm text-gray-200">
-            Scaled Dell’s AI-powered conversational design, reducing self-service
-            start time by <strong>71%</strong>.
-          </p>
-        </li>
-      </ul>
-    </div>
-
-    {/* Recognition card */}
-    <div className="p-6 rounded-xl shadow-lg text-left 
-      bg-gradient-to-tr from-teal-500/30 to-purple-600/30 
-      backdrop-blur-md border border-white/20">
-      <h3 className="text-2xl font-semibold mb-6 text-white">Recognition & Awards</h3>
-      <ul className="space-y-6 text-gray-100">
-        <li>
-          <p className="font-semibold">President’s Award — Digital Entry Point (DEP)</p>
-          <p className="text-sm text-gray-200">
-            Dell’s highest recognition for innovation and business impact.
-          </p>
-        </li>
-        <li>
-          <p className="font-semibold">Dell Award for Innovation — Design Libraries</p>
-          <p className="text-sm text-gray-200">
-            Recognized for creating scalable design systems.
-          </p>
-        </li>
-        <li>
-          <p className="font-semibold">NN/g Certified UX Designer</p>
-          <p className="text-sm text-gray-200">
-            Industry’s most respected UX certification.
-          </p>
-        </li>
-        <li>
-          <p className="font-semibold">Rising Leader at Dell (RLD)</p>
-          <p className="text-sm text-gray-200">
-            Selected for Dell’s high-potential leadership program.
-          </p>
-        </li>
-      </ul>
-    </div>
+  <div className="grid md:grid-cols-2 gap-8 mt-12">
+  {/* Key Achievements */}
+  <div className="p-8 rounded-2xl shadow-lg bg-gradient-to-tr from-teal-500/30 to-purple-500/30 backdrop-blur-lg border border-white/20">
+    <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-md">Key Achievements</h3>
+    <ul className="space-y-4 text-left">
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">Digital Entry Point</p>
+        <p className="text-gray-100">Award-winning product that saved <strong>$37M+</strong> and redefined the customer device lifecycle.</p>
+      </li>
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">Unified Portal</p>
+        <p className="text-gray-100">Led research and design for a consolidated enterprise hub, simplifying customer experiences.</p>
+      </li>
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">Virtual Assistant</p>
+        <p className="text-gray-100">Scaled Dell’s AI-powered conversational design, reducing self-service start time by <strong>71%</strong>.</p>
+      </li>
+    </ul>
   </div>
+
+  {/* Recognition & Awards */}
+  <div className="p-8 rounded-2xl shadow-lg bg-gradient-to-tr from-teal-500/30 to-purple-500/30 backdrop-blur-lg border border-white/20">
+    <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-md">Recognition & Awards</h3>
+    <ul className="space-y-4 text-left">
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">President’s Award — Digital Entry Point (DEP)</p>
+        <p className="text-gray-100">Dell’s highest recognition for innovation and business impact.</p>
+      </li>
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">Dell Award for Innovation — Design Libraries</p>
+        <p className="text-gray-100">Recognized for creating scalable design systems.</p>
+      </li>
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">NN/g Certified UX Designer</p>
+        <p className="text-gray-100">Industry’s most respected UX certification.</p>
+      </li>
+      <li>
+        <p className="font-semibold text-white drop-shadow-md">Rising Leader at Dell (RLD)</p>
+        <p className="text-gray-100">Selected for Dell’s high-potential leadership program.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
 </section>
 {/* About Section ends */}
 
