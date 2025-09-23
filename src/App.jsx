@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./sections/Skills";
+
 import "./index.css"; // keep your global css import if present
 
 export default function App() {
@@ -34,24 +36,9 @@ export default function App() {
       </header>
 
       <main>
-        {/* Hero moved into its own component */}
         <Hero />
-
-        {/* About moved into its own component */}
         <About />
-
-        {/* Skills Section (kept in App for now) */}
-        <section id="skills" className="py-20 bg-gray-50 text-center">
-          <h2 className="text-4xl font-bold mb-6">Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="p-4 bg-white rounded-lg shadow">Designing with AI</div>
-            <div className="p-4 bg-white rounded-lg shadow">UX Strategy</div>
-            <div className="p-4 bg-white rounded-lg shadow">Prototyping</div>
-            <div className="p-4 bg-white rounded-lg shadow">Design Systems</div>
-            <div className="p-4 bg-white rounded-lg shadow">Agile Coach (Kanban)</div>
-            <div className="p-4 bg-white rounded-lg shadow">Figma Guru & Mentor</div>
-          </div>
-        </section>
+        <Skills />
 
         {/* Experience Section */}
         <section id="experience" className="py-20 px-6 bg-white text-center">
