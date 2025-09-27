@@ -9,34 +9,35 @@ import "swiper/css/pagination";
 
 const Featured = () => {
   const slides = [
-    {
-      id: "dep",
-      title: "Dell Enterprise Portal",
-      subtitle: "Streamlined Support Portal",
-      body: "Built an enterprise-grade portal for Dell to unify support access, improve discoverability, and optimize workflows.",
-      pills: ["React", "Redux", "Node.js", "Tailwind"],
-      impact: "Impact: Reduced ticket resolution time by 25%.",
-      img: "/images/dep.jpg",
-    },
-    {
-      id: "va",
-      title: "Virtual Assistant",
-      subtitle: "Conversational AI Assistant",
-      body: "Developed an AI-powered virtual assistant that integrates with knowledge bases to guide users through complex troubleshooting.",
-      pills: ["Dialogflow", "React", "APIs"],
-      impact: "Impact: Improved self-service adoption by 40%.",
-      img: "/images/va.jpg",
-    },
-    {
-      id: "cloud",
-      title: "Cloud Migration Tool",
-      subtitle: "Automated Migration Platform",
-      body: "Designed an automation tool to help enterprises migrate legacy applications to cloud-native infrastructure.",
-      pills: ["AWS", "Kubernetes", "Automation"],
-      impact: "Impact: Cut migration timelines by 30%.",
-      img: "/images/cloud.jpg",
-    },
-  ];
+  {
+    id: "dep",
+    title: "Dell Enterprise Portal",
+    subtitle: "Streamlined Support Portal",
+    body: "Built an enterprise-grade portal for Dell to unify support access, improve discoverability, and optimize workflows.",
+    pills: ["React", "Redux", "Node.js", "Tailwind"],
+    impact: "Impact: Reduced ticket resolution time by 25%.",
+    img: "images/dep.jpg",   // ✅ no leading slash
+  },
+  {
+    id: "va",
+    title: "Virtual Assistant",
+    subtitle: "Conversational AI Assistant",
+    body: "Developed an AI-powered virtual assistant that integrates with knowledge bases to guide users through complex troubleshooting.",
+    pills: ["Dialogflow", "React", "APIs"],
+    impact: "Impact: Improved self-service adoption by 40%.",
+    img: "images/va.jpg",   // ✅
+  },
+  {
+    id: "cloud",
+    title: "Cloud Migration Tool",
+    subtitle: "Automated Migration Platform",
+    body: "Designed an automation tool to help enterprises migrate legacy applications to cloud-native infrastructure.",
+    pills: ["AWS", "Kubernetes", "Automation"],
+    impact: "Impact: Cut migration timelines by 30%.",
+    img: "images/cloud.jpg",   // ✅
+  },
+];
+
 
   return (
     <section id="featured" className="py-20 bg-gradient-to-b from-white to-gray-50">
