@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -23,7 +23,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="font-sans scroll-smooth">
         {/* Navbar */}
         <header
@@ -69,6 +69,7 @@ export default function App() {
                   <About />
                   <Skills />
                   <Featured />
+
                   {/* Experience Section */}
                   <section
                     id="experience"
@@ -136,6 +137,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
