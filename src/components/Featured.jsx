@@ -57,17 +57,18 @@ export default function Featured() {
             <SwiperSlide key={s.id}>
               <div className="flex flex-col md:flex-row items-stretch bg-gradient-to-tr from-teal-200/50 via-purple-200/50 to-pink-200/50 rounded-2xl shadow-xl overflow-hidden h-[500px]">
                 
-                {/* Image Left - fills its half */}
-                <div className="w-full md:w-1/2 bg-white flex items-center justify-center">
+                {/* Image Side with Glassmorphism */}
+                <div className="w-full md:w-1/2 relative flex items-center justify-center p-6">
+                  <div className="absolute inset-0 bg-white/30 backdrop-blur-md border-r border-white/40" />
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="h-full w-full object-contain p-6"
+                    className="relative z-10 max-h-[400px] w-auto object-contain"
                   />
                 </div>
 
-                {/* Content Right */}
-                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center">
+                {/* Content Side */}
+                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center bg-white/60 backdrop-blur-sm">
                   <h3 className="text-3xl font-semibold text-gray-900 mb-2">{s.title}</h3>
                   <h4 className="text-lg text-indigo-700 mb-4">{s.subtitle}</h4>
                   <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
@@ -88,10 +89,10 @@ export default function Featured() {
                     {s.impact}
                   </blockquote>
 
-                  {/* Secondary Button */}
+                  {/* Secondary Button (hug text size only) */}
                   <Link
                     to={`/${s.id}-detail`}
-                    className="inline-block px-5 py-2 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition"
+                    className="self-start px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition"
                   >
                     View detailed case study
                   </Link>
