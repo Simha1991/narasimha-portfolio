@@ -61,11 +61,16 @@ export default function Featured() {
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500"
-            style={{ transform: `translateX(-${index * 100}%)`, width: `${slides.length * 100}%` }}
+            style={{
+              transform: `translateX(-${index * 100}%)`,
+              width: `${slides.length * 100}%`,
+            }}
           >
             {slides.map((s) => (
               <div key={s.id} className="w-full px-6">
-                <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 min-h-[380px]">
+                <div className="flex flex-col md:flex-row items-center
+                                bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
+                                rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 min-h-[380px]">
                   {/* image column */}
                   <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                     <img
@@ -78,21 +83,28 @@ export default function Featured() {
 
                   {/* content column */}
                   <div className="w-full md:w-1/2 md:pl-8 text-left">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">{s.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+                      {s.title}
+                    </h3>
                     <h4 className="text-lg text-gray-700 mb-4">{s.subtitle}</h4>
 
                     <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
 
-                    {/* pills (moved before impact as requested) */}
+                    {/* pills */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {s.pills.map((p) => (
-                        <span key={p} className="px-3 py-1 bg-white/60 text-sm rounded-full text-gray-800">
+                        <span
+                          key={p}
+                          className="px-3 py-1 bg-white/60 text-sm rounded-full text-gray-800"
+                        >
                           {p}
                         </span>
                       ))}
                     </div>
 
-                    <blockquote className="italic text-indigo-700 font-medium mb-6">{s.impact}</blockquote>
+                    <blockquote className="italic text-indigo-700 font-medium mb-6">
+                      {s.impact}
+                    </blockquote>
 
                     <Link
                       to={`/${s.id}-detail`}
@@ -110,14 +122,20 @@ export default function Featured() {
         {/* nav arrows */}
         <button
           aria-label="Previous"
-          onClick={() => { prev(); clearTimeout(timeoutRef.current); }}
+          onClick={() => {
+            prev();
+            clearTimeout(timeoutRef.current);
+          }}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow hover:scale-105 transition"
         >
           ‹
         </button>
         <button
           aria-label="Next"
-          onClick={() => { next(); clearTimeout(timeoutRef.current); }}
+          onClick={() => {
+            next();
+            clearTimeout(timeoutRef.current);
+          }}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow hover:scale-105 transition"
         >
           ›
@@ -128,9 +146,14 @@ export default function Featured() {
           {slides.map((_, i) => (
             <button
               key={i}
-              onClick={() => { setIndex(i); clearTimeout(timeoutRef.current); }}
+              onClick={() => {
+                setIndex(i);
+                clearTimeout(timeoutRef.current);
+              }}
               aria-label={`Go to slide ${i + 1}`}
-              className={`w-3 h-3 rounded-full ${i === index ? "bg-indigo-600" : "bg-gray-300"}`}
+              className={`w-3 h-3 rounded-full ${
+                i === index ? "bg-indigo-600" : "bg-gray-300"
+              }`}
             />
           ))}
         </div>
