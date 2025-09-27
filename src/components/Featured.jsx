@@ -1,164 +1,109 @@
-// src/components/Featured.jsx
-import React, { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-export default function Featured() {
+// ✅ Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+const Featured = () => {
   const slides = [
     {
       id: "dep",
-      title: "Digital Entry Point (DEP)",
-      subtitle: "Award-Winning, $37M+ Savings",
-      body:
-        "Revolutionized device registration and lifecycle experience with serialized QR codes. Designed end-to-end flow: storyboarding → IA simplification (tree testing) → low-fi & mid-fi → mobile-first final prototype.",
-      impact:
-        "Earned President's Award for innovation, delivering $37M+ savings and $21M+ in renewal opportunities.",
-      pills: ["mobile-first design", "enterprise design", "innovation"],
-      img: `${import.meta.env.BASE_URL}images/dep.png`,
-    },
-    {
-      id: "upe",
-      title: "Unified Portal Experience (UPE)",
-      subtitle: "Enterprise Experience Unification",
-      body:
-        "Conducted competitive research + capability mapping. Designed IA through open card sorting, created multi-fidelity wireframes, and iterated with stakeholders.",
-      impact:
-        "Built a unified dashboard (service events, lifecycle, fleet health, notifications). Preparing for production rollout.",
-      pills: ["information architecture", "enterprise design", "dashboard design"],
-      img: `${import.meta.env.BASE_URL}images/upe.jpg`,
+      title: "Dell Enterprise Portal",
+      subtitle: "Streamlined Support Portal",
+      body: "Built an enterprise-grade portal for Dell to unify support access, improve discoverability, and optimize workflows.",
+      pills: ["React", "Redux", "Node.js", "Tailwind"],
+      impact: "Impact: Reduced ticket resolution time by 25%.",
+      img: "/images/dep.jpg",
     },
     {
       id: "va",
-      title: "Virtual Assistant (VA)",
-      subtitle: "AI-Powered Conversational Design",
-      body:
-        "Standardized VA across portals using DDS 2.0 + Atomic Design. Created scalable components (chat bubbles, action menus, micro-interactions).",
-      impact:
-        "Enhanced AI-driven support, improving self-service start time by 71% with 99% success probability.",
-      pills: ["conversational design", "design system", "AI"],
-      img: `${import.meta.env.BASE_URL}images/va.jpg`,
+      title: "Virtual Assistant",
+      subtitle: "Conversational AI Assistant",
+      body: "Developed an AI-powered virtual assistant that integrates with knowledge bases to guide users through complex troubleshooting.",
+      pills: ["Dialogflow", "React", "APIs"],
+      impact: "Impact: Improved self-service adoption by 40%.",
+      img: "/images/va.jpg",
+    },
+    {
+      id: "cloud",
+      title: "Cloud Migration Tool",
+      subtitle: "Automated Migration Platform",
+      body: "Designed an automation tool to help enterprises migrate legacy applications to cloud-native infrastructure.",
+      pills: ["AWS", "Kubernetes", "Automation"],
+      impact: "Impact: Cut migration timelines by 30%.",
+      img: "/images/cloud.jpg",
     },
   ];
 
-  const [index, setIndex] = useState(0);
-  const timeoutRef = useRef(null);
-
-  const next = () => setIndex((i) => (i + 1) % slides.length);
-  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
-
-  useEffect(() => {
-    timeoutRef.current = setTimeout(next, 6000);
-    return () => clearTimeout(timeoutRef.current);
-  }, [index]);
-
   return (
-    <section id="featured" className="py-20 bg-gray-50 text-center">
-      <h2 className="text-4xl font-bold mb-12">Featured Work</h2>
+    <section id="featured" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-12">Featured Work</h2>
 
-      <div className="max-w-6xl mx-auto relative">
-        {/* Carousel track */}
-        <div className="overflow-hidden">
-          <div
-            className="flex transition-transform duration-500"
-            style={{
-              transform: `translateX(-${index * 100}%)`,
-              width: `${slides.length * 100}%`,
-            }}
-          >
-            {slides.map((s) => (
-              <div
-                key={s.id}
-                className="w-full flex-shrink-0 px-6"
-                style={{ width: "100%" }}
-              >
-                <div className="flex flex-col md:flex-row items-center 
-                                bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 
-                                rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 min-h-[380px]">
-                  {/* image */}
-                  <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img
-                      src={s.img}
-                      alt={s.title}
-                      className="rounded-lg border border-gray-200 object-contain max-h-64"
-                      style={{ width: "100%", maxWidth: 420 }}
-                    />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          className="max-w-5xl mx-auto"
+        >
+          {slides.map((s) => (
+            <SwiperSlide key={s.id}>
+              <div className="flex flex-col bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 
+                              rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 
+                              min-h-[480px] max-w-3xl mx-auto">
+                
+                {/* Image on top */}
+                <div className="w-full flex justify-center mb-6">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="rounded-lg border border-gray-200 object-contain max-h-72 w-full max-w-lg"
+                  />
+                </div>
+
+                {/* Content below */}
+                <div className="w-full text-left">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+                    {s.title}
+                  </h3>
+                  <h4 className="text-lg text-gray-700 mb-4">{s.subtitle}</h4>
+                  <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
+
+                  {/* pills */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {s.pills.map((p) => (
+                      <span
+                        key={p}
+                        className="px-3 py-1 bg-white/60 text-sm rounded-full text-gray-800"
+                      >
+                        {p}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* content */}
-                  <div className="w-full md:w-1/2 md:pl-8 text-left">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
-                      {s.title}
-                    </h3>
-                    <h4 className="text-lg text-gray-700 mb-4">{s.subtitle}</h4>
-                    <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
+                  <blockquote className="italic text-indigo-700 font-medium mb-6">
+                    {s.impact}
+                  </blockquote>
 
-                    {/* pills */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {s.pills.map((p) => (
-                        <span
-                          key={p}
-                          className="px-3 py-1 bg-white/60 text-sm rounded-full text-gray-800"
-                        >
-                          {p}
-                        </span>
-                      ))}
-                    </div>
-
-                    <blockquote className="italic text-indigo-700 font-medium mb-6">
-                      {s.impact}
-                    </blockquote>
-
-                    <Link
-                      to={`/${s.id}-detail`}
-                      className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
-                    >
-                      View detailed work
-                    </Link>
-                  </div>
+                  <Link
+                    to={`/${s.id}-detail`}
+                    className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                  >
+                    View detailed work
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* nav arrows */}
-        <button
-          aria-label="Previous"
-          onClick={() => {
-            prev();
-            clearTimeout(timeoutRef.current);
-          }}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow hover:scale-105 transition"
-        >
-          ‹
-        </button>
-        <button
-          aria-label="Next"
-          onClick={() => {
-            next();
-            clearTimeout(timeoutRef.current);
-          }}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow hover:scale-105 transition"
-        >
-          ›
-        </button>
-
-        {/* dots */}
-        <div className="flex items-center justify-center gap-3 mt-6">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                setIndex(i);
-                clearTimeout(timeoutRef.current);
-              }}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`w-3 h-3 rounded-full ${
-                i === index ? "bg-indigo-600" : "bg-gray-300"
-              }`}
-            />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
-}
+};
+
+export default Featured;
