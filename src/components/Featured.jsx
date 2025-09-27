@@ -1,7 +1,7 @@
+// src/components/Featured.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-/* Simple, dependency-free carousel */
 export default function Featured() {
   const slides = [
     {
@@ -23,11 +23,7 @@ export default function Featured() {
         "Conducted competitive research + capability mapping. Designed IA through open card sorting, created multi-fidelity wireframes, and iterated with stakeholders.",
       impact:
         "Built a unified dashboard (service events, lifecycle, fleet health, notifications). Preparing for production rollout.",
-      pills: [
-        "information architecture",
-        "enterprise design",
-        "dashboard design",
-      ],
+      pills: ["information architecture", "enterprise design", "dashboard design"],
       img: `${import.meta.env.BASE_URL}images/upe.jpg`,
     },
     {
@@ -49,7 +45,6 @@ export default function Featured() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
-  // Optional: auto-advance every 6s
   useEffect(() => {
     timeoutRef.current = setTimeout(next, 6000);
     return () => clearTimeout(timeoutRef.current);
@@ -70,9 +65,15 @@ export default function Featured() {
             }}
           >
             {slides.map((s) => (
-              <div key={s.id} className="w-full px-6">
-                <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 min-h-[380px]">
-                  {/* image column */}
+              <div
+                key={s.id}
+                className="w-full flex-shrink-0 px-6"
+                style={{ width: "100%" }}
+              >
+                <div className="flex flex-col md:flex-row items-center 
+                                bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 
+                                rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 min-h-[380px]">
+                  {/* image */}
                   <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                     <img
                       src={s.img}
@@ -82,18 +83,13 @@ export default function Featured() {
                     />
                   </div>
 
-                  {/* content column */}
+                  {/* content */}
                   <div className="w-full md:w-1/2 md:pl-8 text-left">
                     <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
                       {s.title}
                     </h3>
-                    <h4 className="text-lg text-gray-700 mb-4">
-                      {s.subtitle}
-                    </h4>
-
-                    <p className="text-gray-800 mb-4 leading-relaxed">
-                      {s.body}
-                    </p>
+                    <h4 className="text-lg text-gray-700 mb-4">{s.subtitle}</h4>
+                    <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
 
                     {/* pills */}
                     <div className="flex flex-wrap gap-2 mb-4">
