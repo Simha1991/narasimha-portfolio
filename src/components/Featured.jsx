@@ -20,11 +20,12 @@ export default function Featured() {
           spaceBetween={40}
           slidesPerView={1.1}
           centeredSlides={true}
-          className="pb-12"
+          className="pb-16"
         >
           {/* DEP Card */}
           <SwiperSlide>
-            <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 
+            <div className="flex flex-col md:flex-row items-center 
+                            bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30 
                             rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 h-full">
               {/* Image */}
               <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
@@ -43,10 +44,9 @@ export default function Featured() {
                   Award-Winning, $37M+ Savings
                 </h4>
                 <p className="text-gray-800 mb-4">
-                  Revolutionized device registration and lifecycle experience with
-                  serialized QR codes. Designed end-to-end flow: storyboarding → IA
-                  simplification (tree testing) → low-fi & mid-fi → mobile-first
-                  final prototype.
+                  Revolutionized device registration and lifecycle with serialized QR codes. 
+                  Designed end-to-end flow: storyboarding → IA simplification → low-fi & mid-fi 
+                  → mobile-first final prototype.
                 </p>
                 {/* Pills */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -62,15 +62,15 @@ export default function Featured() {
                 </div>
                 {/* Impact */}
                 <blockquote className="italic text-indigo-900 font-medium mb-6">
-                  Impact: Earned President's Award for innovation, delivering $37M+
+                  Impact: Earned President's Award for innovation, delivering $37M+ 
                   savings and $21M+ in renewal opportunities.
                 </blockquote>
                 {/* Button */}
                 <Link
                   to="/dep-detail"
-                  className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                  className="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
-                  View Detailed Case Study
+                  Explore More
                 </Link>
               </div>
             </div>
@@ -78,7 +78,8 @@ export default function Featured() {
 
           {/* UPE Card */}
           <SwiperSlide>
-            <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-purple-200/30 via-pink-200/30 to-yellow-200/30 
+            <div className="flex flex-col md:flex-row items-center 
+                            bg-gradient-to-tr from-purple-200/30 via-pink-200/30 to-yellow-200/30 
                             rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 h-full">
               <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                 <img
@@ -95,9 +96,8 @@ export default function Featured() {
                   Enterprise Experience Unification
                 </h4>
                 <p className="text-gray-800 mb-4">
-                  Conducted competitive research + capability mapping. Designed IA
-                  through open card sorting, created multi-fidelity wireframes, and
-                  iterated with stakeholders.
+                  Conducted competitive research + capability mapping. Designed IA 
+                  through open card sorting, created wireframes, and iterated with stakeholders.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-white/40 text-sm rounded-full">
@@ -111,14 +111,14 @@ export default function Featured() {
                   </span>
                 </div>
                 <blockquote className="italic text-indigo-900 font-medium mb-6">
-                  Impact: Built a unified dashboard (service events, lifecycle, fleet
+                  Impact: Built a unified dashboard (service events, lifecycle, fleet 
                   health, notifications). Preparing for production rollout.
                 </blockquote>
                 <Link
                   to="/upe-detail"
-                  className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                  className="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
-                  View Detailed Case Study
+                  Explore More
                 </Link>
               </div>
             </div>
@@ -126,7 +126,8 @@ export default function Featured() {
 
           {/* VA Card */}
           <SwiperSlide>
-            <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-pink-200/30 via-teal-200/30 to-indigo-200/30 
+            <div className="flex flex-col md:flex-row items-center 
+                            bg-gradient-to-tr from-pink-200/30 via-teal-200/30 to-indigo-200/30 
                             rounded-2xl shadow-xl p-8 backdrop-blur-lg border border-white/40 h-full">
               <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                 <img
@@ -143,9 +144,8 @@ export default function Featured() {
                   AI-Powered Conversational Design
                 </h4>
                 <p className="text-gray-800 mb-4">
-                  Standardized VA across portals using DDS 2.0 + Atomic Design.
-                  Created scalable components (chat bubbles, action menus,
-                  micro-interactions).
+                  Standardized VA across portals using DDS 2.0 + Atomic Design. 
+                  Created scalable components (chat bubbles, action menus, micro-interactions).
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-white/40 text-sm rounded-full">
@@ -159,14 +159,14 @@ export default function Featured() {
                   </span>
                 </div>
                 <blockquote className="italic text-indigo-900 font-medium mb-6">
-                  Impact: Enhanced AI-driven support, improving self-service start
-                  time by 71% with 99% success probability.
+                  Impact: Enhanced AI-driven support, improving self-service 
+                  start time by 71% with 99% success probability.
                 </blockquote>
                 <Link
                   to="/va-detail"
-                  className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                  className="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
-                  View Detailed Case Study
+                  Explore More
                 </Link>
               </div>
             </div>
