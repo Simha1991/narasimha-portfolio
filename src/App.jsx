@@ -130,9 +130,9 @@ export default function App() {
             />
 
             {/* Detail Pages */}
-            <Route path="/dep" element={<DepDetail />} />
-            <Route path="/upe" element={<UpeDetail />} />
-            <Route path="/va" element={<VaDetail />} />
+            <Route path="/dep-detail" element={<DepDetail />} />
+            <Route path="/upe-detail" element={<UpeDetail />} />
+            <Route path="/va-detail" element={<VaDetail />} />
           </Routes>
         </main>
       </div>
