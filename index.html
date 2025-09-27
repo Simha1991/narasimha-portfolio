@@ -4,27 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Narasimha Bhat — Portfolio</title>
-
-    <!-- 👇 Important for GitHub Pages -->
-    <base href="/narasimha-portfolio/" />
-
-    <script type="text/javascript">
-      // Handle GitHub Pages refresh/404 redirect for React Router
-      (function(l) {
-        if (l.search[1] === "/") {
-          const decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(s => s.replace(/~and~/g, "&"))
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
   </head>
   <body>
     <div id="root"></div>
