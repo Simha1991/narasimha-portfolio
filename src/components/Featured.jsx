@@ -55,19 +55,19 @@ export default function Featured() {
         >
           {slides.map((s) => (
             <SwiperSlide key={s.id}>
-              <div className="flex flex-col md:flex-row items-center bg-gradient-to-tr from-teal-200/50 via-purple-200/50 to-pink-200/50 rounded-2xl shadow-xl overflow-hidden">
+              <div className="flex flex-col md:flex-row items-stretch bg-gradient-to-tr from-teal-200/50 via-purple-200/50 to-pink-200/50 rounded-2xl shadow-xl overflow-hidden h-[500px]">
                 
-                {/* Image Left */}
-                <div className="w-full md:w-1/2 flex justify-center bg-white">
+                {/* Image Left - fills its half */}
+                <div className="w-full md:w-1/2 bg-white flex items-center justify-center">
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="object-contain max-h-[400px] w-full p-6"
+                    className="h-full w-full object-contain p-6"
                   />
                 </div>
 
                 {/* Content Right */}
-                <div className="w-full md:w-1/2 p-8 text-left">
+                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center">
                   <h3 className="text-3xl font-semibold text-gray-900 mb-2">{s.title}</h3>
                   <h4 className="text-lg text-indigo-700 mb-4">{s.subtitle}</h4>
                   <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
