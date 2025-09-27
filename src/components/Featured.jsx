@@ -67,7 +67,7 @@ export default function Featured() {
                 </blockquote>
                 {/* Button */}
                 <Link
-                  to="/dep"
+                  to="/dep-detail"
                   className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
                   View Detailed Case Study
@@ -115,7 +115,7 @@ export default function Featured() {
                   health, notifications). Preparing for production rollout.
                 </blockquote>
                 <Link
-                  to="/upe"
+                  to="/upe-detail"
                   className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
                   View Detailed Case Study
@@ -163,7 +163,7 @@ export default function Featured() {
                   time by 71% with 99% success probability.
                 </blockquote>
                 <Link
-                  to="/va"
+                  to="/va-detail"
                   className="inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
                 >
                   View Detailed Case Study
