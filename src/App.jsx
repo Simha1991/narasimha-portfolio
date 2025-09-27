@@ -1,50 +1,12 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Featured from "./components/Featured";
 
-import DepDetail from "./pages/DepDetail";
-import UpeDetail from "./pages/UpeDetail";
-import VaDetail from "./pages/VaDetail";
 
-import "./index.css";
-
-/* ErrorBoundary so we see an error message instead of a white screen */
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, error: null, info: null };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error };
-  }
-  componentDidCatch(error, info) {
-    console.error("ErrorBoundary caught:", error, info);
-    this.setState({ info });
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center p-6">
-          <div className="max-w-3xl bg-white rounded-lg p-8 shadow-lg">
-            <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
-            <pre className="whitespace-pre-wrap text-sm text-red-700">
-              {String(this.state.error && this.state.error.toString())}
-            </pre>
-            <details className="mt-4 text-sm text-gray-700">
-              {this.state.info && this.state.info.componentStack}
-            </details>
-          </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
+import "./index.css"; // keep your global css import if present
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,97 +18,68 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <ErrorBoundary>
-        <div className="font-sans scroll-smooth">
-          {/* Navbar */}
-          <header
-            className={`fixed w-full z-50 transition-all duration-500 ${
-              scrolled
-                ? "bg-gradient-to-r from-teal-500 via-purple-600 to-indigo-600 shadow-lg"
-                : "bg-transparent"
-            }`}
-          >
-            <nav className="max-w-6xl mx-auto flex justify-center items-center py-6">
-              <div className="space-x-8 font-medium">
-                <a href="#about" className="text-white hover:text-gray-200 transition">
-                  About
-                </a>
-                <a href="#skills" className="text-white hover:text-gray-200 transition">
-                  Skills
-                </a>
-                <a href="#featured" className="text-white hover:text-gray-200 transition">
-                  Featured work
-                </a>
-                <a href="#experience" className="text-white hover:text-gray-200 transition">
-                  Experience
-                </a>
-                <a href="#testimonials" className="text-white hover:text-gray-200 transition">
-                  Testimonials
-                </a>
-                <a href="#contact" className="text-white hover:text-gray-200 transition">
-                  Contact
-                </a>
-              </div>
-            </nav>
-          </header>
+    <div className="font-sans scroll-smooth">
+      {/* Navbar */}
+      <header
+        className={`fixed w-full z-50 transition-all duration-500 ${
+          scrolled ? "bg-gradient-to-r from-teal-500 via-purple-600 to-indigo-600 shadow-lg" : "bg-transparent"
+        }`}
+      >
+        <nav className="max-w-6xl mx-auto flex justify-center items-center py-6">
+          <div className="space-x-8 font-medium">
+            <a href="#about" className="text-white hover:text-gray-200 transition">About</a>
+            <a href="#skills" className="text-white hover:text-gray-200 transition">Skills</a>
+            <a href="#featured" className="text-white hover:text-gray-200 transition">Featured work</a>
+            <a href="#experience" className="text-white hover:text-gray-200 transition">Experience</a>
+            <a href="#testimonials" className="text-white hover:text-gray-200 transition">Testimonials</a>
+            <a href="#contact" className="text-white hover:text-gray-200 transition">Contact</a>
+          </div>
+        </nav>
+      </header>
 
-          <main>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Hero />
-                    <About />
-                    <Skills />
-                    <Featured />
-                    {/* Experience Section */}
-                    <section id="experience" className="py-20 px-6 bg-white text-center">
-                      <h2 className="text-4xl font-bold mb-6">Experience</h2>
-                      <div className="max-w-4xl mx-auto space-y-6 text-left">
-                        <div className="p-6 bg-gray-50 rounded-lg shadow">
-                          <h3 className="text-2xl font-semibold">Principal UX Designer — Dell Technologies</h3>
-                          <p className="text-gray-600 mt-2">
-                            Led UX for enterprise-scale products including award-winning Digital Entry Point,
-                            Unified Portal, and Virtual Assistant, delivering measurable impact across efficiency,
-                            adoption, and cost savings.
-                          </p>
-                        </div>
-                      </div>
-                    </section>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Featured />
 
-                    {/* Testimonials */}
-                    <section id="testimonials" className="py-20 bg-white text-center">
-                      <h2 className="text-4xl font-bold mb-12">Testimonials</h2>
-                      <div className="max-w-4xl mx-auto space-y-8">
-                        <blockquote className="p-6 bg-gray-50 rounded-lg shadow italic">
-                          "Narasimha consistently delivers high-quality design work—even on tight timelines—without ever compromising on excellence."
-                          <span className="block mt-2 font-semibold">— Todd Boyum</span>
-                        </blockquote>
-                      </div>
-                    </section>
+        {/* Experience Section */}
+        <section id="experience" className="py-20 px-6 bg-white text-center">
+          <h2 className="text-4xl font-bold mb-6">Experience</h2>
+          <div className="max-w-4xl mx-auto space-y-6 text-left">
+            <div className="p-6 bg-gray-50 rounded-lg shadow">
+              <h3 className="text-2xl font-semibold">
+                Principal UX Designer — Dell Technologies
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Led UX for enterprise-scale products including award-winning Digital
+                Entry Point, Unified Portal, and Virtual Assistant, delivering
+                measurable impact across efficiency, adoption, and cost savings.
+              </p>
+            </div>
+          </div>
+        </section>
 
-                    {/* Contact */}
-                    <section id="contact" className="py-20 bg-gradient-to-r from-teal-500 to-indigo-600 text-white text-center">
-                      <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
-                      <p className="text-lg mb-4">I’m always open to new opportunities, collaborations, and design conversations.</p>
-                      <a href="mailto:bhatnarasimha1991@gmail.com" className="text-lg font-semibold hover:underline">
-                        bhatnarasimha1991@gmail.com
-                      </a>
-                    </section>
-                  </>
-                }
-              />
+        {/* Testimonials */}
+        <section id="testimonials" className="py-20 bg-white text-center">
+          <h2 className="text-4xl font-bold mb-12">Testimonials</h2>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <blockquote className="p-6 bg-gray-50 rounded-lg shadow italic">
+              "Narasimha consistently delivers high-quality design work—even on tight timelines—without ever compromising on excellence."
+              <span className="block mt-2 font-semibold">— Todd Boyum</span>
+            </blockquote>
+          </div>
+        </section>
 
-              {/* Detail Pages */}
-              <Route path="/dep-detail" element={<DepDetail />} />
-              <Route path="/upe-detail" element={<UpeDetail />} />
-              <Route path="/va-detail" element={<VaDetail />} />
-            </Routes>
-          </main>
-        </div>
-      </ErrorBoundary>
-    </Router>
+        {/* Contact */}
+        <section id="contact" className="py-20 bg-gradient-to-r from-teal-500 to-indigo-600 text-white text-center">
+          <h2 className="text-4xl font-bold mb-6">Let’s Connect</h2>
+          <p className="text-lg mb-4">I’m always open to new opportunities, collaborations, and design conversations.</p>
+          <a href="mailto:bhatnarasimha1991@gmail.com" className="text-lg font-semibold hover:underline">
+            bhatnarasimha1991@gmail.com
+          </a>
+        </section>
+      </main>
+    </div>
   );
 }
