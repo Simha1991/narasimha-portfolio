@@ -23,49 +23,65 @@ export default function About() {
         {/* Two-column layout for cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Key Achievements Card */}
-          <div className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
-                          bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
-                          border border-white/40">
+          <div
+            className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
+                       bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
+                       border border-white/40"
+          >
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">Key Achievements</h3>
-            <ul className="space-y-6 text-left text-gray-800">
+            <ul className="space-y-6 text-left text-gray-700">
               <li>
-                <p className="font-bold text-gray-900">Digital Entry Point</p>
+                <p className="font-bold text-gray-800">Digital Entry Point</p>
                 <p>
                   Award-winning product that saved <strong>$37M+</strong> and redefined
                   the customer device lifecycle.
                 </p>
               </li>
               <li>
-                <p className="font-bold text-gray-900">Unified Portal</p>
-                <p>Led research and design for a consolidated enterprise hub, simplifying customer experiences.</p>
+                <p className="font-bold text-gray-800">Unified Portal</p>
+                <p>
+                  Led research and design for a consolidated enterprise hub,
+                  simplifying customer experiences.
+                </p>
               </li>
               <li>
-                <p className="font-bold text-gray-900">Virtual Assistant</p>
-                <p>Scaled Dell’s AI-powered conversational design, reducing self-service start time by <strong>71%</strong>.</p>
+                <p className="font-bold text-gray-800">Virtual Assistant</p>
+                <p>
+                  Scaled Dell’s AI-powered conversational design, reducing
+                  self-service start time by <strong>71%</strong>.
+                </p>
               </li>
             </ul>
           </div>
 
           {/* Recognition & Awards Card */}
-          <div className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
-                          bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
-                          border border-white/40">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Recognition & Awards</h3>
-            <ul className="space-y-6 text-left text-gray-800">
+          <div
+            className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
+                       bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
+                       border border-white/40"
+          >
+            <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+              Recognition & Awards
+            </h3>
+            <ul className="space-y-6 text-left text-gray-700">
               <li>
-                <p className="font-bold text-gray-900">President’s Award — Digital Entry Point (DEP)</p>
+                <p className="font-bold text-gray-800">
+                  President’s Award — Digital Entry Point (DEP)
+                </p>
                 <p>Dell’s highest recognition for innovation and business impact.</p>
               </li>
               <li>
-                <p className="font-bold text-gray-900">Dell Award for Innovation — Design Libraries</p>
+                <p className="font-bold text-gray-800">
+                  Dell Award for Innovation — Design Libraries
+                </p>
                 <p>Recognized for creating scalable design systems.</p>
               </li>
               <li>
-                <p className="font-bold text-gray-900">NN/g Certified UX Designer</p>
+                <p className="font-bold text-gray-800">NN/g Certified UX Designer</p>
                 <p>Industry’s most respected UX certification.</p>
               </li>
               <li>
-                <p className="font-bold text-gray-900">Rising Leader at Dell (RLD)</p>
+                <p className="font-bold text-gray-800">Rising Leader at Dell (RLD)</p>
                 <p>Selected for Dell’s high-potential leadership program.</p>
               </li>
             </ul>
