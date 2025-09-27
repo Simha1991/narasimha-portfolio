@@ -3,16 +3,11 @@ import React, { useEffect } from "react";
 
 export default function Featured() {
   useEffect(() => {
-    // Initialize Swiper when component mounts
     const swiper = new window.Swiper(".mySwiper", {
-      slidesPerView: 1.2, // show 1 card + peek of next
+      slidesPerView: 1.05, // main card ~95%, reveal ~5%
       spaceBetween: 30,
-      centeredSlides: false,
       grabCursor: true,
       loop: false,
-      breakpoints: {
-        1024: { slidesPerView: 1.5 }, // wider peek on desktop
-      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -37,9 +32,9 @@ export default function Featured() {
                             bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
                             border border-white/40">
               <img
-                src={`${import.meta.env.BASE_URL}images/digital-entry-point.png`}
+                src={`${import.meta.env.BASE_URL}images/dep.png`}
                 alt="Digital Entry Point"
-                className="w-full md:w-1/2 rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
+                className="w-full md:w-1/2 h-64 object-cover rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
               />
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Digital Entry Point (DEP)</h3>
@@ -67,7 +62,7 @@ export default function Featured() {
               <img
                 src={`${import.meta.env.BASE_URL}images/upe.jpg`}
                 alt="Unified Portal Experience"
-                className="w-full md:w-1/2 rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
+                className="w-full md:w-1/2 h-64 object-cover rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
               />
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Unified Portal Experience (UPE)</h3>
@@ -92,9 +87,9 @@ export default function Featured() {
                             bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
                             border border-white/40">
               <img
-                src={`${import.meta.env.BASE_URL}images/virtual-assistant.jpg`}
+                src={`${import.meta.env.BASE_URL}images/va.jpg`}
                 alt="Virtual Assistant"
-                className="w-full md:w-1/2 rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
+                className="w-full md:w-1/2 h-64 object-cover rounded-xl shadow-md mb-6 md:mb-0 md:mr-8"
               />
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">Virtual Assistant (VA)</h3>
@@ -113,7 +108,7 @@ export default function Featured() {
           </div>
         </div>
 
-        {/* Navigation buttons + Pagination */}
+        {/* Nav + Pagination */}
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
         <div className="swiper-pagination mt-6"></div>
