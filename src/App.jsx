@@ -7,9 +7,9 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Featured from "./components/Featured";
 
-import DEPDetail from "./pages/DEPDetail";
-import UPEDetail from "./pages/UPEDetail";
-import VADetail from "./pages/VADetail";
+import DepDetail from "./pages/DepDetail";
+import UpeDetail from "./pages/UpeDetail";
+import VaDetail from "./pages/VaDetail";
 
 import "./index.css";
 
@@ -130,9 +130,9 @@ export default function App() {
             />
 
             {/* Detail Pages */}
-            <Route path="/dep" element={<DEPDetail />} />
-            <Route path="/upe" element={<UPEDetail />} />
-            <Route path="/va" element={<VADetail />} />
+            <Route path="/dep" element={<DepDetail />} />
+            <Route path="/upe" element={<UpeDetail />} />
+            <Route path="/va" element={<VaDetail />} />
           </Routes>
         </main>
       </div>
