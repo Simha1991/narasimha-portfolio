@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 /* Simple, dependency-free carousel */
 export default function Featured() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const slides = [
     {
       id: "dep",
@@ -166,6 +167,14 @@ export default function Featured() {
       </div>
     </section>
 =======
+=======
+  return (
+    <>
+      {/* Featured Section */}
+      <section id="featured" className="py-20 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold mb-12">Featured Work</h2>
+
+>>>>>>> parent of 3317e39 (Update Featured.jsx)
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
@@ -292,6 +301,9 @@ export default function Featured() {
       </section>
       {/* Featured Section Ends */}
     </>
+<<<<<<< HEAD
+>>>>>>> parent of 3317e39 (Update Featured.jsx)
+=======
 >>>>>>> parent of 3317e39 (Update Featured.jsx)
   );
 }
