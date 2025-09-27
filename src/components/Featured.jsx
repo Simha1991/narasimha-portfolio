@@ -18,6 +18,7 @@ export default function Featured() {
       impact: "Earned President's Award for innovation, delivering $37M+ savings and $21M+ in renewal opportunities.",
       pills: ["mobile-first design", "enterprise design", "innovation"],
       img: `${import.meta.env.BASE_URL}images/dep.png`,
+      gradient: "from-sky-200 via-cyan-200 to-blue-300",
     },
     {
       id: "upe",
@@ -27,6 +28,7 @@ export default function Featured() {
       impact: "Built a unified dashboard (service events, lifecycle, fleet health, notifications). Preparing for production rollout.",
       pills: ["information architecture", "enterprise design", "dashboard design"],
       img: `${import.meta.env.BASE_URL}images/upe.jpg`,
+      gradient: "from-purple-200 via-indigo-200 to-pink-200",
     },
     {
       id: "va",
@@ -36,6 +38,7 @@ export default function Featured() {
       impact: "Enhanced AI-driven support, improving self-service start time by 71% with 99% success probability.",
       pills: ["conversational design", "design system", "AI"],
       img: `${import.meta.env.BASE_URL}images/va.jpg`,
+      gradient: "from-emerald-200 via-teal-200 to-green-300",
     },
   ];
 
@@ -55,20 +58,21 @@ export default function Featured() {
         >
           {slides.map((s) => (
             <SwiperSlide key={s.id}>
-              <div className="flex flex-col md:flex-row items-stretch bg-gradient-to-tr from-teal-200/50 via-purple-200/50 to-pink-200/50 rounded-2xl shadow-xl overflow-hidden h-[500px]">
-                
-                {/* Image Side with Glassmorphism */}
-                <div className="w-full md:w-1/2 relative flex items-center justify-center p-6">
-                  <div className="absolute inset-0 bg-white/30 backdrop-blur-md border-r border-white/40" />
+              {/* Full card gradient with slide-specific colors */}
+              <div
+                className={`flex flex-col md:flex-row items-stretch bg-gradient-to-tr ${s.gradient} rounded-2xl shadow-xl overflow-hidden h-[500px]`}
+              >
+                {/* Image Side */}
+                <div className="w-full md:w-1/2 flex items-center justify-center p-6">
                   <img
                     src={s.img}
                     alt={s.title}
-                    className="relative z-10 max-h-[400px] w-auto object-contain"
+                    className="max-h-[400px] w-auto object-contain rounded-lg shadow-lg"
                   />
                 </div>
 
-                {/* Content Side */}
-                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center bg-white/60 backdrop-blur-sm">
+                {/* Content Side with frosted overlay */}
+                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center bg-white/60 backdrop-blur-sm rounded-l-2xl md:rounded-l-none">
                   <h3 className="text-3xl font-semibold text-gray-900 mb-2">{s.title}</h3>
                   <h4 className="text-lg text-indigo-700 mb-4">{s.subtitle}</h4>
                   <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
@@ -89,7 +93,7 @@ export default function Featured() {
                     {s.impact}
                   </blockquote>
 
-                  {/* Secondary Button (hug text size only) */}
+                  {/* Secondary Button */}
                   <Link
                     to={`/${s.id}-detail`}
                     className="self-start px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition"
