@@ -1,7 +1,8 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/narasimha-portfolio/', // 👈 important for GitHub Pages
-})
+  base: mode === 'production' ? '/narasimha-portfolio/' : '/', // ✅ base only in prod
+}))
