@@ -73,7 +73,10 @@ export default function Experience() {
       id="experience"
       className="relative py-20 bg-gradient-to-br from-teal-500 via-green-400 to-green-600 text-white"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold drop-shadow-lg">Experience & Impact</h2>
@@ -82,8 +85,8 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Horizontal Tabs */}
-        <div className="flex justify-center gap-6 mb-10 border-b border-white/20">
+        {/* Horizontal Tabs with more spacing */}
+        <div className="flex justify-center gap-10 mb-10 border-b border-white/20">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -102,7 +105,7 @@ export default function Experience() {
         {/* Glassmorphism Card */}
         <div
           ref={cardRef}
-          className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-300"
+          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-300"
           style={{ minHeight: cardHeight }}
         >
           <h3 className="text-2xl font-semibold mb-6">{content[activeTab].title}</h3>
