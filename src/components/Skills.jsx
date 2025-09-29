@@ -5,9 +5,12 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 px-6 bg-gradient-to-br from-teal-400 via-blue-500 to-purple-600 text-white"
+      className="relative py-20 px-6 bg-gradient-to-br from-teal-400 via-blue-500 to-purple-600 text-white"
     >
-      <div className="max-w-6xl mx-auto text-center mb-16">
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">A decade of design excellence</h2>
         <p className="text-lg text-gray-100">
           From technical foundations to design leadership, I bring a unique blend of
@@ -15,7 +18,7 @@ function Skills() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="relative grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Core UX Expertise */}
         <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
           <div className="flex items-center mb-4">
