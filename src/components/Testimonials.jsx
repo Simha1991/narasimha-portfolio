@@ -1,5 +1,5 @@
 // src/components/Testimonials.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const testimonials = [
   {
@@ -24,6 +24,8 @@ const testimonials = [
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const intervalRef = useRef(null);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -33,24 +35,39 @@ export default function Testimonials() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  useEffect(() => {
+    // Clear any existing interval
+    if (intervalRef.current) clearInterval(intervalRef.current);
+
+    // Only set interval if not hovered
+    if (!isHovered) {
+      intervalRef.current = setInterval(() => {
+        nextTestimonial();
+      }, 5000);
+    }
+
+    return () => clearInterval(intervalRef.current);
+  }, [isHovered, currentIndex]);
+
   return (
     <section
       id="testimonials"
-      className="relative py-20 text-white"
+      className="relative py-20 bg-white text-gray-900"
     >
-      {/* Dark overlay behind entire section */}
-      <div className="absolute inset-0 bg-black/30"></div>
-
       <div className="relative max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-5xl font-bold drop-shadow-lg mb-6">What People Say</h2>
-        <p className="text-lg text-white/80 mb-12">
+        <h2 className="text-5xl font-bold mb-6">What People Say</h2>
+        <p className="text-lg text-gray-700 mb-12">
           Collaborators and peers share their experience working with me on impactful projects.
         </p>
 
         {/* Testimonial Card */}
-        <div className="relative">
+        <div
+          className="relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <div
-            className={`backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl bg-gradient-to-br ${testimonials[currentIndex].bgGradient}`}
+            className={`backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl bg-gradient-to-br ${testimonials[currentIndex].bgGradient} hover:animate-gradient-shift`}
           >
             <div className="bg-black/40 rounded-lg p-6">
               <p className="text-white/90 text-lg mb-6 leading-relaxed">"{testimonials[currentIndex].text}"</p>
@@ -64,13 +81,13 @@ export default function Testimonials() {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white text-3xl font-bold px-3"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 text-3xl font-bold px-3"
           >
             ‹
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white text-3xl font-bold px-3"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 text-3xl font-bold px-3"
           >
             ›
           </button>
@@ -82,7 +99,7 @@ export default function Testimonials() {
             <button
               key={idx}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex === idx ? "bg-white" : "bg-white/40"
+                currentIndex === idx ? "bg-gray-900" : "bg-gray-400"
               }`}
               onClick={() => setCurrentIndex(idx)}
             />
