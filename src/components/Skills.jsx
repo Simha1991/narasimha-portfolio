@@ -20,7 +20,7 @@ function Skills() {
 
       <div className="relative grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Core UX Expertise */}
-        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
+        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
           <div className="flex items-center mb-4">
             <span className="text-3xl mr-3">🧠</span>
             <h3 className="text-2xl font-semibold text-white">Core UX Expertise</h3>
@@ -36,7 +36,7 @@ function Skills() {
         </div>
 
         {/* Special Strengths */}
-        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
+        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
           <div className="flex items-center mb-4">
             <span className="text-3xl mr-3">⚡</span>
             <h3 className="text-2xl font-semibold text-white">Special Strengths</h3>
@@ -52,7 +52,7 @@ function Skills() {
         </div>
 
         {/* Tools & Technologies */}
-        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition">
+        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
           <div className="flex items-center mb-4">
             <span className="text-3xl mr-3">🎨</span>
             <h3 className="text-2xl font-semibold text-white">Tools & Technologies</h3>
