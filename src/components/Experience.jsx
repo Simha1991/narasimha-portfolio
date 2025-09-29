@@ -13,7 +13,8 @@ export default function Experience() {
 
   const content = {
     principal: {
-      title: "Principal User Interface Designer — Dell Technologies (2021 – Present)",
+      title: "Principal User Interface Designer — Dell Technologies",
+      years: "2021 – Present",
       body: [
         "Spearheaded the UX vision for enterprise-scale platforms, including <strong>Digital Entry Point (DEP)</strong>, the <strong>Unified Portal Experience (UPE)</strong>, and AI-powered <strong>Virtual Assistant (VA)</strong>, delivering measurable results such as $37M+ cost savings.",
         "Defined end-to-end design strategies — from <strong>research and storyboarding</strong> to <strong>high-fidelity prototypes</strong>, ensuring adoption of a mobile-first and scalable approach.",
@@ -21,7 +22,8 @@ export default function Experience() {
       ]
     },
     senior: {
-      title: "Senior User Interface Designer — Dell Technologies (2019 – 2021)",
+      title: "Senior User Interface Designer — Dell Technologies",
+      years: "2019 – 2021",
       body: [
         "Redesigned legacy enterprise dashboards into a unified, intuitive experience that streamlined customer journeys and enhanced task efficiency.",
         "Implemented scalable design systems based on <strong>DDS 2.0</strong> and <strong>atomic design principles</strong>, enabling reusability and faster development.",
@@ -29,7 +31,8 @@ export default function Experience() {
       ]
     },
     designer: {
-      title: "UI Designer & Front-End Developer — Dell Technologies (2016 – 2019)",
+      title: "UI Designer & Front-End Developer — Dell Technologies",
+      years: "2016 – 2019",
       body: [
         "Combined <strong>UI design expertise with front-end development</strong> to deliver seamless customer-facing experiences.",
         "Created interactive prototypes, coded responsive UIs, and optimized accessibility across Dell’s enterprise products.",
@@ -37,7 +40,8 @@ export default function Experience() {
       ]
     },
     robotics: {
-      title: "Robotics Developer — LimberLink Technologies (2012 – 2016)",
+      title: "Robotics Developer — LimberLink Technologies",
+      years: "2012 – 2016",
       body: [
         "Led a <strong>10-member engineering team</strong> in designing and developing robots powered by <strong>microcontrollers</strong>, building automation workflows and control systems for complex industrial tasks.",
         "Partnered on <strong>industry-grade robotics projects</strong>, scaling prototypes into production-ready systems.",
@@ -46,12 +50,11 @@ export default function Experience() {
     }
   };
 
-  // Estimate tallest card height on mount
+  // Estimate tallest card height
   const [cardHeight, setCardHeight] = useState(0);
 
   useEffect(() => {
-    // Estimate using the tallest content (Principal tab seems longest)
-    setCardHeight(360); // adjust this number if needed based on content
+    setCardHeight(360); // adjust based on content
   }, []);
 
   return (
@@ -93,7 +96,15 @@ export default function Experience() {
           className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
           style={{ height: `${cardHeight}px` }}
         >
-          <h3 className="text-2xl font-semibold mb-6">{content[activeTab].title}</h3>
+          {/* Title row with year range pill */}
+          <div className="flex justify-between items-start mb-6">
+            <h3 className="text-2xl font-semibold">{content[activeTab].title}</h3>
+            <span className="px-4 py-1 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm">
+              {content[activeTab].years}
+            </span>
+          </div>
+
+          {/* Content List */}
           <ul className="space-y-4 text-white/90 leading-relaxed">
             {content[activeTab].body.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
