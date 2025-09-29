@@ -69,7 +69,7 @@ export default function App() {
                   <About />
                   <Skills />
                   <Featured />
-                  <Experienced />
+                  <Experience />
                   {/* other sections */}
                 </>
               }
