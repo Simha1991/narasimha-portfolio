@@ -7,6 +7,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Featured from "./components/Featured";
 import Experience from "./components/Experience";
+import Testimonials from "./components/Testimonials";
 
 import DepDetail from "./pages/DepDetail";
 import UpeDetail from "./pages/UpeDetail";
@@ -70,6 +71,7 @@ export default function App() {
                   <Skills />
                   <Featured />
                   <Experience />
+                  <Testimonials />
                   {/* other sections */}
                 </>
               }
