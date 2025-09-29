@@ -1,10 +1,8 @@
 // src/components/Experience.jsx
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState("principal");
-  const [cardHeight, setCardHeight] = useState(0);
-  const cardRef = useRef(null);
 
   const tabs = [
     { id: "principal", label: "Principal UI Designer" },
@@ -48,24 +46,12 @@ export default function Experience() {
     }
   };
 
-  // Calculate tallest card content on mount
+  // Estimate tallest card height on mount
+  const [cardHeight, setCardHeight] = useState(0);
+
   useEffect(() => {
-    if (cardRef.current) {
-      const maxHeight = Math.max(
-        ...Object.values(content).map((c) => {
-          const div = document.createElement("div");
-          div.style.visibility = "hidden";
-          div.style.position = "absolute";
-          div.style.width = cardRef.current.offsetWidth + "px";
-          div.innerHTML = `<h3>${c.title}</h3><ul>${c.body.map(p => `<li>${p}</li>`).join('')}</ul>`;
-          document.body.appendChild(div);
-          const h = div.offsetHeight;
-          document.body.removeChild(div);
-          return h;
-        })
-      );
-      setCardHeight(maxHeight);
-    }
+    // Estimate using the tallest content (Principal tab seems longest)
+    setCardHeight(360); // adjust this number if needed based on content
   }, []);
 
   return (
@@ -102,11 +88,10 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Glassmorphism Card with hover effect */}
+        {/* Glassmorphism Card with fixed height & smooth transition */}
         <div
-          ref={cardRef}
-          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
-          style={{ minHeight: cardHeight }}
+          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
+          style={{ height: `${cardHeight}px` }}
         >
           <h3 className="text-2xl font-semibold mb-6">{content[activeTab].title}</h3>
           <ul className="space-y-4 text-white/90 leading-relaxed">
