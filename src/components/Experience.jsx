@@ -85,7 +85,7 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Horizontal Tabs with more spacing */}
+        {/* Horizontal Tabs */}
         <div className="flex justify-center gap-10 mb-10 border-b border-white/20">
           {tabs.map((tab) => (
             <button
@@ -102,10 +102,10 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Glassmorphism Card */}
+        {/* Glassmorphism Card with hover effect */}
         <div
           ref={cardRef}
-          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-300"
+          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
           style={{ minHeight: cardHeight }}
         >
           <h3 className="text-2xl font-semibold mb-6">{content[activeTab].title}</h3>
