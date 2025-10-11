@@ -57,40 +57,40 @@ const Contact = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
 
           <div className="space-y-4 text-gray-800">
-            <div>
-              <p className="font-semibold">📍 Location</p>
-              <p>Mangaluru, Karnataka, India</p>
-            </div>
+  <div>
+    <p className="font-semibold">📍 Location</p>
+    <p>Mangaluru, Karnataka, India</p>
+  </div>
 
-            <div>
-              <p className="font-semibold">📧 Email</p>
-              <a href="mailto:bhatnarasimha1991@gmail.com" className="text-teal-600 hover:underline">
-                bhatnarasimha1991@gmail.com
-              </a>
-            </div>
+  <div>
+    <p className="font-semibold">📧 Email</p>
+    <a href="mailto:bhatnarasimha1991@gmail.com" className="text-teal-600 hover:underline">
+      bhatnarasimha1991@gmail.com
+    </a>
+  </div>
 
-            <div>
-              <p className="font-semibold">📞 Phone</p>
-              <a href="tel:+917899745213" className="text-teal-600 hover:underline">
-                +91 7899745213
-              </a>
-            </div>
+  <div>
+    <p className="font-semibold">📞 Phone</p>
+    <a href="tel:+917899745213" className="text-teal-600 hover:underline">
+      +91 7899745213
+    </a>
+  </div>
 
-            <div className="pt-4">
-              <p className="font-semibold mb-2">🌐 Connect Online</p>
-              <div className="flex space-x-4">
-                <a href="https://www.linkedin.com/in/bhatnarasimha" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                  <i className="fab fa-linkedin text-2xl text-teal-600"></i>
-                </a>
-                <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                  <i className="fab fa-twitter text-2xl text-teal-600"></i>
-                </a>
-                <a href="https://www.figma.com/@yourhandle" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                  <i className="fab fa-figma text-2xl text-teal-600"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+  <div>
+    <p className="font-semibold">X</p>
+    <a href="https://twitter.com/yourXID" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
+      @yourXID
+    </a>
+  </div>
+
+  <div>
+    <p className="font-semibold">LinkedIn</p>
+    <a href="https://www.linkedin.com/in/bhatnarasimha" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
+      linkedin.com/in/bhatnarasimha
+    </a>
+  </div>
+</div>
+
         </div>
 
         {/* Right: Send a Message */}
