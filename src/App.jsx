@@ -29,7 +29,6 @@ export default function App() {
   return (
     <BrowserRouter basename="/narasimha-portfolio">
       <div className="font-sans scroll-smooth">
-         <CanvasBackground /> {/* Snake background */}
         {/* Navbar */}
         <header
           className={`fixed w-full z-50 transition-all duration-500 ${
