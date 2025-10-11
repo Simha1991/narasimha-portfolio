@@ -1,28 +1,41 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
-    setStatusMessage("");
 
     emailjs
       .sendForm("service_p53re7t", "template_yfmuemi", form.current, "zSu7tCtYybXQOiwdj")
       .then(
-        (result) => {
-          console.log(result.text);
-          setStatusMessage("✅ Message sent successfully!");
+        () => {
+          toast.success("✅ Message sent successfully!", {
+            duration: 4000,
+            style: {
+              background: "#10B981",
+              color: "#fff",
+              borderRadius: "10px",
+              fontWeight: 500,
+            },
+          });
           setIsSending(false);
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
-          setStatusMessage("❌ Failed to send message. Please try again.");
+        () => {
+          toast.error("❌ Failed to send message. Please try again.", {
+            duration: 4000,
+            style: {
+              background: "#EF4444",
+              color: "#fff",
+              borderRadius: "10px",
+              fontWeight: 500,
+            },
+          });
           setIsSending(false);
         }
       );
@@ -33,11 +46,13 @@ const Contact = () => {
       id="contact"
       className="relative py-20 bg-gradient-to-b from-white via-white/70 to-gray-100/50"
     >
+      {/* Add toaster container */}
+      <Toaster position="bottom-center" reverseOrder={false} />
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,150,136,0.1),transparent_60%)]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
-        {/* Left side: Get in Touch */}
+        {/* Left: Get in Touch */}
         <div className="backdrop-blur-xl bg-white/40 border border-white/20 rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
 
@@ -78,7 +93,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right side: Send a Message */}
+        {/* Right: Send a Message */}
         <div className="backdrop-blur-xl bg-white/40 border border-white/20 rounded-2xl p-8 shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Send a Message</h2>
           <form ref={form} onSubmit={sendEmail} className="space-y-5">
@@ -140,10 +155,6 @@ const Contact = () => {
             >
               {isSending ? "Sending..." : "Send Message"}
             </button>
-
-            {statusMessage && (
-              <p className="text-center mt-2 text-sm text-gray-700">{statusMessage}</p>
-            )}
           </form>
         </div>
       </div>
