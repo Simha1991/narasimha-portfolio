@@ -1,70 +1,98 @@
 // src/components/CanvasBackground.jsx
 import React, { useEffect, useRef } from "react";
 
-export default function CanvasBackground({ snakeCount = 3 }) {
+export default function CanvasBackground({ snakeCount = 5 }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+
+    // Resize canvas to Hero size
+    const resizeCanvas = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     const gridSize = 20;
+
+    // Utility: random pastel color for aesthetic snakes
+    const randomColor = () => `hsl(${Math.random() * 360}, 70%, 65%)`;
 
     // Initialize snakes
     const snakes = [];
     for (let i = 0; i < snakeCount; i++) {
       snakes.push({
-        body: [{ x: Math.floor(Math.random() * (canvas.width / gridSize)), y: Math.floor(Math.random() * (canvas.height / gridSize)) }],
-        color: `hsl(${Math.random() * 360}, 70%, 50%)`, // unique color per snake
-        cake: { x: Math.floor(Math.random() * (canvas.width / gridSize)), y: Math.floor(Math.random() * (canvas.height / gridSize)) },
+        body: [
+          {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+          },
+        ],
+        color: randomColor(),
+        cake: {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+        },
+        speed: 1 + Math.random() * 1.5, // pixels per frame
       });
     }
 
     function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Slight fade for trailing effect
+      ctx.fillStyle = "rgba(0,0,0,0.15)"; 
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       snakes.forEach((snake) => {
         const head = { ...snake.body[0] };
 
-        // Move head toward cake
-        if (head.x < snake.cake.x) head.x += 1;
-        else if (head.x > snake.cake.x) head.x -= 1;
-        if (head.y < snake.cake.y) head.y += 1;
-        else if (head.y > snake.cake.y) head.y -= 1;
+        // Vector towards cake
+        const dx = snake.cake.x - head.x;
+        const dy = snake.cake.y - head.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 1) {
+          head.x += (dx / dist) * snake.speed;
+          head.y += (dy / dist) * snake.speed;
+        }
 
         snake.body.unshift(head);
 
-        // Check if cake eaten
-        if (head.x === snake.cake.x && head.y === snake.cake.y) {
-          snake.cake = { x: Math.floor(Math.random() * (canvas.width / gridSize)), y: Math.floor(Math.random() * (canvas.height / gridSize)) };
+        // Check if cake reached
+        if (dist < 5) {
+          snake.cake = {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+          };
         } else {
           snake.body.pop();
         }
 
         // Draw cake
         ctx.fillStyle = "#FBBF24";
-        ctx.fillRect(snake.cake.x * gridSize, snake.cake.y * gridSize, gridSize, gridSize);
+        ctx.beginPath();
+        ctx.arc(snake.cake.x, snake.cake.y, gridSize / 2, 0, Math.PI * 2);
+        ctx.fill();
 
-        // Draw snake
-        ctx.fillStyle = snake.color;
-        snake.body.forEach((segment) => ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize));
+        // Draw snake with smooth gradient trail
+        for (let i = 0; i < snake.body.length; i++) {
+          const alpha = 1 - i / snake.body.length; // fading trail
+          ctx.fillStyle = snake.color.replace("hsl", `hsla`).replace(")", `, ${alpha})`);
+          ctx.beginPath();
+          ctx.arc(snake.body[i].x, snake.body[i].y, gridSize / 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
       });
     }
 
-    const interval = setInterval(draw, 100);
-
-    const handleResize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+    const animate = () => {
+      draw();
+      requestAnimationFrame(animate);
     };
-    window.addEventListener("resize", handleResize);
+    animate();
 
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", resizeCanvas);
   }, [snakeCount]);
 
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full pointer-events-none" />;
