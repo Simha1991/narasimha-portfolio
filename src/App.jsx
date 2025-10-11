@@ -9,6 +9,7 @@ import Featured from "./components/Featured";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import CanvasBackground from "./components/CanvasBackground";
 
 import DepDetail from "./pages/DepDetail";
 import UpeDetail from "./pages/UpeDetail";
@@ -28,6 +29,7 @@ export default function App() {
   return (
     <BrowserRouter basename="/narasimha-portfolio">
       <div className="font-sans scroll-smooth">
+         <CanvasBackground /> {/* Snake background */}
         {/* Navbar */}
         <header
           className={`fixed w-full z-50 transition-all duration-500 ${
