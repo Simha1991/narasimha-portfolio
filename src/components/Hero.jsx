@@ -17,7 +17,7 @@ export default function Hero() {
              bg-gradient-to-b from-teal-500 via-purple-600 to-indigo-700 text-white px-6
              pt-32"
       >
-        <CanvasBackground />
+        <CanvasBackground snakeCount={3} />
         {/* headshot + gradient ring */}
         <div className="mb-6">
           <div
