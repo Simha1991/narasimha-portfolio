@@ -78,14 +78,14 @@ const Contact = () => {
 
   <div>
     <p className="font-semibold">X</p>
-    <a href="https://twitter.com/yourXID" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
+    <a href="https://x.com/IaMSimha007" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
       https://x.com/IaMSimha007
     </a>
   </div>
 
   <div>
     <p className="font-semibold">LinkedIn</p>
-    <a href="https://www.linkedin.com/in/bhatnarasimha" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
+    <a href="https://www.linkedin.com/in/narasimha-bhat/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline">
       https://www.linkedin.com/in/narasimha-bhat/
     </a>
   </div>
