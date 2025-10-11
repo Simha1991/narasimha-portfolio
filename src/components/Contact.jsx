@@ -59,7 +59,9 @@ const Contact = () => {
           <div className="space-y-4 text-gray-800">
   <div>
     <p className="font-semibold">📍 Location</p>
-    <p>Mangaluru, Karnataka, India</p>
+    <a href="https://maps.app.goo.gl/NCySbXLRSLBgrV8o7" className="text-teal-600 hover:underline">
+          Mangaluru, Karnataka, India
+    </a>
   </div>
 
   <div>
