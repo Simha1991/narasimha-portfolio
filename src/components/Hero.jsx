@@ -1,5 +1,7 @@
 // src/components/Hero.jsx
 import React from "react";
+import CanvasBackground from "./CanvasBackground";
+
 
 /* Hero Section */
 export default function Hero() {
