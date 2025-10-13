@@ -77,30 +77,49 @@ const Contact = () => {
                 bhatnarasimha1991@gmail.com
               </a>
             </div>
+{/* X (formerly Twitter) */}
+<div className="flex items-center space-x-3">
+  <span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className="w-5 h-5 fill-current text-white"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H17.52l-5.482-7.182-6.272 7.182H2.457l7.73-8.86L1.953 2.25h6.948l4.944 6.56z" />
+    </svg>
+  </span>
+  <a
+    href="https://twitter.com/IaMSimha007"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    @IaMSimha007
+  </a>
+</div>
 
-            <div>
-              <p className="font-semibold">X</p>
-              <a
-                href="https://x.com/IaMSimha007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400 hover:underline"
-              >
-                https://x.com/IaMSimha007
-              </a>
-            </div>
+{/* LinkedIn */}
+<div className="flex items-center space-x-3">
+  <span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className="w-5 h-5 fill-current text-white"
+    >
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z" />
+    </svg>
+  </span>
+  <a
+    href="https://www.linkedin.com/in/narasimha-bhat"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    /in/narasimha-bhat
+  </a>
+</div>
 
-            <div>
-              <p className="font-semibold">LinkedIn</p>
-              <a
-                href="https://www.linkedin.com/in/narasimha-bhat/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400 hover:underline"
-              >
-                https://www.linkedin.com/in/narasimha-bhat/
-              </a>
-            </div>
+          
           </div>
         </div>
 
