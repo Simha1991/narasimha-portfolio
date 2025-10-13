@@ -5,10 +5,10 @@ export default function Experience() {
   const [activeTab, setActiveTab] = useState("principal");
 
   const tabs = [
-    { id: "principal", label: "Principal UI Designer" },
-    { id: "senior", label: "Senior UI Designer" },
-    { id: "designer", label: "UI Designer & Front-End Dev" },
-    { id: "robotics", label: "Robotics Developer" },
+    { id: "principal", label: "Principal UI Designer", years: "2021 – Present" },
+    { id: "senior", label: "Senior UI Designer", years: "2019 – 2021" },
+    { id: "designer", label: "UI Designer & Front-End Dev", years: "2016 – 2019" },
+    { id: "robotics", label: "Robotics Developer", years: "2012 – 2016" },
   ];
 
   const content = {
@@ -50,7 +50,6 @@ export default function Experience() {
     }
   };
 
-  // Estimate tallest card height
   const [cardHeight, setCardHeight] = useState(0);
 
   useEffect(() => {
@@ -74,29 +73,44 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Horizontal Tabs */}
-        <div className="flex justify-center gap-10 mb-10 border-b border-white/20">
+        {/* Tabs */}
+        <div className="flex justify-center gap-10 mb-10 border-b border-white/20 flex-wrap">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-2 text-lg font-semibold transition-all duration-300 ${
+              className={`pb-3 px-4 text-center transition-all duration-300 ${
                 activeTab === tab.id
-                  ? "border-b-4 border-white text-white"
+                  ? "border-b-4 border-white text-white drop-shadow-lg scale-105"
                   : "text-white/70 hover:text-white"
               }`}
             >
-              {tab.label}
+              <div
+                className={`text-lg font-semibold ${
+                  activeTab === tab.id ? "text-white" : "text-white/80"
+                }`}
+              >
+                {tab.label}
+              </div>
+              <div
+                className={`text-sm ${
+                  activeTab === tab.id
+                    ? "text-white/90 font-medium glow"
+                    : "text-white/50"
+                }`}
+              >
+                {tab.years}
+              </div>
             </button>
           ))}
         </div>
 
-        {/* Glassmorphism Card with fixed height & smooth transition */}
+        {/* Glassmorphism Card */}
         <div
           className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
           style={{ height: `${cardHeight}px` }}
         >
-          {/* Title row with year range pill */}
+          {/* Title & years */}
           <div className="flex justify-between items-start mb-6">
             <h3 className="text-2xl font-semibold">{content[activeTab].title}</h3>
             <span className="px-4 py-1 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm">
@@ -104,7 +118,7 @@ export default function Experience() {
             </span>
           </div>
 
-          {/* Content List */}
+          {/* Content */}
           <ul className="space-y-4 text-white/90 leading-relaxed">
             {content[activeTab].body.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
