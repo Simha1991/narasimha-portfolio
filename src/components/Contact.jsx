@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 bg-gradient-to-br from-teal-500 via-green-400 to-green-600 text-white"
+      className="relative bg-gradient-to-br from-indigo-700 via-purple-700 to-fuchsia-700 text-white py-20 px-6"
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
@@ -75,13 +75,6 @@ const Contact = () => {
               <p className="font-semibold">📧 Email</p>
               <a href="mailto:bhatnarasimha1991@gmail.com" className="text-teal-400 hover:underline">
                 bhatnarasimha1991@gmail.com
-              </a>
-            </div>
-
-            <div>
-              <p className="font-semibold">📞 Phone</p>
-              <a href="tel:+917899745213" className="text-teal-400 hover:underline">
-                +91 7899745213
               </a>
             </div>
 
