@@ -34,12 +34,13 @@ export default function Hero() {
       {/* Content */}
      <div className="relative z-10 max-w-4xl text-center px-6">
 
-  <p className="text-lg md:text-xl text-gray-300 mb-4">
+  <p className="text-xl md:text-2xl text-gray-200 mb-4 font-medium">
     Narasimha Bhat
   </p>
 
-  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-    Designing clarity in complex systems
+  <h1 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+      Designing clarity in <br className="hidden md:block" />
+      complex systems  
   </h1>
 
   <p className="mt-6 text-lg md:text-xl text-gray-300">
