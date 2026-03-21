@@ -37,7 +37,7 @@ export default function FeaturedWork() {
 
   return (
     <section
-      id="featured"
+      id="work"
       className="py-20 px-6 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900"
     >
       <div className="max-w-6xl mx-auto">
