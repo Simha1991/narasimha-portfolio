@@ -46,7 +46,7 @@ export default function DepDetail() {
                 <strong>Scope:</strong> Customer Experience
               </span>
               <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
-                <strong>Impact:</strong> Millions saved in support costs
+                <strong>Impact:</strong> $37M+ saved · President’s Award
               </span>
             </div>
           </section>
@@ -164,12 +164,12 @@ export default function DepDetail() {
           <section>
             <h2 className="text-2xl font-semibold">Impact</h2>
             <ul className="mt-4 space-y-3 text-gray-700 max-w-3xl">
+              <li>• Achieved over $37M in savings by transitioning assisted support (calls) to self-service</li>
               <li>• Significantly reduced support call volume</li>
-              <li>• Saved millions in operational costs</li>
-              <li>• Increased QR scan adoption across users</li>
-              <li>• Improved accessibility to device information</li>
-              <li>• Enabled true self-service experience</li>
-              <li>• Recognized with Dell President’s Award</li>
+              <li>• Increased QR scan adoption and engagement</li>
+              <li>• Improved accessibility to device information across user segments</li>
+              <li>• Enabled scalable self-service support experience</li>
+              <li>• Recognized with Dell’s President’s Award for business impact</li>
             </ul>
           </section>
 
@@ -181,7 +181,8 @@ export default function DepDetail() {
               By replacing a system that required users to adapt with one that aligned with natural behavior, 
               we significantly improved usability and adoption.
 
-              It also demonstrated how small changes in entry points can drive large-scale business impact.
+              It also demonstrated how simplifying the entry point can drive large-scale business impact—both in customer 
+              experience and operational efficiency.
             </p>
           </section>
 
