@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -18,8 +18,10 @@ import VaDetail from "./pages/VaDetail";
 
 import "./index.css";
 
-export default function App() {
+/* 👇 Wrapper to access useLocation */
+function AppContent() {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -27,10 +29,14 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /* 👇 Hide navbar on detail pages */
+  const isDetailPage = location.pathname.includes("detail");
+
   return (
-    <BrowserRouter basename="/narasimha-portfolio">
-      <div className="font-sans scroll-smooth">
-        {/* Navbar */}
+    <div className="font-sans scroll-smooth">
+
+      {/* Navbar (hidden on case studies) */}
+      {!isDetailPage && (
         <header
           className={`fixed w-full z-50 transition-all duration-500 ${
             scrolled
@@ -61,31 +67,39 @@ export default function App() {
             </div>
           </nav>
         </header>
+      )}
 
-        {/* Routes */}
-        <main>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <About />
-                  <Skills />
-                  <Featured />
-                  <Experience />
-                  <Approach />
-                  <Testimonials />
-                  <Contact />
-                </>
-              }
-            />
-            <Route path="/dep-detail" element={<DepDetail />} />
-            <Route path="/upe-detail" element={<UpeDetail />} />
-            <Route path="/va-detail" element={<VaDetail />} />
-          </Routes>
-        </main>
-      </div>
+      {/* Routes */}
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <Skills />
+                <Featured />
+                <Experience />
+                <Approach />
+                <Testimonials />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/dep-detail" element={<DepDetail />} />
+          <Route path="/upe-detail" element={<UpeDetail />} />
+          <Route path="/va-detail" element={<VaDetail />} />
+        </Routes>
+      </main>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename="/narasimha-portfolio">
+      <AppContent />
     </BrowserRouter>
   );
 }
