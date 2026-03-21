@@ -1,106 +1,203 @@
 import { useNavigate } from "react-router-dom";
 
-export default function FeaturedWork() {
+export default function CommsStudio() {
   const navigate = useNavigate();
 
-  const primaryProjects = [
-    {
-      title: "CommStudio AI",
-      problem: "Guided users through complex enterprise workflows with contextual assistance",
-      impact: "Improved task clarity and reduced user errors",
-      link: "/comms-studio", // update later when new page is created
-    },
-    {
-      title: "Digital Entry Point",
-      problem: "Redesigned the primary entry experience for enterprise users across systems",
-      impact: "Improved discoverability and streamlined user journeys",
-      link: "/dep-detail",
-    },
-    {
-      title: "Virtual Assistant (ISG)",
-      problem: "Enabled users to interact with enterprise systems through conversational interfaces",
-      impact: "Improved support efficiency and user engagement",
-      link: "/va-detail",
-    },
-  ];
-
-  const secondaryProject = {
-    title: "Unified Portal Experience (UPE)",
-    problem: "Unified fragmented portal workflows into a cohesive experience",
-    impact: "Improved task completion by 30%+",
-    link: "/upe-detail",
-  };
-
   return (
-    <section
-      id="work"
-      className="py-20 px-6 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900"
-    >
-      <div className="max-w-6xl mx-auto">
-        
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-          Selected Work
-        </h2>
+    <div>
 
-        {/* 🔥 Primary Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {primaryProjects.map((project, index) => (
-            <div
-              key={index}
-              onClick={() => navigate(
-                window.scrollTo(0, 0);
-                project.link)}
-              className="group cursor-pointer rounded-2xl p-6 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300 hover:scale-[1.02]"
-            >
-              <h3 className="text-xl font-semibold text-white">
-                {project.title}
-              </h3>
-
-              <p className="mt-3 text-gray-300 text-sm">
-                {project.problem}
-              </p>
-
-              <p className="mt-4 text-teal-400 font-medium text-sm">
-                {project.impact}
-              </p>
-
-              <p className="mt-2 text-gray-400 text-xs">
-                {project.role}
-              </p>
-
-              <div className="mt-6 text-sm text-indigo-300 group-hover:translate-x-1 transition">
-                View Case Study →
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ➕ Secondary Project */}
-        <div className="max-w-md">
-          <div
-            onClick={() => navigate(secondaryProject.link)}
-            className="group cursor-pointer rounded-xl p-5 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300"
+      {/* Top Bar */}
+      <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+          
+          <button
+            onClick={() => navigate(-1)}
+            className="text-sm text-gray-600 hover:text-black transition"
           >
-            <h3 className="text-lg font-semibold text-white">
-              {secondaryProject.title}
-            </h3>
+            ← Back to work
+          </button>
 
-            <p className="mt-2 text-gray-300 text-sm">
-              {secondaryProject.problem}
-            </p>
+          <span className="text-sm font-medium text-gray-700">
+            Narasimha Bhat
+          </span>
 
-            <p className="mt-3 text-teal-400 text-sm font-medium">
-              {secondaryProject.impact}
-            </p>
-
-            <div className="mt-4 text-sm text-indigo-300 group-hover:translate-x-1 transition">
-              View Case Study →
-            </div>
-          </div>
         </div>
-
       </div>
-    </section>
+
+      {/* Content */}
+      <div className="bg-gray-50 text-gray-900">
+        <div className="max-w-5xl mx-auto px-6 py-20 space-y-20">
+
+          {/* Hero */}
+          <section className="pb-12 border-b border-gray-200">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              CommStudio AI
+            </h1>
+
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+              Reinventing enterprise communication creation through AI-driven workflows
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4 text-sm">
+              <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+                <strong>Role:</strong> Principal UX Designer
+              </span>
+              <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+                <strong>Scope:</strong> Enterprise Platform
+              </span>
+              <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+                <strong>Impact:</strong> Months → Weeks turnaround
+              </span>
+            </div>
+          </section>
+
+          {/* Visual */}
+          <section>
+            <div className="w-full h-[320px] bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
+              Product overview / AI workflow UI
+            </div>
+          </section>
+
+          {/* Context */}
+          <section>
+            <h2 className="text-2xl font-semibold">Context</h2>
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+              The project was initiated after repeated stakeholder concerns about inconsistent communication outputs and long turnaround times. 
+              Creating even a simple email required coordination across multiple teams, often taking up to 2–6 months from request to deployment.
+              
+              The workflow spanned multiple disconnected tools—Figma for design, PowerPoint for stakeholder reviews, and manual HTML development—resulting in inefficiencies, version confusion, and lack of standardization.
+            </p>
+          </section>
+
+          {/* Problem */}
+          <section>
+            <h2 className="text-2xl font-semibold">Problem</h2>
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+              The system was fragmented and heavily dependent on the design team, which became a bottleneck for every request and iteration. 
+              Stakeholders struggled to review Figma files, leading to additional steps like exporting designs into presentations. 
+              
+              Developers then manually converted approved designs into HTML, increasing effort and introducing inconsistencies. 
+              This disconnected workflow led to delays, lack of uniformity, and poor scalability.
+            </p>
+          </section>
+
+          {/* Approach */}
+          <section>
+            <h2 className="text-2xl font-semibold">Approach</h2>
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+              I worked closely with business, design, and engineering teams to map the full lifecycle of communication creation and identify 
+              friction points across each stage.
+
+              One key challenge was enabling a new development team that was unfamiliar with the design system and implementation patterns. 
+              Leveraging my background in front-end development, I helped bridge this gap by guiding them on structure, reusable patterns, 
+              and HTML implementation.
+
+              Instead of optimizing individual steps, I reframed the problem by shifting ownership closer to business users while introducing 
+              guardrails to maintain consistency and quality.
+            </p>
+          </section>
+
+          {/* Before vs After */}
+          <section>
+            <h2 className="text-2xl font-semibold">Before vs After</h2>
+
+            <div className="mt-6 grid md:grid-cols-2 gap-8 text-gray-700 max-w-4xl">
+              
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Before</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Figma → PPT → Email → Development workflow</li>
+                  <li>• Heavy dependency on design team</li>
+                  <li>• Manual HTML conversion</li>
+                  <li>• 2–6 months turnaround</li>
+                  <li>• Inconsistent outputs</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">After</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Unified platform for creation and collaboration</li>
+                  <li>• Business-led content creation</li>
+                  <li>• AI-assisted content refinement</li>
+                  <li>• HTML generated automatically</li>
+                  <li>• Turnaround reduced to weeks</li>
+                </ul>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Workflow Visual */}
+          <section>
+            <div className="w-full h-[300px] bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
+              Before vs After workflow transformation
+            </div>
+          </section>
+
+          {/* Solution */}
+          <section>
+            <h2 className="text-2xl font-semibold">Solution</h2>
+
+            <div className="mt-6 space-y-6 text-gray-700 max-w-3xl">
+
+              <p>
+                Designed an AI-driven platform that enables business users to create, edit, and manage communications independently, 
+                reducing reliance on design teams.
+              </p>
+
+              <p>
+                Introduced a real-time AI content engine that understands intent, generates structured messaging, and ensures 
+                compliance with enterprise communication guidelines.
+              </p>
+
+              <p>
+                Replaced fragmented workflows with a unified collaboration system where stakeholders review, comment, and approve 
+                directly within the platform.
+              </p>
+
+              <p>
+                Enabled automatic validation against design systems, UX patterns, and legal requirements to maintain consistency 
+                without manual intervention.
+              </p>
+
+              <p className="font-medium text-gray-900">
+                Delivered production-ready HTML output directly from the platform, eliminating manual design-to-development translation. 
+                This significantly reduced engineering effort and enabled faster deployment cycles.
+              </p>
+
+            </div>
+          </section>
+
+          {/* Impact */}
+          <section>
+            <h2 className="text-2xl font-semibold">Impact</h2>
+            <ul className="mt-4 space-y-3 text-gray-700 max-w-3xl">
+              <li>• Reduced communication turnaround from months to weeks</li>
+              <li>• Eliminated fragmented Figma → PPT → email workflows</li>
+              <li>• Improved consistency across communication outputs</li>
+              <li>• Reduced development effort through HTML-ready output</li>
+              <li>• Enabled scalable communication creation across teams</li>
+              <li>• Introduced real-time metrics to track usage, performance, and adoption</li>
+            </ul>
+          </section>
+
+          {/* Reflection */}
+          <section>
+            <h2 className="text-2xl font-semibold">Reflection</h2>
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
+              This project reinforced that solving complex UX problems often requires rethinking the system, not just improving interfaces. 
+              
+              By shifting ownership to business users and embedding intelligence and guardrails into the workflow, we eliminated entire layers 
+              of friction while maintaining consistency and quality.
+
+              It also highlighted the importance of bridging gaps between design and development—where my ability to contribute across both 
+              helped accelerate execution and align teams effectively.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </div>
   );
 }
