@@ -1,110 +1,81 @@
-// src/components/Featured.jsx
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+const projects = [
+  {
+    title: "Unified Policy Engine (UPE)",
+    problem: "Simplified complex policy workflows across enterprise systems",
+    impact: "Improved task completion by 30%+",
+    role: "Lead UX Designer",
+    link: "/upe-detail"
+  },
+  {
+    title: "Design Experience Platform (DEP)",
+    problem: "Enabled scalable design system adoption across teams",
+    impact: "Reduced design inconsistencies across products",
+    role: "Principal UX Designer",
+    link: "/dep-detail"
+  },
+  {
+    title: "Volunteer Association Platform (VA)",
+    problem: "Digitized community workflows and engagement",
+    impact: "Improved participation and operational efficiency",
+    role: "UX Designer",
+    link: "/va-detail"
+  }
+];
 
-export default function Featured() {
-  const slides = [
-    {
-      id: "dep",
-      title: "Digital Entry Point (DEP)",
-      subtitle: "Award-Winning, $37M+ Savings",
-      body: "Revolutionized device registration and lifecycle experience with serialized QR codes. Designed end-to-end flow: storyboarding → IA simplification (tree testing) → low-fi & mid-fi → mobile-first final prototype.",
-      impact: "Earned President's Award for innovation, delivering $37M+ savings and $21M+ in renewal opportunities.",
-      pills: ["mobile-first design", "enterprise design", "innovation"],
-      img: `${import.meta.env.BASE_URL}images/dep.png`,
-      gradient: "from-sky-200 via-cyan-200 to-blue-300",
-    },
-    {
-      id: "upe",
-      title: "Unified Portal Experience (UPE)",
-      subtitle: "Enterprise Experience Unification",
-      body: "Conducted competitive research + capability mapping. Designed IA through open card sorting, created multi-fidelity wireframes, and iterated with stakeholders.",
-      impact: "Built a unified dashboard (service events, lifecycle, fleet health, notifications). Preparing for production rollout.",
-      pills: ["information architecture", "enterprise design", "dashboard design"],
-      img: `${import.meta.env.BASE_URL}images/upe.jpg`,
-      gradient: "from-purple-200 via-indigo-200 to-pink-200",
-    },
-    {
-      id: "va",
-      title: "Virtual Assistant (VA)",
-      subtitle: "AI-Powered Conversational Design",
-      body: "Standardized VA across portals using DDS 2.0 + Atomic Design. Created scalable components (chat bubbles, action menus, micro-interactions).",
-      impact: "Enhanced AI-driven support, improving self-service start time by 71% with 99% success probability.",
-      pills: ["conversational design", "design system", "AI"],
-      img: `${import.meta.env.BASE_URL}images/va.jpg`,
-      gradient: "from-emerald-200 via-teal-200 to-green-300",
-    },
-  ];
+export default function FeaturedWork() {
+  const navigate = useNavigate();
 
   return (
-    <section id="featured" className="py-20 bg-gray-50">
-      <h2 className="text-4xl font-bold mb-12 text-center">Featured Work</h2>
-
+    <section id="work" className="py-20 px-6 bg-gradient-to-b from-transparent to-black/20">
+      
       <div className="max-w-6xl mx-auto">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-          spaceBetween={40}
-          slidesPerView={1}
-          className="pb-12"
-        >
-          {slides.map((s) => (
-            <SwiperSlide key={s.id}>
-              {/* Full card gradient with slide-specific colors */}
-              <div
-                className={`flex flex-col md:flex-row items-stretch bg-gradient-to-tr ${s.gradient} rounded-2xl shadow-xl overflow-hidden h-[500px]`}
-              >
-                {/* Image Side */}
-                <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    className="max-h-[400px] w-auto object-contain rounded-lg shadow-lg"
-                  />
-                </div>
+        
+        {/* Section Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+          Featured Work
+        </h2>
 
-                {/* Content Side with frosted overlay */}
-                <div className="w-full md:w-1/2 p-8 text-left flex flex-col justify-center bg-white/60 backdrop-blur-sm rounded-l-2xl md:rounded-l-none">
-                  <h3 className="text-3xl font-semibold text-gray-900 mb-2">{s.title}</h3>
-                  <h4 className="text-lg text-indigo-700 mb-4">{s.subtitle}</h4>
-                  <p className="text-gray-800 mb-4 leading-relaxed">{s.body}</p>
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              onClick={() => navigate(project.link)}
+              className="group cursor-pointer rounded-2xl p-6 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300 hover:scale-[1.02]"
+            >
+              
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-white">
+                {project.title}
+              </h3>
 
-                  {/* Pills */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {s.pills.map((p) => (
-                      <span
-                        key={p}
-                        className="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm rounded-full shadow-sm"
-                      >
-                        {p}
-                      </span>
-                    ))}
-                  </div>
+              {/* Problem */}
+              <p className="mt-3 text-gray-300 text-sm">
+                {project.problem}
+              </p>
 
-                  <blockquote className="italic text-indigo-900 font-medium mb-6">
-                    {s.impact}
-                  </blockquote>
+              {/* Impact */}
+              <p className="mt-4 text-teal-400 font-medium text-sm">
+                {project.impact}
+              </p>
 
-                  {/* Secondary Button */}
-                  <Link
-                    to={`/${s.id}-detail`}
-                    className="self-start px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition"
-                  >
-                    View detailed case study
-                  </Link>
-                </div>
+              {/* Role */}
+              <p className="mt-2 text-gray-400 text-xs">
+                {project.role}
+              </p>
+
+              {/* CTA */}
+              <div className="mt-6 text-sm text-indigo-300 group-hover:translate-x-1 transition">
+                View Case Study →
               </div>
-            </SwiperSlide>
+
+            </div>
           ))}
-        </Swiper>
+
+        </div>
       </div>
     </section>
   );
