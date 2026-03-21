@@ -32,22 +32,26 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl text-center px-6">
+     <div className="relative z-10 max-w-4xl text-center px-6">
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Designing clarity in complex systems
-        </h1>
+  <p className="text-lg md:text-xl text-gray-300 mb-4">
+    Narasimha Bhat
+  </p>
 
-        <p className="mt-6 text-lg md:text-xl text-gray-300">
-          Principal UX Designer · AI-driven experiences · Enterprise platforms
-        </p>
+  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+    Designing clarity in complex systems
+  </h1>
 
-        <p className="mt-6 text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
-          I solve ambiguous problems by bringing structure, aligning stakeholders, 
-          and creating user-centered solutions that drive measurable business impact.
-        </p>
+  <p className="mt-6 text-lg md:text-xl text-gray-300">
+    Principal UX Designer · AI-driven experiences · Enterprise platforms
+  </p>
 
-      </div>
+  <p className="mt-6 text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
+    I solve ambiguous problems by bringing structure, aligning stakeholders, 
+    and creating user-centered solutions that drive measurable business impact.
+  </p>
+
+</div>
 
     </section>
   );
