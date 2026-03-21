@@ -6,30 +6,30 @@ export default function FeaturedWork() {
   const primaryProjects = [
     {
       title: "COMS Coach",
-      problem: "Improved guided workflows and user decision-making across enterprise systems",
-      impact: "Enhanced task clarity and reduced user friction",
+      problem: "Guided users through complex enterprise workflows with contextual assistance",
+      impact: "Improved task clarity and reduced user errors",
       role: "Principal UX Designer",
-      link: "/dep-detail", // update later
+      link: "/dep-detail", // update later when new page is created
     },
     {
-      title: "COMS Tool",
-      problem: "Designed scalable internal tools to streamline operations",
-      impact: "Reduced complexity and improved efficiency across teams",
+      title: "Digital Entry Point",
+      problem: "Redesigned the primary entry experience for enterprise users across systems",
+      impact: "Improved discoverability and streamlined user journeys",
       role: "Principal UX Designer",
-      link: "/va-detail", // update later
+      link: "/dep-detail",
     },
     {
-      title: "Enterprise Platform",
-      problem: "Led UX for complex enterprise workflows",
-      impact: "Improved usability and system efficiency",
+      title: "Virtual Assistant (ISG)",
+      problem: "Enabled users to interact with enterprise systems through conversational interfaces",
+      impact: "Improved support efficiency and user engagement",
       role: "Principal UX Designer",
-      link: "/dep-detail", // update later
+      link: "/va-detail",
     },
   ];
 
   const secondaryProject = {
     title: "Unified Portal Experience (UPE)",
-    problem: "Simplified fragmented portal workflows across systems",
+    problem: "Unified fragmented portal workflows into a cohesive experience",
     impact: "Improved task completion by 30%+",
     role: "Lead UX Designer",
     link: "/upe-detail",
@@ -78,7 +78,7 @@ export default function FeaturedWork() {
           ))}
         </div>
 
-        {/* ➕ Secondary Project (UPE) */}
+        {/* ➕ Secondary Project */}
         <div className="max-w-md">
           <div
             onClick={() => navigate(secondaryProject.link)}
