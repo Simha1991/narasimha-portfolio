@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function UpeDetail() {
   return (
     <div className="bg-white text-gray-900 px-6 py-20">
