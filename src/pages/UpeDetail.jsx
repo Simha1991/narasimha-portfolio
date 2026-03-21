@@ -1,5 +1,26 @@
+import { useNavigate } from "react-router-dom";
+const navigate = useNavigate();
+
 export default function UpeDetail() {
   return (
+
+  <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+      <button
+        onClick={() => navigate("/")}
+        className="text-sm text-gray-600 hover:text-black transition"
+      >
+        ← Back to work
+      </button>
+
+      <span className="text-sm font-medium text-gray-700">
+        Narasimha Bhat
+      </span>
+
+    </div>
+  </div>
+    
     <div className="bg-gray-50 text-gray-900">
       
       <div className="max-w-5xl mx-auto px-6 py-20 space-y-20">
