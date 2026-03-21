@@ -11,7 +11,7 @@ export default function UpeDetail() {
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
           
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate(-1)}
             className="text-sm text-gray-600 hover:text-black transition"
           >
             ← Back to work
