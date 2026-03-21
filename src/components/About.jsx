@@ -35,7 +35,7 @@ export default function About() {
           {/* Image (25%) */}
           <div className="flex justify-center md:justify-end">
             <img
-              src="/narasimha-portfolio/headshot.jpg"
+              src="/narasimha-portfolio/images/headshot.jpg"
               alt="Narasimha Bhat"
               className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-xl shadow-md"
             />
