@@ -1,30 +1,35 @@
 export default function UpeDetail() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-gray-50 text-gray-900">
       
       <div className="max-w-5xl mx-auto px-6 py-20 space-y-20">
 
         {/* Hero */}
-        <section>
+        <section className="pb-12 border-b border-gray-200">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Unified Portal Experience (UPE)
           </h1>
 
           <p className="mt-4 text-lg text-gray-600 max-w-2xl">
-            Simplifying and unifying fragmented enterprise workflows into a seamless portal experience.
+            Simplifying and unifying enterprise portal workflows across systems
           </p>
 
-          {/* Meta Info */}
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-500">
-            <span><strong>Role:</strong> Lead UX Designer</span>
-            <span><strong>Scope:</strong> Enterprise Platform</span>
-            <span><strong>Impact:</strong> +30% task completion</span>
+          <div className="mt-8 flex flex-wrap gap-4 text-sm">
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Role:</strong> Lead UX Designer
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Scope:</strong> Enterprise Platform
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Impact:</strong> +30% task completion
+            </span>
           </div>
         </section>
 
-        {/* Image Placeholder */}
+        {/* Main Screenshot */}
         <section>
-          <div className="w-full h-[300px] bg-gray-100 rounded-xl flex items-center justify-center text-gray-400">
+          <div className="w-full h-[320px] bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
             Product overview / dashboard screenshot
           </div>
         </section>
@@ -33,7 +38,7 @@ export default function UpeDetail() {
         <section>
           <h2 className="text-2xl font-semibold">Context</h2>
           <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
-            The platform was used by enterprise users to access and manage multiple services 
+            The portal was used by enterprise users to access and manage multiple services 
             across systems. However, the experience was fragmented, requiring users to navigate 
             disconnected workflows and interfaces.
           </p>
@@ -58,9 +63,9 @@ export default function UpeDetail() {
           </p>
         </section>
 
-        {/* Image Placeholder */}
+        {/* Process / Workflow Visual */}
         <section>
-          <div className="w-full h-[300px] bg-gray-100 rounded-xl flex items-center justify-center text-gray-400">
+          <div className="w-full h-[300px] bg-white rounded-xl shadow-sm flex items-center justify-center text-gray-400">
             Workflow / process diagram
           </div>
         </section>
