@@ -1,94 +1,139 @@
-// src/components/About.jsx
-import React from "react";
-
-/* About Section */
 export default function About() {
   return (
-    <>
-      {/* About Section */}
-      <section id="about" className="py-20 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6 text-gray-900">About Me</h2>
+    <section id="about" className="py-24 px-6 bg-white text-gray-900">
+      <div className="max-w-6xl mx-auto space-y-20">
 
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
-          I’m a Principal UX Designer specializing in AI-augmented experiences.
-          With a strong background in human-centered design, I’ve led award-winning
-          projects that streamlined workflows, reduced costs, and created
-          delightful user experiences.
-        </p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-12">
-          I’ve led transformative initiatives at the intersection of design, AI,
-          and enterprise-scale systems.
-        </p>
+        {/* Top Section (Text + Photo) */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Two-column layout for cards */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Key Achievements Card */}
-          <div
-            className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
-                       bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
-                       border border-white/40"
-          >
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Key Achievements</h3>
-            <ul className="space-y-6 text-left text-gray-700">
-              <li>
-                <p className="font-bold text-gray-800">Digital Entry Point</p>
-                <p>
-                  Award-winning product that saved <strong>$37M+</strong> and redefined
-                  the customer device lifecycle.
-                </p>
-              </li>
-              <li>
-                <p className="font-bold text-gray-800">Unified Portal</p>
-                <p>
-                  Led research and design for a consolidated enterprise hub,
-                  simplifying customer experiences.
-                </p>
-              </li>
-              <li>
-                <p className="font-bold text-gray-800">Virtual Assistant</p>
-                <p>
-                  Scaled Dell’s AI-powered conversational design, reducing
-                  self-service start time by <strong>71%</strong>.
-                </p>
-              </li>
-            </ul>
+          {/* Text */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              About Me
+            </h2>
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              I’m a Principal UX Designer with over a decade of experience designing enterprise products 
+              and platforms. I specialize in solving complex, ambiguous problems by bringing clarity through 
+              user-centered thinking, structured design, and close collaboration with stakeholders.
+            </p>
+
+            <p className="mt-5 text-lg text-gray-700 leading-relaxed">
+              I don’t wait for answers — I actively explore, ask the right questions, and work across teams 
+              to uncover what’s needed. Whether it’s redefining workflows, simplifying systems, or enabling 
+              new ways of working, I focus on creating solutions that are intuitive for users and impactful 
+              for the business.
+            </p>
+
+            <p className="mt-5 text-lg text-gray-700 leading-relaxed">
+              My approach combines strong UX fundamentals with an understanding of technology and delivery, 
+              allowing me to bridge design, product, and engineering. I aim to build experiences that are 
+              not only usable, but meaningful, scalable, and measurable.
+            </p>
           </div>
 
-          {/* Recognition & Awards Card */}
-          <div
-            className="p-8 rounded-2xl shadow-lg backdrop-blur-lg
-                       bg-gradient-to-tr from-teal-200/30 via-purple-200/30 to-pink-200/30
-                       border border-white/40"
-          >
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-              Recognition & Awards
+          {/* Photo */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/profile.jpg"  // 👈 Replace with your image path
+              alt="Narasimha Bhat"
+              className="w-64 h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+        </div>
+
+        {/* Impact & Recognition */}
+        <div className="grid md:grid-cols-2 gap-8">
+
+          {/* Impact */}
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-indigo-50 shadow-sm">
+            <h3 className="text-xl font-semibold mb-6">
+              Impact
             </h3>
-            <ul className="space-y-6 text-left text-gray-700">
-              <li>
-                <p className="font-bold text-gray-800">
-                  President’s Award — Digital Entry Point (DEP)
+
+            <div className="space-y-5 text-gray-700">
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  Digital Entry Point
                 </p>
-                <p>Dell’s highest recognition for innovation and business impact.</p>
-              </li>
-              <li>
-                <p className="font-bold text-gray-800">
+                <p className="text-sm">
+                  Saved $37M+ by shifting assisted support to self-service and redefining the device lifecycle experience.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  Virtual Assistant (ISG)
+                </p>
+                <p className="text-sm">
+                  Reduced time-to-support by 71% and improved success rate from ~8% to ~95%.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  Unified Portal Experience
+                </p>
+                <p className="text-sm">
+                  Led design for a consolidated enterprise platform, simplifying complex workflows across systems.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Recognition */}
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 shadow-sm">
+            <h3 className="text-xl font-semibold mb-6">
+              Recognition
+            </h3>
+
+            <div className="space-y-5 text-gray-700">
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  President’s Award — Digital Entry Point
+                </p>
+                <p className="text-sm">
+                  Dell’s highest recognition for innovation and measurable business impact.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">
                   Dell Award for Innovation — Design Libraries
                 </p>
-                <p>Recognized for creating scalable design systems.</p>
-              </li>
-              <li>
-                <p className="font-bold text-gray-800">NN/g Certified UX Designer</p>
-                <p>Industry’s most respected UX certification.</p>
-              </li>
-              <li>
-                <p className="font-bold text-gray-800">Rising Leader at Dell (RLD)</p>
-                <p>Selected for Dell’s high-potential leadership program.</p>
-              </li>
-            </ul>
+                <p className="text-sm">
+                  Recognized for building scalable and reusable design systems.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  NN/g Certified UX Designer
+                </p>
+                <p className="text-sm">
+                  Industry-recognized certification in user experience design.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">
+                  Rising Leader at Dell (RLD)
+                </p>
+                <p className="text-sm">
+                  Selected for Dell’s high-potential leadership development program.
+                </p>
+              </div>
+
+            </div>
           </div>
+
         </div>
-      </section>
-      {/* About Section Ends */}
-    </>
+
+      </div>
+    </section>
   );
 }
