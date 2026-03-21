@@ -23,7 +23,10 @@ export default function Experience() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+    <section 
+      id="experience"
+      className="py-24 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white"
+    >
       
       <div className="max-w-5xl mx-auto">
         
