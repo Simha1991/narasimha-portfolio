@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function DepDetail() {
   const navigate = useNavigate();
 
+  
   return (
     <div>
 
