@@ -51,6 +51,28 @@ export default function Hero() {
     and creating user-centered solutions that drive measurable business impact.
   </p>
 
+       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+
+  {/* Primary CTA */}
+  <a
+    href="#work"
+    className="px-6 py-3 rounded-lg bg-white text-gray-900 font-medium hover:bg-gray-200 transition"
+  >
+    View Work
+  </a>
+
+  {/* Secondary CTA */}
+  <a
+    href="/narasimha-portfolio/Narasimha_Bhat_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition"
+  >
+    Download CV
+  </a>
+
+</div>
+
 </div>
 
     </section>
