@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import CanvasBackground from "./components/CanvasBackground";
 
 import DepDetail from "./pages/DepDetail";
+import CommsStudio from "./pages/CommsStudio";
 import UpeDetail from "./pages/UpeDetail";
 import VaDetail from "./pages/VaDetail";
 
@@ -88,6 +89,7 @@ function AppContent() {
             }
           />
           <Route path="/dep-detail" element={<DepDetail />} />
+          <Route path="/comms-studio" element={<CommsStudio />} />
           <Route path="/upe-detail" element={<UpeDetail />} />
           <Route path="/va-detail" element={<VaDetail />} />
         </Routes>
