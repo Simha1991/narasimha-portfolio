@@ -1,12 +1,12 @@
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto space-y-20">
+      <div className="max-w-6xl mx-auto space-y-12">
 
         {/* Top Section */}
-        <div className="grid md:grid-cols-3 gap-12 items-center">
+        <div className="grid md:grid-cols-3 gap-12 items-start">
 
-          {/* Text (75%) */}
+          {/* Text */}
           <div className="md:col-span-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               About Me
@@ -30,58 +30,37 @@ export default function About() {
               allowing me to bridge design, product, and engineering. I’m an NN/g Certified UX Designer and 
               have contributed to R&D-driven initiatives, bringing innovation into real-world products at scale.
             </p>
+
+            {/* Impact & Recognition (inline) */}
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Impact & Recognition
+              </h3>
+
+              <ul className="space-y-3 text-gray-700 text-base">
+                <li>
+                  • Saved $37M+ through Digital Entry Point by shifting assisted support to self-service, earning Dell’s President’s Award
+                </li>
+                <li>
+                  • Improved Virtual Assistant success rate from ~8% to ~95% and reduced time-to-support by 71%
+                </li>
+                <li>
+                  • Selected for Dell’s Rising Leader (RLD) program for high-impact leadership and execution
+                </li>
+              </ul>
+            </div>
+
           </div>
 
-          {/* Image (25%) */}
+          {/* Image */}
           <div className="flex justify-center md:justify-end">
             <img
               src="/narasimha-portfolio/images/headshot.jpg"
               alt="Narasimha Bhat"
-              className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-xl shadow-md"
+              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-lg"
             />
           </div>
 
-        </div>
-
-        {/* Impact + Recognition (Merged) */}
-        <div className="p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-sm">
-          
-          <h3 className="text-xl font-semibold mb-6">
-            Impact & Recognition
-          </h3>
-
-          <div className="space-y-6 text-gray-700 max-w-3xl">
-
-            <div>
-              <p className="font-semibold text-gray-900">
-                Digital Entry Point (DEP)
-              </p>
-              <p className="text-sm">
-                Saved $37M+ by shifting assisted support to self-service and redefining the device lifecycle experience. 
-                Recognized with Dell’s President’s Award for delivering large-scale business impact.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-semibold text-gray-900">
-                Virtual Assistant (ISG)
-              </p>
-              <p className="text-sm">
-                Reduced time-to-support by 71% and improved success rate from ~8% to ~95%, enabling faster resolution 
-                for enterprise infrastructure customers.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-semibold text-gray-900">
-                Leadership Recognition
-              </p>
-              <p className="text-sm">
-                Selected for Dell’s Rising Leader (RLD) program, recognizing high-potential leadership and impact across initiatives.
-              </p>
-            </div>
-
-          </div>
         </div>
 
       </div>
