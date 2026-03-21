@@ -1,80 +1,107 @@
 import { useNavigate } from "react-router-dom";
 
-const projects = [
-  {
-    title: "Unified Policy Engine (UPE)",
-    problem: "Simplified complex policy workflows across enterprise systems",
-    impact: "Improved task completion by 30%+",
-    role: "Lead UX Designer",
-    link: "/upe-detail"
-  },
-  {
-    title: "Design Experience Platform (DEP)",
-    problem: "Enabled scalable design system adoption across teams",
-    impact: "Reduced design inconsistencies across products",
-    role: "Principal UX Designer",
-    link: "/dep-detail"
-  },
-  {
-    title: "Volunteer Association Platform (VA)",
-    problem: "Digitized community workflows and engagement",
-    impact: "Improved participation and operational efficiency",
-    role: "UX Designer",
-    link: "/va-detail"
-  }
-];
-
 export default function FeaturedWork() {
   const navigate = useNavigate();
 
+  const primaryProjects = [
+    {
+      title: "COMS Coach",
+      problem: "Improved guided workflows and user decision-making across enterprise systems",
+      impact: "Enhanced task clarity and reduced user friction",
+      role: "Principal UX Designer",
+      link: "/dep-detail", // update later
+    },
+    {
+      title: "COMS Tool",
+      problem: "Designed scalable internal tools to streamline operations",
+      impact: "Reduced complexity and improved efficiency across teams",
+      role: "Principal UX Designer",
+      link: "/va-detail", // update later
+    },
+    {
+      title: "Enterprise Platform",
+      problem: "Led UX for complex enterprise workflows",
+      impact: "Improved usability and system efficiency",
+      role: "Principal UX Designer",
+      link: "/dep-detail", // update later
+    },
+  ];
+
+  const secondaryProject = {
+    title: "Unified Portal Experience (UPE)",
+    problem: "Simplified fragmented portal workflows across systems",
+    impact: "Improved task completion by 30%+",
+    role: "Lead UX Designer",
+    link: "/upe-detail",
+  };
+
   return (
-      <section id="work" className="py-20 px-6 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900">      
+    <section
+      id="work"
+      className="py-20 px-6 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900"
+    >
       <div className="max-w-6xl mx-auto">
         
-        {/* Section Title */}
+        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
           Selected Work
         </h2>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {projects.map((project, index) => (
+        {/* 🔥 Primary Projects */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {primaryProjects.map((project, index) => (
             <div
               key={index}
               onClick={() => navigate(project.link)}
               className="group cursor-pointer rounded-2xl p-6 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300 hover:scale-[1.02]"
             >
-              
-              {/* Title */}
               <h3 className="text-xl font-semibold text-white">
                 {project.title}
               </h3>
 
-              {/* Problem */}
               <p className="mt-3 text-gray-300 text-sm">
                 {project.problem}
               </p>
 
-              {/* Impact */}
               <p className="mt-4 text-teal-400 font-medium text-sm">
                 {project.impact}
               </p>
 
-              {/* Role */}
               <p className="mt-2 text-gray-400 text-xs">
                 {project.role}
               </p>
 
-              {/* CTA */}
               <div className="mt-6 text-sm text-indigo-300 group-hover:translate-x-1 transition">
                 View Case Study →
               </div>
-
             </div>
           ))}
-
         </div>
+
+        {/* ➕ Secondary Project (UPE) */}
+        <div className="max-w-md">
+          <div
+            onClick={() => navigate(secondaryProject.link)}
+            className="group cursor-pointer rounded-xl p-5 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300"
+          >
+            <h3 className="text-lg font-semibold text-white">
+              {secondaryProject.title}
+            </h3>
+
+            <p className="mt-2 text-gray-300 text-sm">
+              {secondaryProject.problem}
+            </p>
+
+            <p className="mt-3 text-teal-400 text-sm font-medium">
+              {secondaryProject.impact}
+            </p>
+
+            <div className="mt-4 text-sm text-indigo-300 group-hover:translate-x-1 transition">
+              View Case Study →
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
