@@ -19,8 +19,8 @@ export default function Approach() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-transparent to-black/20 text-white">
-      
+      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+  
       <div className="max-w-6xl mx-auto">
         
         {/* Title */}
