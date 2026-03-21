@@ -31,7 +31,9 @@ function AppContent() {
   }, []);
 
   /* 👇 Hide navbar on detail pages */
-  const isDetailPage = location.pathname.includes("detail");
+  const isDetailPage =
+  location.pathname.includes("detail") ||
+  location.pathname.includes("comms");
 
   return (
     <div className="font-sans scroll-smooth">
