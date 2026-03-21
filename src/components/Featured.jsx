@@ -5,24 +5,21 @@ export default function FeaturedWork() {
 
   const primaryProjects = [
     {
-      title: "COMS Coach",
+      title: "CommStudio AI",
       problem: "Guided users through complex enterprise workflows with contextual assistance",
       impact: "Improved task clarity and reduced user errors",
-      role: "Principal UX Designer",
-      link: "/dep-detail", // update later when new page is created
+      link: "/comms-studio", // update later when new page is created
     },
     {
       title: "Digital Entry Point",
       problem: "Redesigned the primary entry experience for enterprise users across systems",
       impact: "Improved discoverability and streamlined user journeys",
-      role: "Principal UX Designer",
       link: "/dep-detail",
     },
     {
       title: "Virtual Assistant (ISG)",
       problem: "Enabled users to interact with enterprise systems through conversational interfaces",
       impact: "Improved support efficiency and user engagement",
-      role: "Principal UX Designer",
       link: "/va-detail",
     },
   ];
@@ -31,7 +28,6 @@ export default function FeaturedWork() {
     title: "Unified Portal Experience (UPE)",
     problem: "Unified fragmented portal workflows into a cohesive experience",
     impact: "Improved task completion by 30%+",
-    role: "Lead UX Designer",
     link: "/upe-detail",
   };
 
