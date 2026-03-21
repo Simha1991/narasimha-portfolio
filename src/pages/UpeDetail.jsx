@@ -7,10 +7,10 @@ export default function UPE() {
         {/* Hero */}
         <section>
           <h1 className="text-4xl font-bold">
-            Unified Policy Engine (UPE)
+            Unified Portal Experience (UPE)
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Simplifying complex policy workflows across enterprise systems
+            Simplifying and unifying enterprise portal workflows across systems
           </p>
 
           <div className="mt-6 text-sm text-gray-500">
@@ -24,8 +24,9 @@ export default function UPE() {
             Context
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            The platform was used by enterprise administrators to manage complex policies 
-            across multiple systems. The workflows were fragmented and difficult to navigate.
+            The portal was used by enterprise users to access and manage multiple services 
+            across systems. However, the experience was fragmented, requiring users to navigate 
+            disconnected workflows and interfaces.
           </p>
         </section>
 
@@ -35,8 +36,8 @@ export default function UPE() {
             Problem
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            Users struggled with high cognitive load, unclear workflows, and inefficient navigation, 
-            leading to errors and low task completion rates.
+            Users faced inconsistent navigation, high cognitive load, and inefficient task flows, 
+            making it difficult to complete key actions within the portal.
           </p>
         </section>
 
@@ -47,8 +48,8 @@ export default function UPE() {
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
             I worked closely with stakeholders across product and engineering to understand 
-            constraints, clarify requirements, and identify key pain points. Through iterative 
-            exploration and user-focused thinking, I brought clarity to an otherwise ambiguous problem space.
+            constraints, identify pain points, and align on priorities. By navigating ambiguity 
+            and actively gathering insights, I helped bring clarity to the problem space.
           </p>
         </section>
 
@@ -58,8 +59,8 @@ export default function UPE() {
             Solution
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            Designed a streamlined workflow that reduced complexity, improved navigation clarity, 
-            and made policy management more intuitive for users.
+            Designed a unified experience that streamlined navigation, reduced fragmentation, 
+            and created a more intuitive flow for users to complete their tasks efficiently.
           </p>
         </section>
 
@@ -69,8 +70,8 @@ export default function UPE() {
             Impact
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            The redesign led to a 30%+ improvement in task completion and significantly reduced 
-            user frustration.
+            The redesign improved task completion rates by over 30% and enhanced overall user 
+            satisfaction across the platform.
           </p>
         </section>
 
@@ -80,8 +81,9 @@ export default function UPE() {
             Reflection
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            This project reinforced the importance of stakeholder alignment and clarity in complex systems. 
-            Navigating ambiguity effectively was key to delivering a meaningful solution.
+            This project highlighted the importance of aligning stakeholders early and continuously 
+            in complex environments. Proactively navigating ambiguity played a key role in delivering 
+            a cohesive and effective solution.
           </p>
         </section>
 
