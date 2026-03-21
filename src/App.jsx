@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Featured from "./components/Featured";
 import Approach from "./components/Approach";
 import Experience from "./components/Experience";
@@ -75,7 +74,6 @@ function AppContent() {
               <>
                 <Hero />
                 <About />
-                <Skills />
                 <Featured />
                 <Experience />
                 <Approach />
