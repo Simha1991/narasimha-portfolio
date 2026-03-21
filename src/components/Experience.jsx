@@ -1,132 +1,68 @@
-// src/components/Experience.jsx
-import React, { useState, useEffect } from "react";
+const experiences = [
+  {
+    company: "Dell Technologies",
+    role: "Principal UX Designer",
+    duration: "Present",
+    points: [
+      "Leading UX for enterprise platforms handling complex data workflows",
+      "Driving design system adoption across multiple product teams",
+      "Collaborating with product and engineering to deliver scalable solutions"
+    ]
+  },
+  {
+    company: "Previous Company",
+    role: "Senior UX Designer (UI & Front-end)",
+    duration: "Earlier",
+    points: [
+      "Designed and developed responsive user interfaces for enterprise applications",
+      "Bridged design and engineering by translating UX concepts into production-ready front-end code",
+      "Improved usability and performance through close collaboration with engineering teams"
+    ]
+  }
+];
 
 export default function Experience() {
-  const [activeTab, setActiveTab] = useState("principal");
-
-  const tabs = [
-    { id: "principal", label: "Principal UI Designer", years: "2021 – Present" },
-    { id: "senior", label: "Senior UI Designer", years: "2019 – 2021" },
-    { id: "designer", label: "UI Designer & Front-End Dev", years: "2016 – 2019" },
-    { id: "robotics", label: "Robotics Developer", years: "2012 – 2016" },
-  ];
-
-  const content = {
-    principal: {
-      title: "Principal User Interface Designer — Dell Technologies",
-      years: "2021 – Present",
-      body: [
-        "Spearheaded the UX vision for enterprise-scale platforms, including <strong>Digital Entry Point (DEP)</strong>, the <strong>Unified Portal Experience (UPE)</strong>, and AI-powered <strong>Virtual Assistant (VA)</strong>, delivering measurable results such as $37M+ cost savings.",
-        "Defined end-to-end design strategies — from <strong>research and storyboarding</strong> to <strong>high-fidelity prototypes</strong>, ensuring adoption of a mobile-first and scalable approach.",
-        "Partnered with executives and engineering teams across multiple geographies to align design innovation with business goals, earning a <strong>President’s Award</strong> for innovation."
-      ]
-    },
-    senior: {
-      title: "Senior User Interface Designer — Dell Technologies",
-      years: "2019 – 2021",
-      body: [
-        "Redesigned legacy enterprise dashboards into a unified, intuitive experience that streamlined customer journeys and enhanced task efficiency.",
-        "Implemented scalable design systems based on <strong>DDS 2.0</strong> and <strong>atomic design principles</strong>, enabling reusability and faster development.",
-        "Pioneered multi-fidelity prototyping and <strong>tree testing</strong> to validate navigation models, improving usability scores significantly."
-      ]
-    },
-    designer: {
-      title: "UI Designer & Front-End Developer — Dell Technologies",
-      years: "2016 – 2019",
-      body: [
-        "Combined <strong>UI design expertise with front-end development</strong> to deliver seamless customer-facing experiences.",
-        "Created interactive prototypes, coded responsive UIs, and optimized accessibility across Dell’s enterprise products.",
-        "Collaborated with developers to bridge the design-development gap, ensuring design fidelity and performance consistency."
-      ]
-    },
-    robotics: {
-      title: "Robotics Developer — LimberLink Technologies",
-      years: "2012 – 2016",
-      body: [
-        "Led a <strong>10-member engineering team</strong> in designing and developing robots powered by <strong>microcontrollers</strong>, building automation workflows and control systems for complex industrial tasks.",
-        "Partnered on <strong>industry-grade robotics projects</strong>, scaling prototypes into production-ready systems.",
-        "Blended leadership with hands-on technical innovation, driving adoption of robotics solutions in real-world environments."
-      ]
-    }
-  };
-
-  const [cardHeight, setCardHeight] = useState(0);
-
-  useEffect(() => {
-    setCardHeight(360); // adjust based on content
-  }, []);
-
   return (
-    <section
-      id="experience"
-      className="relative py-20 bg-gradient-to-br from-teal-500 via-green-400 to-green-600 text-white"
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+    <section className="py-20 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+      
+      <div className="max-w-5xl mx-auto">
+        
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          Experience
+        </h2>
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold drop-shadow-lg">Experience & Impact</h2>
-          <p className="text-lg mt-4 max-w-3xl mx-auto text-white/80">
-            Over a decade of transformative work, leading design initiatives that deliver measurable business value and exceptional user experiences.
-          </p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex justify-center gap-10 mb-10 border-b border-white/20 flex-wrap">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 px-4 text-center transition-all duration-300 ${
-                activeTab === tab.id
-                  ? "border-b-4 border-white text-white drop-shadow-lg scale-105"
-                  : "text-white/70 hover:text-white"
-              }`}
+        <div className="space-y-8">
+          
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition"
             >
-              <div
-                className={`text-lg font-semibold ${
-                  activeTab === tab.id ? "text-white" : "text-white/80"
-                }`}
-              >
-                {tab.label}
+              
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    {exp.role}
+                  </h3>
+                  <p className="text-gray-300">
+                    {exp.company}
+                  </p>
+                </div>
+
+                <p className="text-sm text-gray-400 mt-2 md:mt-0">
+                  {exp.duration}
+                </p>
               </div>
-              <div
-                className={`text-sm ${
-                  activeTab === tab.id
-                    ? "text-white/90 font-medium glow"
-                    : "text-white/50"
-                }`}
-              >
-                {tab.years}
-              </div>
-            </button>
+
+              <ul className="mt-4 space-y-2 text-gray-300 text-sm leading-relaxed">
+                {exp.points.map((point, i) => (
+                  <li key={i}>• {point}</li>
+                ))}
+              </ul>
+
+            </div>
           ))}
-        </div>
 
-        {/* Glassmorphism Card */}
-        <div
-          className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl"
-          style={{ height: `${cardHeight}px` }}
-        >
-          {/* Title & years */}
-          <div className="flex justify-between items-start mb-6">
-            <h3 className="text-2xl font-semibold">{content[activeTab].title}</h3>
-            <span className="px-4 py-1 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm">
-              {content[activeTab].years}
-            </span>
-          </div>
-
-          {/* Content */}
-          <ul className="space-y-4 text-white/90 leading-relaxed">
-            {content[activeTab].body.map((point, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="text-green-300 text-xl">▹</span>
-                <span dangerouslySetInnerHTML={{ __html: point }} />
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
