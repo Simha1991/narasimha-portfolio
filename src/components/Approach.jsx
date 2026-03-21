@@ -19,20 +19,25 @@ export default function Approach() {
   ];
 
   return (
-      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
-  
-      <div className="max-w-6xl mx-auto">
-        
+    <section className="pt-32 pb-24 px-6 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+      
+      <div className="max-w-5xl mx-auto">
+
+        {/* Divider */}
+        <div className="mb-20">
+          <div className="h-px w-full bg-white/10"></div>
+        </div>
+
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold mb-16">
           How I Work
         </h2>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        {/* Content (Editorial Layout) */}
+        <div className="space-y-16">
           
           {items.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="max-w-3xl">
               
               <h3 className="text-xl font-semibold text-teal-400">
                 {item.title}
