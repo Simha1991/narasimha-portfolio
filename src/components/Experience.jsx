@@ -32,37 +32,38 @@ export default function Experience() {
           Experience
         </h2>
 
-        <div className="relative border-l border-white/20 pl-8 space-y-16">
+        <div className="space-y-16">
           
           {experiences.map((exp, index) => (
-            <div key={index} className="relative">
+            <div
+              key={index}
+              className="relative pl-6 border-l border-white/20 hover:border-teal-400 transition"
+            >
               
-              {/* Dot */}
-              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-teal-400 rounded-full shadow-md"></div>
-
-              {/* Content */}
-              <div>
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      {exp.role}
-                    </h3>
-                    <p className="text-gray-300">
-                      {exp.company}
-                    </p>
-                  </div>
-
-                  <p className="text-sm text-gray-400 mt-2 md:mt-0">
-                    {exp.duration}
+              {/* Role + Company */}
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                
+                <div>
+                  <h3 className="text-xl md:text-2xl font-semibold">
+                    {exp.role}
+                  </h3>
+                  <p className="text-gray-300 mt-1">
+                    {exp.company}
                   </p>
                 </div>
 
-                <ul className="mt-4 space-y-2 text-gray-300 text-sm leading-relaxed">
-                  {exp.points.map((point, i) => (
-                    <li key={i}>• {point}</li>
-                  ))}
-                </ul>
+                <p className="text-sm text-gray-400 mt-2 md:mt-0">
+                  {exp.duration}
+                </p>
+              </div>
+
+              {/* Points (NO BULLETS) */}
+              <div className="mt-6 space-y-3">
+                {exp.points.map((point, i) => (
+                  <p key={i} className="text-gray-300 text-sm leading-relaxed">
+                    {point}
+                  </p>
+                ))}
               </div>
 
             </div>
