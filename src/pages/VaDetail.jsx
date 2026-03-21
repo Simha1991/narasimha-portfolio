@@ -1,163 +1,198 @@
 // src/pages/VaDetail.jsx
-import React from "react";
+
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function VaDetail() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900 px-6 py-16">
+      <div className="max-w-4xl mx-auto">
 
-      {/* HEADER */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="mb-4 opacity-80">← Back to work</p>
+        {/* Back */}
+        <button
+          onClick={() => navigate(-1)}
+          className="mb-8 text-sm text-gray-500 hover:text-gray-800 transition"
+        >
+          ← Back to work
+        </button>
 
-          <h1 className="text-5xl font-bold mb-6">
-            Virtual Assistant (VA)
-          </h1>
+        {/* Title */}
+        <h1 className="text-4xl font-bold mb-4">
+          Virtual Assistant (VA)
+        </h1>
 
-          <p className="text-xl opacity-90 max-w-3xl">
-            Reimagining enterprise support by bringing AI-powered assistance to the forefront —
-            reducing friction, accelerating resolution, and improving customer trust.
-          </p>
+        <p className="text-lg text-gray-600 mb-6">
+          Reimagining enterprise support by bringing AI-driven assistance to the forefront
+        </p>
 
-          <div className="flex gap-4 mt-6 flex-wrap">
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-              Role: Principal UX Designer
-            </span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-              Scope: Enterprise Support (ISG)
-            </span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-              Impact: 71% faster start · ~95% success rate
-            </span>
-          </div>
-        </div>
-      </section>
+        {/* Role */}
+        <p className="text-sm text-gray-600 mb-16">
+          <span className="font-semibold text-gray-900">Role:</span> Principal UX Designer ·
+          <span className="font-semibold text-gray-900"> Scope:</span> UX, IA, AI interaction design ·
+          <span className="font-semibold text-gray-900"> Team:</span> Product, Engineering
+        </p>
 
-      {/* PROBLEM */}
-      <section className="py-20 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+        <div className="space-y-24">
 
-          <div>
-            <h2 className="text-3xl font-bold mb-6">
-              Understanding the problem
-            </h2>
+          {/* Context */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Context</h2>
 
-            <p className="text-lg text-gray-600 mb-6">
-              The existing support experience required users to navigate multiple disconnected steps 
-              before getting help. Critical actions like identifying the issue, validating severity, 
-              and choosing contact methods were scattered — increasing effort and delaying resolution.
+            <p className="text-gray-700 leading-relaxed mb-4">
+              A Virtual Assistant already existed within the support ecosystem, but it was heavily underutilized.
+              Despite being designed to help users resolve issues faster, it remained buried deep within the
+              support journey — often requiring 8–9 steps before users could even access it.
             </p>
 
-            <ul className="space-y-4 text-gray-700">
-              <li>• <span className="font-medium">9+ steps</span> before reaching support</li>
-              <li>• Forced decisions before understanding the issue</li>
-              <li>• <span className="font-medium">Redundant validation</span> (sign-in, severity)</li>
-              <li>• No clear entry point for immediate help</li>
-              <li>• Experience reduced user trust</li>
+            <p className="text-gray-700 leading-relaxed">
+              Research showed that enterprise users — primarily administrators and technicians managing critical
+              infrastructure — either didn’t know the Virtual Assistant existed or found it too difficult to reach.
+              As a result, most users defaulted to assisted support, increasing operational cost and delaying resolution.
+            </p>
+          </section>
+
+          {/* Problem */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">The Problem</h2>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The support experience was fragmented, rigid, and heavily process-driven rather than user-driven.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Users were required to navigate multiple disconnected steps before they could even begin describing
+              their issue. These steps included identifying the product, selecting support categories, validating
+              severity levels, and entering details — all before receiving any meaningful assistance.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              This created a high-friction experience where users were forced to make decisions without sufficient
+              context, reducing trust and increasing time to resolution.
+            </p>
+
+            {/* IMAGE PLACEHOLDER */}
+            {/* Add problem flow image here later */}
+          </section>
+
+          {/* Diagnosis */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Diagnosis</h2>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Through analysis and user research, three fundamental issues emerged:
+            </p>
+
+            <div className="space-y-6 text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900">1. Delayed entry to support</p>
+                <p>
+                  Users could not access help immediately. The system required multiple steps before support even began,
+                  increasing effort and drop-offs.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">2. Rigid interaction model</p>
+                <p>
+                  The experience relied on predefined decision trees with yes/no questions, leaving no room for users
+                  to describe issues naturally.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900">3. System-centric design</p>
+                <p>
+                  The flow prioritized internal processes such as categorization and ticket creation rather than helping
+                  users resolve issues quickly.
+                </p>
+              </div>
+            </div>
+
+            <p className="text-gray-700 mt-6">
+              These issues resulted in extremely low engagement (~8% success rate) and high dependency on support agents.
+            </p>
+          </section>
+
+          {/* Insight */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Key Insight</h2>
+
+            <p className="text-xl text-gray-900 leading-relaxed">
+              Users don’t want to find support — they want immediate help.
+            </p>
+
+            <p className="text-gray-600 mt-4">
+              The faster we bring assistance to the entry point, the higher the success rate and user trust.
+            </p>
+          </section>
+
+          {/* Solution */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">The Solution</h2>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We reimagined the Virtual Assistant as a first-class entry point in the support experience.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Instead of guiding users through multiple steps, we brought support directly to them — enabling immediate
+              interaction, contextual understanding, and faster resolution.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              The redesigned experience supports natural language interaction, allowing users to describe their issues
+              freely while the system intelligently guides them toward resolution.
+            </p>
+
+            {/* IMAGE PLACEHOLDER */}
+            {/* Add AI flows image here later */}
+          </section>
+
+          {/* Key Decisions */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Key Design Decisions</h2>
+
+            <ul className="space-y-3 text-gray-700">
+              <li>• Moved Virtual Assistant to the top-level entry point</li>
+              <li>• Replaced decision-tree flows with natural language input</li>
+              <li>• Prioritized critical issues with immediate escalation to support</li>
+              <li>• Reduced unnecessary validation steps and user inputs</li>
+              <li>• Integrated knowledge base within the assistant experience</li>
+              <li>• Unified support journey across self-service and assisted channels</li>
             </ul>
-          </div>
+          </section>
 
-          <div>
-            <img
-              src="/narasimha-portfolio/images/va-problem-flow.png"
-              alt="Fragmented support flow"
-              className="w-full rounded-lg shadow-md"
-            />
+          {/* Impact */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Impact</h2>
 
-            <p className="text-sm text-gray-500 mt-4">
-              Legacy support journey showing multiple steps and delays before users could access help.
+            <div className="text-center mb-8">
+              <p className="text-5xl font-bold text-indigo-600">71%</p>
+              <p className="text-gray-600 mt-2">reduction in time to start support</p>
+            </div>
+
+            <ul className="space-y-3 text-gray-700">
+              <li>• Increased success rate from ~8% to ~95%</li>
+              <li>• Reduced unnecessary service requests</li>
+              <li>• Improved trust among enterprise users</li>
+              <li>• Enabled faster resolution for critical issues</li>
+              <li>• Streamlined support experience across ISG systems</li>
+            </ul>
+
+            <p className="text-gray-700 mt-6 leading-relaxed">
+              By shifting from a process-driven model to a user-centered approach, the Virtual Assistant transformed
+              from a hidden feature into a primary support channel.
             </p>
-          </div>
+          </section>
 
         </div>
-      </section>
-
-      {/* LANDSCAPE */}
-      <section className="py-20 border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Fragmented ecosystem across support portals
-          </h2>
-
-          <img
-            src="/narasimha-portfolio/images/va-landscape.png"
-            alt="Fragmented ecosystem"
-            className="w-full rounded-lg shadow-md"
-          />
-        </div>
-      </section>
-
-      {/* ENTRY POINT */}
-      <section className="py-20 border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Virtual Assistant was buried deep in the journey
-          </h2>
-
-          <img
-            src="/narasimha-portfolio/images/va-entry.png"
-            alt="VA entry point"
-            className="w-full rounded-lg shadow-md"
-          />
-        </div>
-      </section>
-
-      {/* SOLUTION */}
-      <section className="py-20 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-
-          <h2 className="text-3xl font-bold mb-10">
-            Reimagining support through AI-driven assistance
-          </h2>
-
-          <img
-            src="/narasimha-portfolio/images/va-ai-flows.png"
-            alt="VA capabilities"
-            className="w-full rounded-lg shadow-md"
-          />
-
-        </div>
-      </section>
-
-      {/* WHAT WE DID */}
-      <section className="py-20 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-
-          <h2 className="text-3xl font-bold mb-6">
-            Key improvements
-          </h2>
-
-          <ul className="space-y-4 text-gray-700 text-lg">
-            <li>• Moved Virtual Assistant to the <span className="font-medium">top of the journey</span></li>
-            <li>• Enabled <span className="font-medium">natural language input</span> instead of rigid flows</li>
-            <li>• Reduced dependency on multi-step navigation</li>
-            <li>• Introduced <span className="font-medium">critical issue detection</span> with direct escalation</li>
-            <li>• Integrated knowledge base + guided troubleshooting</li>
-            <li>• Unified “Contact Us” within the VA experience</li>
-          </ul>
-
-        </div>
-      </section>
-
-      {/* IMPACT */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6">
-
-          <h2 className="text-3xl font-bold mb-6">
-            Impact
-          </h2>
-
-          <ul className="space-y-4 text-gray-700 text-lg">
-            <li>• <span className="font-medium">71% faster</span> time to start support</li>
-            <li>• Increased success rate from <span className="font-medium">~8% → ~95%</span></li>
-            <li>• Reduced unnecessary support tickets</li>
-            <li>• Improved discoverability of help</li>
-            <li>• Enabled faster resolution for enterprise customers</li>
-          </ul>
-
-        </div>
-      </section>
-
+      </div>
     </div>
   );
 }
