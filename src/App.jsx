@@ -52,17 +52,11 @@ function AppContent() {
               <a href="#about" className="text-white hover:text-gray-200 transition">
                 About
               </a>
-              <a href="#skills" className="text-white hover:text-gray-200 transition">
-                Skills
-              </a>
-              <a href="#featured" className="text-white hover:text-gray-200 transition">
-                Selected work
+              <a href="#work" className="text-white hover:text-gray-200 transition">
+                Work
               </a>
               <a href="#experience" className="text-white hover:text-gray-200 transition">
                 Experience
-              </a>
-              <a href="#testimonials" className="text-white hover:text-gray-200 transition">
-                Testimonials
               </a>
               <a href="#contact" className="text-white hover:text-gray-200 transition">
                 Contact
