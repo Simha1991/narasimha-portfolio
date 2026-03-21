@@ -48,7 +48,9 @@ export default function FeaturedWork() {
           {primaryProjects.map((project, index) => (
             <div
               key={index}
-              onClick={() => navigate(project.link)}
+              onClick={() => navigate(
+                window.scrollTo(0, 0);
+                project.link)}
               className="group cursor-pointer rounded-2xl p-6 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300 hover:scale-[1.02]"
             >
               <h3 className="text-xl font-semibold text-white">
