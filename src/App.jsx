@@ -46,7 +46,7 @@ export default function App() {
                 Skills
               </a>
               <a href="#featured" className="text-white hover:text-gray-200 transition">
-                Featured work
+                Selected work
               </a>
               <a href="#experience" className="text-white hover:text-gray-200 transition">
                 Experience
