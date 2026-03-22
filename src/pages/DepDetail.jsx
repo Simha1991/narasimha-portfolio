@@ -59,7 +59,7 @@ export default function DepDetail() {
         <div className="space-y-24">
 
           {/* Problem */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">The Problem</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -73,7 +73,7 @@ export default function DepDetail() {
           </section>
 
           {/* Before vs After */}
-          <section className="py-16 bg-gray-50 rounded-2xl px-6">
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">
                 From fragmented experience to instant access
@@ -84,12 +84,12 @@ export default function DepDetail() {
             <img
               src="/narasimha-portfolio/images/dep-before-after.png"
               alt="Before vs After journey"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Scenario */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">
                 Real-world scenario: When a device issue occurs
@@ -105,12 +105,12 @@ export default function DepDetail() {
             <img
               src="/narasimha-portfolio/images/dep-scenario.png"
               alt="User scenario"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Solution */}
-          <section className="py-16 bg-gray-50 rounded-2xl px-6">
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">The Solution</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -125,12 +125,12 @@ export default function DepDetail() {
             <img
               src="/narasimha-portfolio/images/dep-lifecycle.png"
               alt="Lifecycle experience"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Key Decisions */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Key Design Decisions</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -145,7 +145,7 @@ export default function DepDetail() {
           </section>
 
           {/* Final UI */}
-          <section className="py-16 bg-gray-50 rounded-2xl px-6">
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Final Experience</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -154,12 +154,12 @@ export default function DepDetail() {
             <img
               src="/narasimha-portfolio/images/dep-final-ui.png"
               alt="Final UI"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Impact */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Impact</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -182,7 +182,7 @@ export default function DepDetail() {
             <img
               src="/narasimha-portfolio/images/dep-award.png"
               alt="President Award"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
