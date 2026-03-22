@@ -7,25 +7,25 @@ export default function VaDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
-  const sections = document.querySelectorAll(".fade-in-section");
+    const sections = document.querySelectorAll(".fade-in-section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observer.observe(section));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-16">
@@ -65,11 +65,15 @@ export default function VaDetail() {
             </div>
 
             <p className="text-gray-700 mb-4 leading-relaxed">
-              A Virtual Assistant already existed within the support ecosystem but was heavily underutilized.
+              A Virtual Assistant already existed within the support ecosystem, but it was heavily underutilized.
+              Despite being designed to help users resolve issues faster, it remained buried deep within the
+              support journey — often requiring 8–9 steps before users could even access it.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              It remained buried deep within the journey — often 8–9 steps away — leading users to rely on assisted support.
+              Enterprise users — primarily administrators and technicians managing critical infrastructure —
+              either didn’t know the Virtual Assistant existed or found it too difficult to reach.
+              As a result, most users defaulted to assisted support, increasing operational cost and delaying resolution.
             </p>
           </section>
 
@@ -80,13 +84,18 @@ export default function VaDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              The support experience was fragmented and process-driven, requiring multiple steps before users could get help.
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              The support experience was fragmented, rigid, and heavily process-driven rather than user-driven.
+            </p>
+
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              Users were required to navigate multiple disconnected steps before they could even begin describing
+              their issue.
             </p>
 
             <img
-              src="/narasimha-portfolio/images/va-fragmented.png"
-              className="w-full rounded-lg shadow-md image-hover"
+              src="/narasimha-portfolio/images/va-landscape.png"
+              className="w-full rounded-lg shadow-md image-hover mt-6"
             />
           </section>
 
@@ -97,9 +106,13 @@ export default function VaDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
+            <p className="text-gray-700 mb-6">
+              Through analysis and research, three key issues emerged:
+            </p>
+
             <img
               src="/narasimha-portfolio/images/va-process-split.png"
-              className="w-full rounded-lg shadow-md mb-8 image-hover"
+              className="w-full rounded-lg shadow-md image-hover mb-8"
             />
 
             <ul className="space-y-4 text-gray-700">
@@ -117,7 +130,7 @@ export default function VaDetail() {
             </div>
 
             <p className="text-gray-700 mb-6">
-              We moved Virtual Assistant to the entry point and enabled natural language interaction.
+              We reimagined Virtual Assistant as the primary entry point to support, enabling immediate access.
             </p>
 
             <div className="flex justify-center">
@@ -126,6 +139,10 @@ export default function VaDetail() {
                 className="w-1/2 rounded-lg shadow-md image-hover"
               />
             </div>
+
+            <p className="text-gray-700 mt-6">
+              Users can now describe issues in natural language and receive intelligent guidance instantly.
+            </p>
           </section>
 
           {/* AI Section */}
@@ -137,9 +154,15 @@ export default function VaDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 mb-6">
-              The Virtual Assistant combines conversational AI, knowledge guidance, and diagnostics into one system.
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              The redesigned Virtual Assistant brings multiple capabilities into a single experience.
             </p>
+
+            <ul className="space-y-3 text-gray-700 mb-8">
+              <li>• Conversational support</li>
+              <li>• Knowledge base guidance</li>
+              <li>• Advanced diagnostics</li>
+            </ul>
 
             <img
               src="/narasimha-portfolio/images/va-ai-flows.png"
