@@ -1,164 +1,379 @@
-import React from "react";
+// src/pages/CommsStudio.jsx
 
-const UnifiedPortalDetail = () => {
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
+export default function CommsStudio() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const sections = document.querySelectorAll(".fade-in-section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="caseStudyContainer">
+    <div className="min-h-screen bg-white text-gray-900 px-6 py-16">
+      <div className="max-w-5xl mx-auto">
 
-      {/* HERO */}
-      <section className="caseHero">
-        <h1>Unified Portal Experience (UPE)</h1>
-        <p className="caseSubtitle">
-          Reimagining Dell’s fragmented ecosystem into a unified, lifecycle-driven platform
-        </p>
+        {/* Back */}
+        <button
+          onClick={() => navigate(-1)}
+          className="mb-8 text-sm text-gray-500 hover:text-gray-800 transition"
+        >
+          ← Back to work
+        </button>
 
-        <div className="roleBlock">
-          <p><strong>Role:</strong> UX Designer</p>
-          <p><strong>Focus:</strong> Competitive analysis, capability mapping, information architecture, early design exploration</p>
-          <p><strong>Scale:</strong> 100+ stakeholders across multiple organizations</p>
+        {/* Hero */}
+        <section className="pb-12 border-b border-gray-200 fade-in-section">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Comms Studio AI
+          </h1>
+
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+            Transforming enterprise communication creation from months of manual effort into AI-powered self-service workflows
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 text-sm">
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Role:</strong> Principal UX Designer
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Scope:</strong> End-to-end platform design
+            </span>
+            <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
+              <strong>Impact:</strong> 2–6 months → Weeks
+            </span>
+          </div>
+        </section>
+
+        <div className="space-y-24 mt-16">
+
+          {/* Context */}
+          <section className="py-16 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Context</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-900 font-medium mb-4">
+              Creating a single enterprise communication required coordinating across 6+ teams and multiple disconnected systems.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Enterprise communication creation at scale is a complex, multi-layered process involving business teams, communications specialists, UX designers, legal reviewers, translation teams, and developers. Each communication is not just a piece of content — it is part of a larger customer lifecycle, requiring alignment with branding, tone, regulatory requirements, and delivery systems.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4">
+              In this ecosystem, every communication had to pass through multiple stages — requirement definition, content creation, design, stakeholder reviews, legal validation, translation, and development. Each of these stages operated in silos, with different tools, workflows, and expectations, creating a highly dependent and sequential process.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The communications team and UX designers were at the center of this system, responsible for translating business intent into structured, compliant, and well-designed communications. This meant they were not only designing experiences but also managing coordination across stakeholders, handling iterations, and ensuring quality across multiple dimensions.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed">
+              As communication demands grew, this model became increasingly difficult to scale. The system was not designed for speed or flexibility, making it challenging to respond to business needs in a timely manner. This created a clear need to rethink the entire communication creation process from a system-level perspective.
+            </p>
+          </section>
+
+          {/* Problem */}
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">The Problem</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Creating a single communication required coordination across multiple teams and tools. Business initiated the request, which flowed through communications teams, product managers, and UX designers. Designers had to interpret requirements, map lifecycle flows, craft content, and design emails while adhering to strict communication guidelines.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              This process involved constant back-and-forth iterations between stakeholders. Designs created in Figma were later reviewed in disconnected tools like PowerPoint, and eventually handed over to developers who manually recreated them in HTML — introducing inefficiencies and inconsistencies.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              End-to-end, this process took anywhere between 2 to 6 months for a single communication. The heavy dependency on design and communication teams created bottlenecks, making the system slow, error-prone, and difficult to scale.
+            </p>
+            <br />
+            <img
+              src="/narasimha-portfolio/images/before-after-comm.png"
+              alt="Before vs After comms studio AI"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            <br />
+            
+            <p className="imageCaption">
+              Legacy workflow required multiple handoffs and manual effort, while the new system enables AI-driven, self-service communication creation.
+            </p>
+          </section>
+
+          {/* Opportunity */}
+          <section className="py-16 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Opportunity</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The core issue was that communications and design teams were at the center of the entire workflow, handling creation, iteration, and coordination across stakeholders.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              This created an opportunity to shift ownership to business users — enabling them to create communications directly, while design, legal, and other teams transitioned into review and approval roles. With AI assistance and a structured workflow, communication creation could become faster, standardized, and significantly more scalable.
+            </p>
+          </section>
+
+          {/* Research */}
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Research & Insights</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              To understand the problem deeply, I conducted interviews with stakeholders across business, design, legal, translation, and development teams. Each group interacted with the communication workflow differently, and their challenges revealed where the system was breaking down.
+            </p>
+
+            <div>
+              <p className="font-semibold text-gray-900">Business teams</p>
+              <p>
+                Business users were primarily responsible for initiating communications but had very little control over execution. They depended heavily on communications and design teams, which led to delays and frequent escalations. Since turnaround times were long, business teams often had to follow up repeatedly, and any changes required restarting the iteration cycle, making the process frustrating and inefficient.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Designers</p>
+              <p>
+                Designers were responsible for interpreting requirements, creating layouts, writing content, and ensuring adherence to communication guidelines. They spent a significant amount of time iterating based on evolving business feedback. Much of their effort was repetitive, focusing on refining content and structure rather than solving higher-level design problems.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Legal teams</p>
+              <p>
+                Legal teams were often brought into the process late, after design and content had already been finalized. This resulted in rework and delays, as any compliance-related changes required revisiting earlier stages of the workflow.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Translation teams</p>
+              <p>
+                Translation workflows operated separately from the main process. Managing multiple languages and validating translated content was time-consuming and difficult to track, especially when changes were made late in the cycle.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Development teams</p>
+              <p>
+                Developers had to manually convert Figma designs into HTML, which added additional effort and introduced the possibility of inconsistencies between design and production. This step further extended the overall timeline.
+              </p>
+            </div>
+          
+          <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
+            These insights made it clear that the problem was not just about individual inefficiencies, but a system that relied on sequential handoffs, manual work, and heavy dependencies across teams.
+          </p>
+
+            <br />
+            <img
+              src="/narasimha-portfolio/images/persona.png"
+              alt="Stakeholder personas and pain points"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            <br />
+            
+            
+            <p className="imageCaption">
+              Multiple stakeholders were involved across the lifecycle, each facing unique challenges that contributed to delays and inefficiencies.
+            </p>
+            
+          </section>
+
+          {/* Solution */}
+          <section className="py-16 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">The Solution</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+           <p className="text-gray-700 leading-relaxed mb-4">
+              Comms Studio AI was designed as a centralized platform that shifts communication creation from a dependency-heavy workflow to a self-service, AI-assisted system. The goal was to enable business users to create communications independently while integrating all stakeholders into a unified, structured workflow.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Instead of relying on multiple teams and tools, the platform brings content creation, design systems, approvals, legal validation, translation, and development output into a single experience.
+            </p>
+
+            <br />
+            <img
+              src="/narasimha-portfolio/images/architecture.png"
+              alt="Comms Studio system architecture"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            <br />
+            
+            <div className="space-y-8 text-gray-700">
+            
+              <div>
+                <p className="font-semibold text-gray-900">Business: Creating communications with AI</p>
+                <p>
+                  Business users start by creating or editing a communication within the platform. Using AI-powered assistance, they can generate content that adheres to communication guidelines within minutes. This eliminates the need for multiple iterations with design teams and significantly reduces turnaround time at the very first step.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Design: System-driven consistency</p>
+                <p>
+                  Instead of designing each communication from scratch, a component-based design system is built into the platform. Business users assemble communications using predefined components, while designers act as reviewers — ensuring that layouts, structure, and language-specific adjustments meet standards without recreating designs in external tools.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Approvals: Structured workflow across teams</p>
+                <p>
+                  The communication moves through a structured approval process within the platform. Business stakeholders review and approve content first, followed by design validation. Legal teams are integrated directly into the workflow, allowing them to review and approve communications at the right stage instead of being an external dependency.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Translation: Built-in and real-time</p>
+                <p>
+                  Translation is fully integrated into the platform through a label management system. Users can view, edit, and validate multiple languages directly within the tool, eliminating the need for separate workflows and making it easier to manage global communications.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Development: Ready-to-use output</p>
+                <p>
+                  Once all approvals are complete, the platform generates production-ready HTML. Developers no longer need to recreate designs manually — they can directly use the output, significantly reducing effort and ensuring consistency between design and production.
+                </p>
+              </div>
+            
+            </div>
+            
+            <p className="text-gray-700 leading-relaxed mt-6">
+              By bringing all stakeholders into a single system and redefining their roles, Comms Studio AI transforms communication creation from a slow, fragmented process into a fast, scalable workflow driven by AI and system design.
+            </p>
+          </section>
+
+          {/* Workflow */}
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">How it works</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Business users create or modify communications within the platform using AI-assisted content generation.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The communication flows through structured approvals — business review, design validation, legal approval, and translation — all managed within the tool.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Once finalized, the communication is exported as HTML and passed to development, eliminating manual design-to-code translation and significantly reducing turnaround time.
+            </p>
+
+            <br/>
+            <img
+              src="/narasimha-portfolio/images/workflow.png"
+              alt="End-to-end workflow with approvals"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            <br />
+            
+            <p className="imageCaption">
+              A structured approval workflow ensures quality while significantly reducing turnaround time.
+            </p>
+                        
+          </section>
+
+           {/* Final experience */}
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">The Final Experience</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+            
+              <p>
+                The final solution transformed communication creation from a fragmented, team-heavy process into a streamlined, self-service experience. Business users can now independently create, edit, and manage communications through a centralized platform powered by AI.
+              </p>
+            
+              <p>
+                Instead of relying on multiple teams for content creation, users can draft communications using AI-assisted suggestions that ensure adherence to content guidelines and tone. The system intelligently guides users through structure, reducing ambiguity and eliminating the need for repeated iterations.
+              </p>
+            
+              <p>
+                The integrated workflow brings all stakeholders into a single ecosystem. Approvals from business, design, legal, and translation teams are handled seamlessly within the platform, with full visibility into progress at every stage. This eliminates back-and-forth communication and significantly improves coordination.
+              </p>
+            
+              <p>
+                The output is production-ready HTML generated directly from the system, removing the need for manual development effort. This not only reduces errors but also ensures consistency across all communications, regardless of scale or region.
+              </p>
+            <br />
+            <img
+              src="/narasimha-portfolio/images/comms-tool.png"
+              alt="Comms studio interface"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            <br />
+            
+              <p className="imageCaption">
+                A unified interface enabling AI-assisted content creation, structured approvals, and real-time tracking across stakeholders.
+              </p>
+            
+              <p>
+                Overall, the experience shifts the ownership of communication creation closer to the business while maintaining quality through system-driven controls. What previously took months and multiple handoffs can now be accomplished in a matter of days, with significantly greater efficiency and confidence.
+              </p>
+            </section>
+          
+
+          {/* Impact */}
+          <section className="py-16 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Impact</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed">
+              Comms Studio AI transformed communication creation from a slow, dependency-heavy process into a scalable, AI-driven workflow. What previously took 2 to 6 months can now be completed within weeks, with significantly fewer iterations and reduced development effort. Early adoption has shown strong positive feedback from business users, reduced escalations, and faster delivery cycles — with the potential to bring timelines down to days as the platform matures.
+            </p>
+          </section>
+
+          {/* Reflection */}
+          <section className="py-16 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Reflection & Future</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
+              This project reinforced the importance of solving problems at a system level rather than optimizing individual steps. By shifting ownership and embedding intelligence into the workflow, we were able to eliminate inefficiencies across multiple teams.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Looking ahead, the platform is being expanded to support additional communication channels like SMS and messaging platforms, integrate workflow visualization, and enable direct deployment without development handoffs.
+            </p>
+          </section>
+
         </div>
-      </section>
-
-      {/* CONTEXT + PROBLEM */}
-      <section className="caseSection">
-        <h2>Context & Problem</h2>
-        <div className="sectionDivider" />
-
-        <p>
-          Dell’s post-purchase experience is powered by a vast ecosystem of portals — each built to serve specific use cases such as support, asset management, service requests, procurement, and lifecycle tracking. Over time, this ecosystem grew into more than 100+ independent platforms, each operating in silos.
-        </p>
-
-        <p>
-          While these portals individually delivered value, they lacked cohesion as a unified experience. Customers were required to navigate across multiple systems to complete even simple tasks, often losing context and repeating effort along the way.
-        </p>
-
-        <p>
-          This fragmentation created confusion, increased cognitive load, and made it difficult for users to understand the full lifecycle of their devices. More importantly, the system was not designed to scale — neither from a user experience standpoint nor from an organizational perspective.
-        </p>
-
-        <p>
-          The Unified Portal Experience (UPE) emerged as a long-term, strategic initiative aimed at solving this problem. Spanning over four years, this effort brought together 100+ stakeholders across multiple teams and organizations to define a single, unified layer that could consolidate capabilities and deliver a seamless lifecycle experience.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/portal-before.png" alt="Fragmented portal ecosystem" />
-        </div>
-        <p className="imageCaption">
-          A fragmented ecosystem of portals with overlapping capabilities and disconnected user journeys.
-        </p>
-      </section>
-
-      {/* MY ROLE / RESEARCH */}
-      <section className="caseSection">
-        <h2>My Role & Research Approach</h2>
-        <div className="sectionDivider" />
-
-        <p>
-          As part of the UX team, my role focused on understanding the ecosystem at scale and defining a structured foundation for unification. This involved multiple layers of research and design exploration to bring clarity to a highly complex system.
-        </p>
-
-        <h3>1. Competitive Analysis</h3>
-        <p>
-          I analyzed leading industry platforms that offered unified portal experiences to understand how they approached consolidation, lifecycle visibility, and service integration. This helped us benchmark our current ecosystem and identify gaps in discoverability, navigation, and scalability.
-        </p>
-
-        <p>
-          Competitive analysis played a crucial role in shaping our direction — it gave us clarity on what “good” looks like at scale and helped align stakeholders around the need for a unified experience.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/competitive.png" alt="Competitive analysis" />
-        </div>
-
-        <h3>2. Capability Mapping</h3>
-        <p>
-          We conducted an extensive audit of Dell’s existing platforms, identifying and documenting capabilities across multiple portals such as My Account, TechDirect, MyService360, and others. This resulted in a detailed capability map spanning 100+ features.
-        </p>
-
-        <p>
-          This exercise helped uncover overlaps, redundancies, and gaps — providing a clear understanding of what exists today and what needs to be unified.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/capability-mapping.png" alt="Capability mapping" />
-        </div>
-
-        <h3>3. Card Sorting & Information Architecture</h3>
-        <p>
-          To move from system-driven structure to user-centered organization, we conducted open card sorting exercises. This allowed us to group capabilities based on user mental models rather than internal classifications.
-        </p>
-
-        <p>
-          The outcome of this activity formed the foundation for a scalable information architecture that could support a unified portal experience.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/card-sorting.png" alt="Card sorting" />
-        </div>
-
-        <h3>4. Wireframing & Iteration</h3>
-        <p>
-          Based on the defined structure, we created low and mid-fidelity wireframes to explore layout, hierarchy, and discoverability. These designs focused on surfacing key capabilities while maintaining flexibility for deeper interactions.
-        </p>
-
-        <p>
-          The wireframes were tested across multiple internal teams and stakeholders. Through continuous feedback and iterative refinement — over several cycles — we evolved the experience to better align with both user needs and business expectations.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/wireframes.png" alt="Wireframes" />
-        </div>
-      </section>
-
-      {/* RESULT / SOLUTION */}
-      <section className="caseSection">
-        <h2>Result of Iterative Design Exploration</h2>
-        <div className="sectionDivider" />
-
-        <p>
-          Through continuous research, mapping, and iterative design, we arrived at a unified portal concept that brings together fragmented capabilities into a single, cohesive experience. This concept serves as a North Star vision for how Dell’s ecosystem can evolve into a lifecycle-driven platform.
-        </p>
-
-        <p>
-          The proposed solution introduces a centralized layer where users can access all relevant capabilities — from support and asset management to lifecycle insights — without navigating across multiple portals. The experience is designed to be contextual, adapting based on the user’s device, lifecycle stage, and intent.
-        </p>
-
-        <p>
-          By aligning the system around user goals rather than internal structures, the portal simplifies navigation, improves discoverability, and reduces the effort required to complete tasks.
-        </p>
-
-        <p>
-          High-fidelity concepts were created to visualize this unified experience, translating insights from wireframes into a more tangible and scalable interface. These designs helped stakeholders understand the potential of a consolidated ecosystem and provided a clear direction for future development.
-        </p>
-
-        <div className="imageContainer">
-          <img src="/images/upe/final-design.png" alt="Unified portal concept design" />
-        </div>
-
-        <p className="imageCaption">
-          A North Star vision illustrating a unified, lifecycle-driven portal experience across Dell’s ecosystem.
-        </p>
-      </section>
-
-      {/* NEXT STEPS */}
-      <section className="caseSection">
-        <h2>Next Steps</h2>
-        <div className="sectionDivider" />
-
-        <p>
-          As an ongoing initiative, the Unified Portal Experience continues to evolve through deeper research, stakeholder alignment, and iterative refinement. The next phase involves validating the high-fidelity concepts with broader stakeholder groups and identifying opportunities for phased implementation.
-        </p>
-
-        <p>
-          Further exploration includes expanding competitive benchmarks, refining the information architecture, and aligning technical feasibility with design direction. Given the scale of the ecosystem, a strategic rollout approach is essential to ensure adoption and long-term success.
-        </p>
-
-        <p>
-          The goal is to progressively move from concept to reality — transforming a fragmented ecosystem into a unified, scalable platform that enhances the overall customer experience.
-        </p>
-      </section>
-
+      </div>
     </div>
   );
-};
-
-export default UnifiedPortalDetail;
+}
