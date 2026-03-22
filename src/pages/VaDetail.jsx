@@ -51,8 +51,8 @@ export default function VaDetail() {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Research showed that enterprise users — primarily administrators and technicians managing critical
-              infrastructure — either didn’t know the Virtual Assistant existed or found it too difficult to reach.
+              Enterprise users — primarily administrators and technicians managing critical infrastructure —
+              either didn’t know the Virtual Assistant existed or found it too difficult to reach.
               As a result, most users defaulted to assisted support, increasing operational cost and delaying resolution.
             </p>
           </section>
@@ -71,13 +71,16 @@ export default function VaDetail() {
               severity levels, and entering details — all before receiving any meaningful assistance.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-8">
               This created a high-friction experience where users were forced to make decisions without sufficient
               context, reducing trust and increasing time to resolution.
             </p>
 
-            {/* IMAGE PLACEHOLDER */}
-            {/* Add problem flow image here later */}
+            <img
+              src="/narasimha-portfolio/images/va-fragmented.png"
+              alt="Fragmented support experience"
+              className="w-full rounded-lg shadow-md"
+            />
           </section>
 
           {/* Diagnosis */}
@@ -88,84 +91,88 @@ export default function VaDetail() {
               Through analysis and user research, three fundamental issues emerged:
             </p>
 
+            <img
+              src="/narasimha-portfolio/images/va-process-split.png"
+              alt="Process breakdown"
+              className="w-full rounded-lg shadow-md mb-8"
+            />
+
             <div className="space-y-6 text-gray-700">
               <div>
                 <p className="font-semibold text-gray-900">1. Delayed entry to support</p>
                 <p>
-                  Users could not access help immediately. The system required multiple steps before support even began,
-                  increasing effort and drop-offs.
+                  Users could not access help immediately, increasing effort and drop-offs.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-gray-900">2. Rigid interaction model</p>
                 <p>
-                  The experience relied on predefined decision trees with yes/no questions, leaving no room for users
-                  to describe issues naturally.
+                  Decision-tree based flows restricted users from describing issues naturally.
                 </p>
               </div>
 
               <div>
                 <p className="font-semibold text-gray-900">3. System-centric design</p>
                 <p>
-                  The flow prioritized internal processes such as categorization and ticket creation rather than helping
-                  users resolve issues quickly.
+                  The experience prioritized internal processes over user needs.
                 </p>
               </div>
             </div>
-
-            <p className="text-gray-700 mt-6">
-              These issues resulted in extremely low engagement (~8% success rate) and high dependency on support agents.
-            </p>
-          </section>
-
-          {/* Insight */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Key Insight</h2>
-
-            <p className="text-xl text-gray-900 leading-relaxed">
-              Users don’t want to find support — they want immediate help.
-            </p>
-
-            <p className="text-gray-600 mt-4">
-              The faster we bring assistance to the entry point, the higher the success rate and user trust.
-            </p>
           </section>
 
           {/* Solution */}
           <section>
             <h2 className="text-2xl font-semibold mb-4">The Solution</h2>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We reimagined the Virtual Assistant as a first-class entry point in the support experience.
+            <p className="text-gray-700 leading-relaxed mb-6">
+              We reimagined the Virtual Assistant as a first-class entry point in the support experience,
+              enabling users to access help instantly instead of navigating multiple steps.
             </p>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Instead of guiding users through multiple steps, we brought support directly to them — enabling immediate
-              interaction, contextual understanding, and faster resolution.
-            </p>
+            <img
+              src="/narasimha-portfolio/images/va-entry.png"
+              alt="New VA entry point"
+              className="w-full rounded-lg shadow-md mb-6"
+            />
 
             <p className="text-gray-700 leading-relaxed">
-              The redesigned experience supports natural language interaction, allowing users to describe their issues
+              The redesigned experience supports natural language interaction, allowing users to describe issues
               freely while the system intelligently guides them toward resolution.
             </p>
-
-            {/* IMAGE PLACEHOLDER */}
-            {/* Add AI flows image here later */}
           </section>
 
-          {/* Key Decisions */}
+          {/* NEW SECTION */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Key Design Decisions</h2>
+            <h2 className="text-2xl font-semibold mb-4">
+              A unified AI-powered support experience
+            </h2>
 
-            <ul className="space-y-3 text-gray-700">
-              <li>• Moved Virtual Assistant to the top-level entry point</li>
-              <li>• Replaced decision-tree flows with natural language input</li>
-              <li>• Prioritized critical issues with immediate escalation to support</li>
-              <li>• Reduced unnecessary validation steps and user inputs</li>
-              <li>• Integrated knowledge base within the assistant experience</li>
-              <li>• Unified support journey across self-service and assisted channels</li>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              The redesigned Virtual Assistant brings multiple support capabilities into a single, unified experience.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Instead of navigating separate tools, users can interact with the system in the way that best fits their needs:
+            </p>
+
+            <ul className="space-y-3 text-gray-700 mb-8">
+              <li>• Conversational support through natural language interaction</li>
+              <li>• Contextual knowledge base guidance and troubleshooting steps</li>
+              <li>• Advanced diagnostics through log analysis for complex issues</li>
             </ul>
+
+            <p className="text-gray-700 leading-relaxed mb-8">
+              By consolidating these capabilities, the Virtual Assistant becomes more than a chatbot —
+              it acts as a self-service support platform, enabling users to diagnose and resolve issues
+              without leaving the experience.
+            </p>
+
+            <img
+              src="/narasimha-portfolio/images/va-ai-flows.png"
+              alt="AI-powered support flows"
+              className="w-full rounded-lg shadow-md"
+            />
           </section>
 
           {/* Impact */}
@@ -186,8 +193,7 @@ export default function VaDetail() {
             </ul>
 
             <p className="text-gray-700 mt-6 leading-relaxed">
-              By shifting from a process-driven model to a user-centered approach, the Virtual Assistant transformed
-              from a hidden feature into a primary support channel.
+              The Virtual Assistant evolved from a hidden feature into a primary support channel.
             </p>
           </section>
 
