@@ -266,7 +266,7 @@ export default function CommsStudio() {
             
             </div>
             
-            <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
+            <p className="text-gray-700 leading-relaxed mt-6">
               By bringing all stakeholders into a single system and redefining their roles, Comms Studio AI transforms communication creation from a slow, fragmented process into a fast, scalable workflow driven by AI and system design.
             </p>
           </section>
