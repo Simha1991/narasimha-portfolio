@@ -25,6 +25,13 @@ export default function FeaturedWork() {
       role: "Principal UX Designer",
       link: "/va-detail",
     },
+    {
+    title: "Unified Portal Experience (UPE)",
+    problem: "Unified fragmented enterprise portal workflows",
+    impact: "Improved task completion by 30%+",
+    role: "Lead UX Designer",
+    link: "/upe-detail",
+  }
   ];
 
   const secondaryProject = {
@@ -80,34 +87,6 @@ export default function FeaturedWork() {
             </div>
           ))}
         </div>
-
-        {/* Secondary Project */}
-        <div className="max-w-md">
-          <div
-            onClick={() => {
-              window.scrollTo(0, 0);
-              navigate(secondaryProject.link);
-            }}
-            className="group cursor-pointer rounded-xl p-5 backdrop-blur-md bg-white/5 border border-white/10 hover:border-white/30 transition duration-300"
-          >
-            <h3 className="text-lg font-semibold text-white">
-              {secondaryProject.title}
-            </h3>
-
-            <p className="mt-2 text-gray-300 text-sm">
-              {secondaryProject.problem}
-            </p>
-
-            <p className="mt-3 text-teal-400 text-sm font-medium">
-              {secondaryProject.impact}
-            </p>
-
-            <div className="mt-4 text-sm text-indigo-300 group-hover:translate-x-1 transition">
-              View Case Study →
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
