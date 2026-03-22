@@ -85,12 +85,6 @@ export default function UnifiedPortalDetail() {
               The Unified Portal Experience (UPE) emerged as a long-term, strategic initiative aimed at solving this problem. Spanning over four years, this effort brought together 100+ stakeholders across multiple teams and organizations to define a single, unified layer that could consolidate capabilities and deliver a seamless lifecycle experience.
             </p>
 
-            <img
-              src="/images/upe/portal-before.png"
-              alt="Fragmented portal ecosystem"
-              className="w-full rounded-lg shadow-md image-hover"
-            />
-
             <p className="imageCaption mt-2">
               A fragmented ecosystem of portals with overlapping capabilities and disconnected user journeys.
             </p>
@@ -110,28 +104,28 @@ export default function UnifiedPortalDetail() {
                 I analyzed leading industry platforms that offered unified portal experiences to understand how they approached consolidation, lifecycle visibility, and service integration. This helped us benchmark our current ecosystem and identify gaps in discoverability, navigation, and scalability. Competitive analysis played a crucial role in shaping our direction — it gave us clarity on what “good” looks like at scale and helped align stakeholders around the need for a unified experience.
             </p>
 
-            <img src="/images/upe/competitive.png" className="w-full rounded-lg shadow-md image-hover" />
+            <img src="/narasimha-portfolio/images/competitive-analysis.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">2. Capability Mapping</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
           We conducted an extensive audit of Dell’s existing platforms, identifying and documenting capabilities across multiple portals such as My Account, TechDirect, MyService360, and others. This resulted in a detailed capability map spanning 100+ features. This exercise helped uncover overlaps, redundancies, and gaps — providing a clear understanding of what exists today and what needs to be unified.
             </p>
 
-            <img src="/images/upe/capability-mapping.png" className="w-full rounded-lg shadow-md image-hover" />
+            <img src="narasimha-portfolio/images/capability-matrix.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">3. Card Sorting & Information Architecture</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
           To move from system-driven structure to user-centered organization, we conducted open card sorting exercises. This allowed us to group capabilities based on user mental models rather than internal classifications. The outcome of this activity formed the foundation for a scalable information architecture that could support a unified portal experience.
             </p>
 
-            <img src="/images/upe/card-sorting.png" className="w-full rounded-lg shadow-md image-hover" />
+            <img src="narasimha-portfolio/images/card-sorting.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">4. Wireframing & Iteration</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
           Based on the defined structure, we created low and mid-fidelity wireframes to explore layout, hierarchy, and discoverability. These designs focused on surfacing key capabilities while maintaining flexibility for deeper interactions. The wireframes were tested across multiple internal teams and stakeholders. Through continuous feedback and iterative refinement — over several cycles — we evolved the experience to better align with both user needs and business expectations.
             </p>
 
-            <img src="/images/upe/wireframes.png" className="w-full rounded-lg shadow-md image-hover" />
+            <img src="narasimha-portfolio/images/wireframe-upe.png" className="w-full rounded-lg shadow-md image-hover" />
           </section>
 
           {/* RESULT */}
@@ -160,7 +154,7 @@ export default function UnifiedPortalDetail() {
             </p>
 
             <img
-              src="/images/upe/final-design.png"
+              src="narasimha-portfolio/images/upe-home.png"
               className="w-full rounded-lg shadow-md image-hover"
             />
 
