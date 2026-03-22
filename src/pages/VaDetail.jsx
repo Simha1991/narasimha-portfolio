@@ -138,12 +138,6 @@ export default function VaDetail() {
               src="/narasimha-portfolio/images/va-process-split.png"
               className="w-full rounded-lg shadow-md image-hover mb-8"
             />
-
-            <ul className="space-y-4 text-gray-700">
-              <li>• Delayed entry to support</li>
-              <li>• Rigid interaction model</li>
-              <li>• System-centric design</li>
-            </ul>
           </section>
 
           {/* Solution */}
@@ -164,17 +158,13 @@ export default function VaDetail() {
 <p className="text-gray-700 leading-relaxed">
   The introduction of natural language processing enables users to describe their issues freely, without being constrained by predefined options. For critical or high-severity issues, the system prioritizes speed by immediately surfacing contact options, allowing users to connect with support teams without delay.
 </p>
-
+<br />
             <div className="flex justify-center">
               <img
                 src="/narasimha-portfolio/images/va-entry.png"
                 className="w-1/2 rounded-lg shadow-md image-hover"
               />
             </div>
-
-            <p className="text-gray-700 mt-6">
-              Users can now describe issues in natural language and receive intelligent guidance instantly.
-            </p>
           </section>
 
           {/* AI Section */}
