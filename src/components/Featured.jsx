@@ -8,14 +8,14 @@ export default function FeaturedWork() {
       title: "CommStudio AI",
       problem: "Reimagined enterprise communication workflows with AI-driven creation",
       impact: "Reduced turnaround from months to weeks",
-      role: "Principal UX Designer",
+      role: "Lead UX Designer",
       link: "/comms-studio",
     },
     {
       title: "Digital Entry Point",
       problem: "Simplified access to device lifecycle and support using QR-based entry",
       impact: "Saved millions by reducing support calls",
-      role: "Principal UX Designer",
+      role: "Lead UX Designer",
       link: "/dep-detail",
     },
     {
@@ -29,7 +29,7 @@ export default function FeaturedWork() {
     title: "Unified Portal Experience (UPE)",
     problem: "Unified fragmented enterprise portal workflows",
     impact: "Improved task completion by 30%+",
-    role: "Lead UX Designer",
+    role: "Principal UX Designer",
     link: "/upe-detail",
   }
   ];
