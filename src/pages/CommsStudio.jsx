@@ -111,9 +111,11 @@ export default function CommsStudio() {
               End-to-end, this process took anywhere between 2 to 6 months for a single communication. The heavy dependency on design and communication teams created bottlenecks, making the system slow, error-prone, and difficult to scale.
             </p>
             <br />
-            <div className="imageContainer">
-              <img src="public/images/before-after-comm.png" alt="Before vs After workflow" />
-            </div>
+            <img
+              src="/narasimha-portfolio/images/before-after-comm.png"
+              alt="Before vs After comms studio AI"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
             
             <p className="imageCaption">
               Legacy workflow required multiple handoffs and manual effort, while the new system enables AI-driven, self-service communication creation.
@@ -191,10 +193,12 @@ export default function CommsStudio() {
           </p>
 
             <br />
-
-            <div className="imageContainer">
-              <img src="/public/images/persona.png" alt="Stakeholder personas and pain points" />
-            </div>
+            <img
+              src="/narasimha-portfolio/images/persona.png"
+              alt="Stakeholder personas and pain points"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+            
             
             <p className="imageCaption">
               Multiple stakeholders were involved across the lifecycle, each facing unique challenges that contributed to delays and inefficiencies.
@@ -217,9 +221,12 @@ export default function CommsStudio() {
               Instead of relying on multiple teams and tools, the platform brings content creation, design systems, approvals, legal validation, translation, and development output into a single experience.
             </p>
 
-            <div className="imageContainer">
-              <img src="/public/images/architecture.png" alt="Comms Studio system architecture" />
-            </div>
+            <br />
+            <img
+              src="/narasimha-portfolio/images/architecture.png"
+              alt="Comms Studio system architecture"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
             
             <p className="imageCaption">
               A centralized platform powered by AI connects business, design, legal, translation, and development into a unified workflow.
@@ -289,10 +296,11 @@ export default function CommsStudio() {
             </p>
 
             <br/>
-
-            <div className="imageContainer">
-              <img src="/public/images/workflow.png" alt="End-to-end workflow with approvals" />
-            </div>
+            <img
+              src="/narasimha-portfolio/images/workflow.png"
+              alt="End-to-end workflow with approvals"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
             
             <p className="imageCaption">
               A structured approval workflow ensures quality while significantly reducing turnaround time.
@@ -301,9 +309,11 @@ export default function CommsStudio() {
           </section>
 
            {/* Final experience */}
-          <section className="caseSection">
-              <h2>The Final Experience</h2>
-              <div className="sectionDivider" />
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">The Final Experience</h2>
+              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
+            </div>
             
               <p>
                 The final solution transformed communication creation from a fragmented, team-heavy process into a streamlined, self-service experience. Business users can now independently create, edit, and manage communications through a centralized platform powered by AI.
@@ -320,13 +330,12 @@ export default function CommsStudio() {
               <p>
                 The output is production-ready HTML generated directly from the system, removing the need for manual development effort. This not only reduces errors but also ensures consistency across all communications, regardless of scale or region.
               </p>
-            
-              <div className="imageContainer">
-                <img
-                  src="/images/commstudio/comms-tool.png"
-                  alt="Comms Studio interface showing AI assistance and approval workflow"
-                />
-              </div>
+            <br />
+            <img
+              src="/narasimha-portfolio/images/comms-tool.png"
+              alt="Comms studio interface"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
             
               <p className="imageCaption">
                 A unified interface enabling AI-assisted content creation, structured approvals, and real-time tracking across stakeholders.
