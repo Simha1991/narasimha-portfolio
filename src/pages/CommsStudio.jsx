@@ -116,6 +116,7 @@ export default function CommsStudio() {
               alt="Before vs After comms studio AI"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
             
             <p className="imageCaption">
               Legacy workflow required multiple handoffs and manual effort, while the new system enables AI-driven, self-service communication creation.
@@ -198,6 +199,7 @@ export default function CommsStudio() {
               alt="Stakeholder personas and pain points"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
             
             
             <p className="imageCaption">
@@ -227,6 +229,7 @@ export default function CommsStudio() {
               alt="Comms Studio system architecture"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
             
             <p className="imageCaption">
               A centralized platform powered by AI connects business, design, legal, translation, and development into a unified workflow.
@@ -301,6 +304,7 @@ export default function CommsStudio() {
               alt="End-to-end workflow with approvals"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
             
             <p className="imageCaption">
               A structured approval workflow ensures quality while significantly reducing turnaround time.
@@ -336,6 +340,7 @@ export default function CommsStudio() {
               alt="Comms studio interface"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
             
               <p className="imageCaption">
                 A unified interface enabling AI-assisted content creation, structured approvals, and real-time tracking across stakeholders.
