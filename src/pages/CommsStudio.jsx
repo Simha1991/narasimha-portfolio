@@ -71,23 +71,23 @@ export default function CommsStudio() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-900 font-medium mb-4 max-w-3xl">
+            <p className="text-gray-900 font-medium mb-4">
               Creating a single enterprise communication required coordinating across 6+ teams and multiple disconnected systems.
             </p>
             
-            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+            <p className="text-gray-700 leading-relaxed mb-4">
               Enterprise communication creation at scale is a complex, multi-layered process involving business teams, communications specialists, UX designers, legal reviewers, translation teams, and developers. Each communication is not just a piece of content — it is part of a larger customer lifecycle, requiring alignment with branding, tone, regulatory requirements, and delivery systems.
             </p>
             
-            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+            <p className="text-gray-700 leading-relaxed mb-4">
               In this ecosystem, every communication had to pass through multiple stages — requirement definition, content creation, design, stakeholder reviews, legal validation, translation, and development. Each of these stages operated in silos, with different tools, workflows, and expectations, creating a highly dependent and sequential process.
             </p>
             
-            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+            <p className="text-gray-700 leading-relaxed mb-4">
               The communications team and UX designers were at the center of this system, responsible for translating business intent into structured, compliant, and well-designed communications. This meant they were not only designing experiences but also managing coordination across stakeholders, handling iterations, and ensuring quality across multiple dimensions.
             </p>
             
-            <p className="text-gray-700 leading-relaxed max-w-3xl">
+            <p className="text-gray-700 leading-relaxed">
               As communication demands grew, this model became increasingly difficult to scale. The system was not designed for speed or flexibility, making it challenging to respond to business needs in a timely manner. This created a clear need to rethink the entire communication creation process from a system-level perspective.
             </p>
           </section>
@@ -149,8 +149,6 @@ export default function CommsStudio() {
             <p className="text-gray-700 leading-relaxed mb-6">
               To understand the problem deeply, I conducted interviews with stakeholders across business, design, legal, translation, and development teams. Each group interacted with the communication workflow differently, and their challenges revealed where the system was breaking down.
             </p>
-            
-            <div className="space-y-6 text-gray-700 max-w-3xl">
 
             <div>
               <p className="font-semibold text-gray-900">Business teams</p>
@@ -187,8 +185,6 @@ export default function CommsStudio() {
               </p>
             </div>
           
-          </div>
-          
           <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
             These insights made it clear that the problem was not just about individual inefficiencies, but a system that relied on sequential handoffs, manual work, and heavy dependencies across teams.
           </p>
@@ -215,11 +211,11 @@ export default function CommsStudio() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-           <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+           <p className="text-gray-700 leading-relaxed mb-4">
               Comms Studio AI was designed as a centralized platform that shifts communication creation from a dependency-heavy workflow to a self-service, AI-assisted system. The goal was to enable business users to create communications independently while integrating all stakeholders into a unified, structured workflow.
             </p>
             
-            <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
+            <p className="text-gray-700 leading-relaxed mb-6">
               Instead of relying on multiple teams and tools, the platform brings content creation, design systems, approvals, legal validation, translation, and development output into a single experience.
             </p>
 
@@ -231,11 +227,7 @@ export default function CommsStudio() {
             />
             <br />
             
-            <p className="imageCaption">
-              A centralized platform powered by AI connects business, design, legal, translation, and development into a unified workflow.
-            </p>
-            
-            <div className="space-y-8 text-gray-700 max-w-3xl">
+            <div className="space-y-8 text-gray-700">
             
               <div>
                 <p className="font-semibold text-gray-900">Business: Creating communications with AI</p>
