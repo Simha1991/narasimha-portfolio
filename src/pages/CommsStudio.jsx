@@ -71,8 +71,24 @@ export default function CommsStudio() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
+            <p className="text-gray-900 font-medium mb-4 max-w-3xl">
+              Creating a single enterprise communication required coordinating across 6+ teams and multiple disconnected systems.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+              Enterprise communication creation at scale is a complex, multi-layered process involving business teams, communications specialists, UX designers, legal reviewers, translation teams, and developers. Each communication is not just a piece of content — it is part of a larger customer lifecycle, requiring alignment with branding, tone, regulatory requirements, and delivery systems.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+              In this ecosystem, every communication had to pass through multiple stages — requirement definition, content creation, design, stakeholder reviews, legal validation, translation, and development. Each of these stages operated in silos, with different tools, workflows, and expectations, creating a highly dependent and sequential process.
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+              The communications team and UX designers were at the center of this system, responsible for translating business intent into structured, compliant, and well-designed communications. This meant they were not only designing experiences but also managing coordination across stakeholders, handling iterations, and ensuring quality across multiple dimensions.
+            </p>
+            
             <p className="text-gray-700 leading-relaxed max-w-3xl">
-              Creating enterprise email communications was a highly manual, multi-team process involving business, communications, design, legal, translation, and development teams. Each stage depended on the previous one, creating a linear workflow with heavy dependencies and frequent delays.
+              As communication demands grew, this model became increasingly difficult to scale. The system was not designed for speed or flexibility, making it challenging to respond to business needs in a timely manner. This created a clear need to rethink the entire communication creation process from a system-level perspective.
             </p>
           </section>
 
@@ -119,17 +135,52 @@ export default function CommsStudio() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We engaged with stakeholders across business, design, legal, translation, and development teams to understand their challenges.
-            </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+  To understand the problem deeply, I conducted interviews with stakeholders across business, design, legal, translation, and development teams. Each group interacted with the communication workflow differently, and their challenges revealed where the system was breaking down.
+</p>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Business teams faced delays and escalations due to slow turnaround times. Designers spent significant effort iterating on content. Legal teams were brought in late, causing rework. Translation workflows were disconnected and difficult to validate. Developers had to manually convert designs into HTML, increasing effort and risk of errors.
-            </p>
+<div className="space-y-6 text-gray-700 max-w-3xl">
 
-            <p className="text-gray-700 leading-relaxed">
-              These insights helped us identify the need for a unified system that could streamline workflows, reduce dependencies, and automate repetitive tasks.
-            </p>
+            <div>
+              <p className="font-semibold text-gray-900">Business teams</p>
+              <p>
+                Business users were primarily responsible for initiating communications but had very little control over execution. They depended heavily on communications and design teams, which led to delays and frequent escalations. Since turnaround times were long, business teams often had to follow up repeatedly, and any changes required restarting the iteration cycle, making the process frustrating and inefficient.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Designers</p>
+              <p>
+                Designers were responsible for interpreting requirements, creating layouts, writing content, and ensuring adherence to communication guidelines. They spent a significant amount of time iterating based on evolving business feedback. Much of their effort was repetitive, focusing on refining content and structure rather than solving higher-level design problems.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Legal teams</p>
+              <p>
+                Legal teams were often brought into the process late, after design and content had already been finalized. This resulted in rework and delays, as any compliance-related changes required revisiting earlier stages of the workflow.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Translation teams</p>
+              <p>
+                Translation workflows operated separately from the main process. Managing multiple languages and validating translated content was time-consuming and difficult to track, especially when changes were made late in the cycle.
+              </p>
+            </div>
+          
+            <div>
+              <p className="font-semibold text-gray-900">Development teams</p>
+              <p>
+                Developers had to manually convert Figma designs into HTML, which added additional effort and introduced the possibility of inconsistencies between design and production. This step further extended the overall timeline.
+              </p>
+            </div>
+          
+          </div>
+          
+          <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
+            These insights made it clear that the problem was not just about individual inefficiencies, but a system that relied on sequential handoffs, manual work, and heavy dependencies across teams.
+          </p>
           </section>
 
           {/* Solution */}
@@ -139,16 +190,55 @@ export default function CommsStudio() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We built Comms Studio AI — a centralized platform that enables business users to create, edit, and manage communications independently using AI assistance.
+           <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
+              Comms Studio AI was designed as a centralized platform that shifts communication creation from a dependency-heavy workflow to a self-service, AI-assisted system. The goal was to enable business users to create communications independently while integrating all stakeholders into a unified, structured workflow.
             </p>
-
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The platform integrates a design system based on reusable components, ensuring consistency without requiring manual design effort. AI helps generate content aligned with communication guidelines, reducing iteration cycles from weeks to minutes.
+            
+            <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
+              Instead of relying on multiple teams and tools, the platform brings content creation, design systems, approvals, legal validation, translation, and development output into a single experience.
             </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              The entire workflow — from creation to approvals, legal validation, translation, and development — is managed within a single system, with output generated directly as production-ready HTML.
+            
+            <div className="space-y-8 text-gray-700 max-w-3xl">
+            
+              <div>
+                <p className="font-semibold text-gray-900">Business: Creating communications with AI</p>
+                <p>
+                  Business users start by creating or editing a communication within the platform. Using AI-powered assistance, they can generate content that adheres to communication guidelines within minutes. This eliminates the need for multiple iterations with design teams and significantly reduces turnaround time at the very first step.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Design: System-driven consistency</p>
+                <p>
+                  Instead of designing each communication from scratch, a component-based design system is built into the platform. Business users assemble communications using predefined components, while designers act as reviewers — ensuring that layouts, structure, and language-specific adjustments meet standards without recreating designs in external tools.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Approvals: Structured workflow across teams</p>
+                <p>
+                  The communication moves through a structured approval process within the platform. Business stakeholders review and approve content first, followed by design validation. Legal teams are integrated directly into the workflow, allowing them to review and approve communications at the right stage instead of being an external dependency.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Translation: Built-in and real-time</p>
+                <p>
+                  Translation is fully integrated into the platform through a label management system. Users can view, edit, and validate multiple languages directly within the tool, eliminating the need for separate workflows and making it easier to manage global communications.
+                </p>
+              </div>
+            
+              <div>
+                <p className="font-semibold text-gray-900">Development: Ready-to-use output</p>
+                <p>
+                  Once all approvals are complete, the platform generates production-ready HTML. Developers no longer need to recreate designs manually — they can directly use the output, significantly reducing effort and ensuring consistency between design and production.
+                </p>
+              </div>
+            
+            </div>
+            
+            <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
+              By bringing all stakeholders into a single system and redefining their roles, Comms Studio AI transforms communication creation from a slow, fragmented process into a fast, scalable workflow driven by AI and system design.
             </p>
           </section>
 
