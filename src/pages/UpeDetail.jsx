@@ -107,28 +107,28 @@ export default function UnifiedPortalDetail() {
 
             <h3 className="font-semibold mt-8 mb-2">1. Competitive Analysis</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              I analyzed leading industry platforms...
+                I analyzed leading industry platforms that offered unified portal experiences to understand how they approached consolidation, lifecycle visibility, and service integration. This helped us benchmark our current ecosystem and identify gaps in discoverability, navigation, and scalability. Competitive analysis played a crucial role in shaping our direction — it gave us clarity on what “good” looks like at scale and helped align stakeholders around the need for a unified experience.
             </p>
 
             <img src="/images/upe/competitive.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">2. Capability Mapping</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              We conducted an extensive audit...
+          We conducted an extensive audit of Dell’s existing platforms, identifying and documenting capabilities across multiple portals such as My Account, TechDirect, MyService360, and others. This resulted in a detailed capability map spanning 100+ features. This exercise helped uncover overlaps, redundancies, and gaps — providing a clear understanding of what exists today and what needs to be unified.
             </p>
 
             <img src="/images/upe/capability-mapping.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">3. Card Sorting & Information Architecture</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              To move from system-driven structure...
+          To move from system-driven structure to user-centered organization, we conducted open card sorting exercises. This allowed us to group capabilities based on user mental models rather than internal classifications. The outcome of this activity formed the foundation for a scalable information architecture that could support a unified portal experience.
             </p>
 
             <img src="/images/upe/card-sorting.png" className="w-full rounded-lg shadow-md image-hover" />
 
             <h3 className="font-semibold mt-8 mb-2">4. Wireframing & Iteration</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Based on the defined structure...
+          Based on the defined structure, we created low and mid-fidelity wireframes to explore layout, hierarchy, and discoverability. These designs focused on surfacing key capabilities while maintaining flexibility for deeper interactions. The wireframes were tested across multiple internal teams and stakeholders. Through continuous feedback and iterative refinement — over several cycles — we evolved the experience to better align with both user needs and business expectations.
             </p>
 
             <img src="/images/upe/wireframes.png" className="w-full rounded-lg shadow-md image-hover" />
@@ -142,7 +142,21 @@ export default function UnifiedPortalDetail() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              Through continuous research, mapping, and iterative design...
+        <p>
+                  Through continuous research, mapping, and iterative design, we arrived at a unified portal concept that brings together fragmented capabilities into a single, cohesive experience. This concept serves as a North Star vision for how Dell’s ecosystem can evolve into a lifecycle-driven platform.
+                </p>
+        
+                <p>
+                  The proposed solution introduces a centralized layer where users can access all relevant capabilities — from support and asset management to lifecycle insights — without navigating across multiple portals. The experience is designed to be contextual, adapting based on the user’s device, lifecycle stage, and intent.
+                </p>
+        
+                <p>
+                  By aligning the system around user goals rather than internal structures, the portal simplifies navigation, improves discoverability, and reduces the effort required to complete tasks.
+                </p>
+        
+                <p>
+                  High-fidelity concepts were created to visualize this unified experience, translating insights from wireframes into a more tangible and scalable interface. These designs helped stakeholders understand the potential of a consolidated ecosystem and provided a clear direction for future development.
+                </p>          
             </p>
 
             <img
@@ -163,7 +177,9 @@ export default function UnifiedPortalDetail() {
             </div>
 
             <p className="text-gray-700 leading-relaxed">
-              As an ongoing initiative...
+          As an ongoing initiative, the Unified Portal Experience continues to evolve through deeper research, stakeholder alignment, and iterative refinement. The next phase involves validating the high-fidelity concepts with broader stakeholder groups and identifying opportunities for phased implementation. Further exploration includes expanding competitive benchmarks, refining the information architecture, and aligning technical feasibility with design direction. Given the scale of the ecosystem, a strategic rollout approach is essential to ensure adoption and long-term success.
+              <br />
+          Further exploration includes expanding competitive benchmarks, refining the information architecture, and aligning technical feasibility with design direction. Given the scale of the ecosystem, a strategic rollout approach is essential to ensure adoption and long-term success.
             </p>
           </section>
 
