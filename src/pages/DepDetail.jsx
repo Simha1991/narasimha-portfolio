@@ -6,26 +6,26 @@ import { useNavigate } from "react-router-dom";
 export default function DepDetail() {
   const navigate = useNavigate();
 
- useEffect(() => {
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-  const sections = document.querySelectorAll(".fade-in-section");
+    const sections = document.querySelectorAll(".fade-in-section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observer.observe(section));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-16">
@@ -55,7 +55,6 @@ export default function DepDetail() {
           <span className="font-semibold text-gray-900"> Team:</span> Product, Engineering, Design
         </p>
 
-        {/* ALL SECTIONS */}
         <div className="space-y-24">
 
           {/* Problem */}
@@ -65,10 +64,17 @@ export default function DepDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-4">
               Accessing device support was complex, fragmented, and heavily dependent on assisted channels.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mb-4">
               Users had to locate a service tag, manually enter it, navigate multiple pages, and still struggled
-              to find relevant information. Most users defaulted to calling support — even for simple issues.
+              to find relevant information.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+              Most users defaulted to calling support — even for simple issues — leading to increased operational cost.
             </p>
           </section>
 
@@ -97,8 +103,11 @@ export default function DepDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-6 leading-relaxed">
               Users often struggled to take the right next step when something went wrong.
+            </p>
+
+            <p className="text-gray-700 mb-6 leading-relaxed">
               The redesigned experience enables immediate action without relying on support.
             </p>
 
@@ -116,8 +125,11 @@ export default function DepDetail() {
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
-            <p className="text-gray-700 mb-8">
+            <p className="text-gray-700 mb-4 leading-relaxed">
               We introduced a QR-based unified entry point that instantly connects users to their device.
+            </p>
+
+            <p className="text-gray-700 mb-8 leading-relaxed">
               The experience dynamically adapts based on the device lifecycle — from onboarding to troubleshooting
               to end-of-life decisions.
             </p>
