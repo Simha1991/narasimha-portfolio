@@ -110,6 +110,14 @@ export default function CommsStudio() {
             <p className="text-gray-700 leading-relaxed">
               End-to-end, this process took anywhere between 2 to 6 months for a single communication. The heavy dependency on design and communication teams created bottlenecks, making the system slow, error-prone, and difficult to scale.
             </p>
+            <br />
+            <div className="imageContainer">
+              <img src="public/images/before-after-comm.png" alt="Before vs After workflow" />
+            </div>
+            
+            <p className="imageCaption">
+              Legacy workflow required multiple handoffs and manual effort, while the new system enables AI-driven, self-service communication creation.
+            </p>
           </section>
 
           {/* Opportunity */}
@@ -136,10 +144,10 @@ export default function CommsStudio() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-  To understand the problem deeply, I conducted interviews with stakeholders across business, design, legal, translation, and development teams. Each group interacted with the communication workflow differently, and their challenges revealed where the system was breaking down.
-</p>
-
-<div className="space-y-6 text-gray-700 max-w-3xl">
+              To understand the problem deeply, I conducted interviews with stakeholders across business, design, legal, translation, and development teams. Each group interacted with the communication workflow differently, and their challenges revealed where the system was breaking down.
+            </p>
+            
+            <div className="space-y-6 text-gray-700 max-w-3xl">
 
             <div>
               <p className="font-semibold text-gray-900">Business teams</p>
@@ -181,6 +189,17 @@ export default function CommsStudio() {
           <p className="text-gray-700 leading-relaxed mt-6 max-w-3xl">
             These insights made it clear that the problem was not just about individual inefficiencies, but a system that relied on sequential handoffs, manual work, and heavy dependencies across teams.
           </p>
+
+            <br />
+
+            <div className="imageContainer">
+              <img src="/public/images/persona.png" alt="Stakeholder personas and pain points" />
+            </div>
+            
+            <p className="imageCaption">
+              Multiple stakeholders were involved across the lifecycle, each facing unique challenges that contributed to delays and inefficiencies.
+            </p>
+            
           </section>
 
           {/* Solution */}
@@ -196,6 +215,14 @@ export default function CommsStudio() {
             
             <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
               Instead of relying on multiple teams and tools, the platform brings content creation, design systems, approvals, legal validation, translation, and development output into a single experience.
+            </p>
+
+            <div className="imageContainer">
+              <img src="/public/images/architecture.png" alt="Comms Studio system architecture" />
+            </div>
+            
+            <p className="imageCaption">
+              A centralized platform powered by AI connects business, design, legal, translation, and development into a unified workflow.
             </p>
             
             <div className="space-y-8 text-gray-700 max-w-3xl">
@@ -260,7 +287,56 @@ export default function CommsStudio() {
             <p className="text-gray-700 leading-relaxed">
               Once finalized, the communication is exported as HTML and passed to development, eliminating manual design-to-code translation and significantly reducing turnaround time.
             </p>
+
+            <br/>
+
+            <div className="imageContainer">
+              <img src="/public/images/workflow.png" alt="End-to-end workflow with approvals" />
+            </div>
+            
+            <p className="imageCaption">
+              A structured approval workflow ensures quality while significantly reducing turnaround time.
+            </p>
+                        
           </section>
+
+           {/* Final experience */}
+          <section className="caseSection">
+              <h2>The Final Experience</h2>
+              <div className="sectionDivider" />
+            
+              <p>
+                The final solution transformed communication creation from a fragmented, team-heavy process into a streamlined, self-service experience. Business users can now independently create, edit, and manage communications through a centralized platform powered by AI.
+              </p>
+            
+              <p>
+                Instead of relying on multiple teams for content creation, users can draft communications using AI-assisted suggestions that ensure adherence to content guidelines and tone. The system intelligently guides users through structure, reducing ambiguity and eliminating the need for repeated iterations.
+              </p>
+            
+              <p>
+                The integrated workflow brings all stakeholders into a single ecosystem. Approvals from business, design, legal, and translation teams are handled seamlessly within the platform, with full visibility into progress at every stage. This eliminates back-and-forth communication and significantly improves coordination.
+              </p>
+            
+              <p>
+                The output is production-ready HTML generated directly from the system, removing the need for manual development effort. This not only reduces errors but also ensures consistency across all communications, regardless of scale or region.
+              </p>
+            
+              <div className="imageContainer">
+                <img
+                  src="/images/commstudio/comms-tool.png"
+                  alt="Comms Studio interface showing AI assistance and approval workflow"
+                />
+              </div>
+            
+              <p className="imageCaption">
+                A unified interface enabling AI-assisted content creation, structured approvals, and real-time tracking across stakeholders.
+              </p>
+            
+              <p>
+                Overall, the experience shifts the ownership of communication creation closer to the business while maintaining quality through system-driven controls. What previously took months and multiple handoffs can now be accomplished in a matter of days, with significantly greater efficiency and confidence.
+              </p>
+            </section>
+          
 
           {/* Impact */}
           <section className="py-16 fade-in-section">
