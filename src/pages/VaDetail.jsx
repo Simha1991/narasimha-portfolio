@@ -7,8 +7,25 @@ export default function VaDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  window.scrollTo(0, 0);
+
+  const sections = document.querySelectorAll(".fade-in-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 px-6 py-16">
