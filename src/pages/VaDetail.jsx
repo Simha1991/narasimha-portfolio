@@ -77,7 +77,7 @@ export default function VaDetail() {
             </p>
 
             <img
-              src="/narasimha-portfolio/images/va-fragmented.png"
+              src="/narasimha-portfolio/images/va-landscape.png"
               alt="Fragmented support experience"
               className="w-full rounded-lg shadow-md"
             />
