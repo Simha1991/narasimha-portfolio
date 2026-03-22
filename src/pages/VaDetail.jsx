@@ -58,7 +58,7 @@ export default function VaDetail() {
         <div className="space-y-24">
 
           {/* Context */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Context</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -74,7 +74,7 @@ export default function VaDetail() {
           </section>
 
           {/* Problem */}
-          <section className="py-16 bg-gray-50 rounded-2xl px-6">
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">The Problem</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -86,12 +86,12 @@ export default function VaDetail() {
 
             <img
               src="/narasimha-portfolio/images/va-fragmented.png"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Diagnosis */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Diagnosis</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -99,7 +99,7 @@ export default function VaDetail() {
 
             <img
               src="/narasimha-portfolio/images/va-process-split.png"
-              className="w-full rounded-lg shadow-md mb-8"
+              className="w-full rounded-lg shadow-md mb-8 image-hover"
             />
 
             <ul className="space-y-4 text-gray-700">
@@ -110,7 +110,7 @@ export default function VaDetail() {
           </section>
 
           {/* Solution */}
-          <section className="py-16 bg-gray-50 rounded-2xl px-6">
+          <section className="py-16 bg-gray-50 rounded-2xl px-6 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">The Solution</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
@@ -123,13 +123,13 @@ export default function VaDetail() {
             <div className="flex justify-center">
               <img
                 src="/narasimha-portfolio/images/va-entry.png"
-                className="w-1/2 rounded-lg shadow-md"
+                className="w-1/2 rounded-lg shadow-md image-hover"
               />
             </div>
           </section>
 
           {/* AI Section */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">
                 A unified AI-powered support experience
@@ -143,12 +143,12 @@ export default function VaDetail() {
 
             <img
               src="/narasimha-portfolio/images/va-ai-flows.png"
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-md image-hover"
             />
           </section>
 
           {/* Impact */}
-          <section className="py-16">
+          <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">Impact</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
