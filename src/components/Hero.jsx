@@ -66,13 +66,18 @@ export default function Hero() {
             View Case Studies
           </a>
 
-          <a
-              href="https://flowcv.com/resume/devm3a6kbcm3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition"
+         <a
+            href="https://flowcv.com/resume/devm3a6kbcm3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:shadow-lg hover:shadow-white/10"
           >
-             View Resume
+            <span className="font-medium">View Resume</span>
+          
+            {/* External Arrow */}
+            <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+              ↗
+            </span>
           </a>
 
         </div>
