@@ -101,6 +101,7 @@ export default function DepDetail() {
 
 </div>
 
+            <br />
             <img
               src="/narasimha-portfolio/images/dep-before-after.png"
               alt="Before vs After journey"
@@ -129,6 +130,7 @@ export default function DepDetail() {
   What previously took multiple steps and considerable effort can now be completed within minutes, allowing users to resolve issues quickly and get back to their work without relying on support calls.
 </p>
 
+            <br />
             <img
               src="/narasimha-portfolio/images/dep-scenario.png"
               alt="User scenario"
@@ -159,6 +161,7 @@ export default function DepDetail() {
   The experience is dynamically tailored based on the device lifecycle. Whether the device is new, in active use, or nearing end-of-life, users are provided with relevant actions such as setup guidance, maintenance updates, or trade-in and recycling options. This ensures that users always know what to do next, without needing to search or guess.
 </p>
 
+            <br />
             <img
               src="/narasimha-portfolio/images/dep-lifecycle.png"
               alt="Lifecycle experience"
@@ -208,7 +211,7 @@ export default function DepDetail() {
             <p className="text-gray-700 leading-relaxed">
   The Digital Entry Point transformed the way customers interact with device support. What was once a complex, multi-step process dependent on phone-based support is now an instant, self-service experience available directly on the user’s phone. By simply scanning a QR code, users can access everything they need — from device details to troubleshooting and support — within seconds. This shift not only simplifies the experience but also empowers users to resolve issues independently and get back to their work faster. More than just a feature, this became a breakthrough in how support is delivered, redefining the relationship between users and device assistance.
 </p>
-
+            <br />
             <img
               src="/narasimha-portfolio/images/dep-final-ui.png"
               alt="Final UI"
