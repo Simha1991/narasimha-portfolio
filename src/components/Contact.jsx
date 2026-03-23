@@ -171,9 +171,9 @@ const Contact = () => {
     </div>
 
   </div>
-  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-white/30 tracking-widest">
-    {visits ? `${visits.toLocaleString()} visits` : ""}
-  </div>
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-white/30 tracking-widest">
+  {visits !== null ? `${visits.toLocaleString()} visits` : "…"}
+</div>
       
 </section>
   );
