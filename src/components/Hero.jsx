@@ -35,9 +35,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl text-center px-6">
 
         {/* Headline (moved to top) */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
           Designing clarity for complex systems at scale
         </h1>
+
+        <br />
 
         {/* Name */}
         <p className="mt-6 text-lg md:text-xl font-medium text-gray-300">
