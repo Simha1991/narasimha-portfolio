@@ -67,12 +67,12 @@ export default function Hero() {
           </a>
 
           <a
-            href="/narasimha-portfolio/Narasimha_Bhat_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition"
+              href="https://flowcv.com/resume/devm3a6kbcm3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg border border-white/30 text-white hover:bg-white/10 transition"
           >
-            Download Resume
+             View Resume
           </a>
 
         </div>
