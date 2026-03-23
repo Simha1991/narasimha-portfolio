@@ -1,11 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
+  const [visits, setVisits] = useState(null);
   const [isSending, setIsSending] = useState(false);
 
+    useEffect(() => {
+      fetch("https://api.countapi.xyz/hit/narasimha-portfolio/visits")
+        .then((res) => res.json())
+        .then((data) => setVisits(data.value))
+        .catch(() => {});
+    }, []);
+  
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
@@ -163,6 +171,10 @@ const Contact = () => {
     </div>
 
   </div>
+  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-white/30 tracking-widest">
+    {visits ? `${visits.toLocaleString()} visits` : ""}
+  </div>
+      
 </section>
   );
 };
