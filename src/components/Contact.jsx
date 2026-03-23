@@ -43,151 +43,127 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
-      className="relative bg-gradient-to-br from-indigo-700 via-purple-700 to-fuchsia-700 text-white py-20 px-6"
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
-      <Toaster position="bottom-center" reverseOrder={false} />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,150,136,0.1),transparent_60%)]" />
+  id="contact"
+  className="relative py-24 px-6 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900 text-white"
+>
+  <Toaster position="bottom-center" reverseOrder={false} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left: Get in Touch */}
-        <div className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl">
-          <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
 
-          <div className="space-y-6 text-white/90">
-            {/* Location */}
-            <div>
-              <div className="flex items-center space-x-3 mb-1">
-                <span className="text-xl">📍</span>
-                <p className="font-semibold">Location</p>
-              </div>
-              <a
-                href="https://maps.app.goo.gl/NCySbXLRSLBgrV8o7"
-                className="text-teal-400 hover:underline block ml-8"
-              >
-                Mangaluru, Karnataka, India
-              </a>
-            </div>
+    {/* Left */}
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
 
-            {/* Email */}
-            <div>
-              <div className="flex items-center space-x-3 mb-1">
-                <span className="text-xl">📧</span>
-                <p className="font-semibold">Email</p>
-              </div>
-              <a
-                href="mailto:bhatnarasimha1991@gmail.com"
-                className="text-teal-400 hover:underline block ml-8"
-              >
-                bhatnarasimha1991@gmail.com
-              </a>
-            </div>
+      <h2 className="text-3xl font-bold mb-6">
+        Get in Touch
+      </h2>
 
-            {/* X (Twitter) */}
-            <div>
-              <div className="flex items-center space-x-3 mb-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 fill-current text-white ml-1"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H17.52l-5.482-7.182-6.272 7.182H2.457l7.73-8.86L1.953 2.25h6.948l4.944 6.56z" />
-                </svg>
-                <p className="font-semibold">X (formerly Twitter)</p>
-              </div>
-              <a
-                href="https://twitter.com/IaMSimha007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400 hover:underline block ml-8"
-              >
-                @IaMSimha007
-              </a>
-            </div>
+      <div className="space-y-6 text-gray-300">
 
-            {/* LinkedIn */}
-            <div>
-              <div className="flex items-center space-x-3 mb-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 fill-current text-white ml-1"
-                >
-                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.16h.05c.53-1 1.83-2.16 3.77-2.16 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-4V8z" />
-                </svg>
-                <p className="font-semibold">LinkedIn</p>
-              </div>
-              <a
-                href="https://www.linkedin.com/in/narasimha-bhat"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400 hover:underline block ml-8"
-              >
-                /in/narasimha-bhat
-              </a>
-            </div>
-          </div>
+        <div>
+          <p className="text-sm text-gray-400">Location</p>
+          <a
+            href="https://maps.app.goo.gl/NCySbXLRSLBgrV8o7"
+            className="text-white hover:underline"
+          >
+            Mangaluru, Karnataka, India
+          </a>
         </div>
 
-        {/* Right: Send a Message */}
-        <div className="backdrop-blur-lg bg-black/30 border border-white/20 rounded-2xl shadow-xl p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl">
-          <h2 className="text-3xl font-bold text-white mb-6">Send a Message</h2>
-          <form ref={form} onSubmit={sendEmail} className="space-y-5">
-            <div>
-              <label className="block text-white font-medium mb-1">Your Name *</label>
-              <input
-                type="text"
-                name="user_name"
-                required
-                className="w-full rounded-lg border border-white/30 bg-black/20 px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white font-medium mb-1">Email Address *</label>
-              <input
-                type="email"
-                name="user_email"
-                required
-                className="w-full rounded-lg border border-white/30 bg-black/20 px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white font-medium mb-1">Subject *</label>
-              <input
-                type="text"
-                name="subject"
-                required
-                className="w-full rounded-lg border border-white/30 bg-black/20 px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white font-medium mb-1">Message *</label>
-              <textarea
-                name="message"
-                rows="4"
-                required
-                className="w-full rounded-lg border border-white/30 bg-black/20 px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-400"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSending}
-              className={`w-full py-3 rounded-lg text-white font-medium transition-all ${
-                isSending ? "bg-teal-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"
-              }`}
-            >
-              {isSending ? "Sending..." : "Send Message"}
-            </button>
-          </form>
+        <div>
+          <p className="text-sm text-gray-400">Email</p>
+          <a
+            href="mailto:bhatnarasimha1991@gmail.com"
+            className="text-white hover:underline"
+          >
+            bhatnarasimha1991@gmail.com
+          </a>
         </div>
+
+        <div>
+          <p className="text-sm text-gray-400">X (Twitter)</p>
+          <a
+            href="https://twitter.com/IaMSimha007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline"
+          >
+            @IaMSimha007 ↗
+          </a>
+        </div>
+
+        <div>
+          <p className="text-sm text-gray-400">LinkedIn</p>
+          <a
+            href="https://www.linkedin.com/in/narasimha-bhat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline"
+          >
+            /in/narasimha-bhat ↗
+          </a>
+        </div>
+
       </div>
-    </section>
+    </div>
+
+    {/* Right */}
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+
+      <h2 className="text-3xl font-bold mb-6">
+        Send a Message
+      </h2>
+
+      <form ref={form} onSubmit={sendEmail} className="space-y-5">
+
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Your Name *"
+          required
+          className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white"
+        />
+
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Email Address *"
+          required
+          className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white"
+        />
+
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject *"
+          required
+          className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white"
+        />
+
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Message *"
+          required
+          className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white"
+        />
+
+        <button
+          type="submit"
+          disabled={isSending}
+          className={`w-full py-3 rounded-lg font-medium transition ${
+            isSending
+              ? "bg-white/30 text-white/60 cursor-not-allowed"
+              : "bg-white text-gray-900 hover:bg-gray-200"
+          }`}
+        >
+          {isSending ? "Sending..." : "Send Message"}
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
   );
 };
 
