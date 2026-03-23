@@ -61,9 +61,14 @@ export default function Hero() {
 
           <a
             href="#work"
-            className="px-6 py-3 rounded-lg bg-white text-gray-900 font-medium hover:bg-gray-200 transition"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-gray-900 font-medium transition-all duration-300 hover:bg-gray-200 hover:shadow-lg hover:shadow-white/20"
           >
-            View Case Studies
+            <span>View Case Studies</span>
+          
+            {/* Direction Arrow */}
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </a>
 
          <a
