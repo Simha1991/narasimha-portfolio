@@ -65,8 +65,7 @@ export default function Testimonials() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="border border-gray-200 rounded-2xl p-10 shadow-sm transition-all duration-300">
-
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-10 shadow-sm hover:shadow-md transition-all duration-300">
             {/* Quote mark */}
             <p className="text-5xl text-gray-300 leading-none mb-4">“</p>
 
