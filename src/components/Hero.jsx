@@ -34,28 +34,28 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl text-center px-6">
 
-        {/* Name */}
-        <p className="text-xl md:text-2xl font-semibold tracking-wide text-gray-200 mb-4">
-          Narasimha Bhat
-        </p>
-
-        {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+        {/* Headline (moved to top) */}
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
           Designing clarity for complex systems at scale
         </h1>
 
-        {/* Role */}
-        <p className="mt-6 text-lg md:text-xl text-gray-300">
+        {/* Name */}
+        <p className="mt-6 text-lg md:text-xl font-medium text-gray-300">
+          Narasimha Bhat
+        </p>
+
+        {/* Supporting Line */}
+        <p className="mt-2 text-base md:text-lg text-gray-400">
           Principal UX Designer · AI-driven experiences · Enterprise platforms
         </p>
 
         {/* Description */}
-        <p className="mt-6 text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
+        <p className="mt-6 text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
           I bring structure to ambiguity—aligning stakeholders and designing solutions that drive measurable business impact.
         </p>
 
         {/* CTA */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center">
 
           <a
             href="#work"
