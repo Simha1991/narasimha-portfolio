@@ -64,7 +64,6 @@ export default function About() {
             <img
               src="/narasimha-portfolio/images/headshot.jpg"
               alt="Narasimha Bhat"
-              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
             />
           </div>
         </div>
