@@ -135,6 +135,7 @@ export default function UiKits() {
               alt="Atomic design"
               className="w-full rounded-lg shadow-md image-hover"
             />
+            <br />
 
             <p className="text-gray-700 leading-relaxed mb-4">
               To ensure scalability and consistency, we structured the system using atomic design principles. At its core, atomic design breaks interfaces into smaller building blocks—atoms, molecules, and organisms. This approach allowed us to create a system where components could be reused, combined, and extended without losing consistency.
@@ -145,14 +146,14 @@ export default function UiKits() {
             </p>
           </section>
 
-          {/* Solution */}
+         {/* Solution */}
           <section className="py-16 fade-in-section">
             <div className="mb-6">
               <h2 className="text-2xl font-semibold tracking-tight">The Solution</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
           
-            {/* Existing content (unchanged) */}
+            {/* Existing content */}
             <p className="text-gray-700 leading-relaxed mb-4">
               The result was a design system that functioned less like a UI kit and more like a shared framework for thinking.
             </p>
@@ -161,24 +162,23 @@ export default function UiKits() {
               It provided reusable components and layouts that teams could use to construct flows and communicate ideas clearly, without starting from scratch. Because the system handled structure, spacing, and alignment, users didn’t need to worry about visual decisions—they could focus entirely on logic and flow.
             </p>
           
-            <p className="text-gray-700 leading-relaxed mb-10">
+            <p className="text-gray-700 leading-relaxed mb-12">
               This shifted the role of design within the organization. Designers were no longer required to create every screen, but instead defined the system that others could build with. Teams across product, engineering, and business were able to use the same components to express ideas, explore solutions, and align with each other.
             </p>
           
-            {/* 🔥 Atomic Design Section */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 🔥 Atomic Design Flow */}
+            <div className="space-y-20">
           
               {/* Foundations */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <img
                   src="/narasimha-portfolio/images/foundation.png"
                   alt="Foundations"
                   className="w-full rounded-xl border border-gray-200 image-hover"
                 />
-                
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Foundations</h4>
-                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                  <h4 className="text-xl font-semibold text-gray-900">Foundations</h4>
+                  <p className="text-gray-600 mt-3 leading-relaxed max-w-md">
                     The core building blocks that define visual consistency—spacing, typography, and layout principles.
                     They ensure every component aligns with a shared structure and system logic.
                   </p>
@@ -186,31 +186,31 @@ export default function UiKits() {
               </div>
           
               {/* Atoms */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900">Atoms</h4>
+                  <p className="text-gray-600 mt-3 leading-relaxed max-w-md">
+                    The smallest UI elements such as buttons, inputs, and labels.
+                    They form the base of all interactions and remain consistent across the system.
+                  </p>
+                </div>
                 <img
                   src="/narasimha-portfolio/images/atoms.png"
                   alt="Atoms"
                   className="w-full rounded-xl border border-gray-200 image-hover"
                 />
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Atoms</h4>
-                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                    The smallest UI elements such as buttons, inputs, and labels.
-                    They form the base of all interactions and remain consistent across the system.
-                  </p>
-                </div>
               </div>
           
               {/* Molecules */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <img
                   src="/narasimha-portfolio/images/molecules.png"
                   alt="Molecules"
                   className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Molecules</h4>
-                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                  <h4 className="text-xl font-semibold text-gray-900">Molecules</h4>
+                  <p className="text-gray-600 mt-3 leading-relaxed max-w-md">
                     Combinations of atoms grouped together to form functional UI patterns.
                     They represent common interactions like form fields or search components.
                   </p>
@@ -218,31 +218,31 @@ export default function UiKits() {
               </div>
           
               {/* Organisms */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900">Organisms</h4>
+                  <p className="text-gray-600 mt-3 leading-relaxed max-w-md">
+                    Complex components built from multiple molecules and atoms working together.
+                    They define larger sections of the interface such as headers, cards, or panels.
+                  </p>
+                </div>
                 <img
                   src="/narasimha-portfolio/images/organisms.png"
                   alt="Organisms"
                   className="w-full rounded-xl border border-gray-200 image-hover"
                 />
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Organisms</h4>
-                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                    Complex components built from multiple molecules and atoms working together.
-                    They define larger sections of the interface such as headers, cards, or panels.
-                  </p>
-                </div>
               </div>
           
               {/* Templates */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <img
                   src="/narasimha-portfolio/images/templates.png"
                   alt="Templates"
                   className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Templates</h4>
-                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                  <h4 className="text-xl font-semibold text-gray-900">Templates</h4>
+                  <p className="text-gray-600 mt-3 leading-relaxed max-w-md">
                     Page-level structures that arrange organisms into complete layouts.
                     They provide a consistent framework for building scalable and repeatable experiences.
                   </p>
