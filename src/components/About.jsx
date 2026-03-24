@@ -60,16 +60,13 @@ export default function About() {
           </div>
 
           {/* Image + Identity */}
-          <div className="flex flex-col items-center md:items-end text-center md:text-right">
-            
+          <div className="flex justify-center md:justify-end">
             <img
               src="/narasimha-portfolio/images/headshot.jpg"
               alt="Narasimha Bhat"
-              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-lg"
+              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
             />
-
           </div>
-
         </div>
 
       </div>
