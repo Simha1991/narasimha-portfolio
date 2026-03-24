@@ -68,16 +68,6 @@ export default function About() {
               className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-lg"
             />
 
-            {/* Name */}
-            <p className="mt-4 text-lg font-semibold text-gray-900">
-              Narasimha Bhat
-            </p>
-
-            {/* Capabilities */}
-            <p className="text-sm text-gray-500 mt-1">
-              Award-winning designer · Enterprise platforms · AI-driven experiences
-            </p>
-
           </div>
 
         </div>
