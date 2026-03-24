@@ -5,29 +5,29 @@ export default function FeaturedWork() {
 
   const primaryProjects = [
     {
-      title: "CommStudio AI",
-      problem: "Reimagined enterprise communication workflows with AI-driven creation",
+      title: "CommsStudio AI",
+      problem: "Transformed enterprise communication from manual workflows to AI-driven creation",
       impact: "Reduced turnaround from months to weeks",
       role: "Lead UX Designer",
       link: "/comms-studio",
     },
     {
       title: "Digital Entry Point",
-      problem: "Simplified access to device lifecycle and support using QR-based entry",
+      problem: "Replaced fragmented device access with a unified QR-based entry experience",
       impact: "Saved millions by reducing support calls",
       role: "Lead UX Designer",
       link: "/dep-detail",
     },
     {
       title: "Virtual Assistant (ISG)",
-      problem: "Enabled conversational access to enterprise systems",
-      impact: "Improved support efficiency and engagement",
+      problem: "Enabled conversational access to enterprise support and diagnostics",
+      impact: "Improved support efficiency and self-service adoption",
       role: "Principal UX Designer",
       link: "/va-detail",
     },
     {
     title: "Unified Portal Experience (UPE)",
-    problem: "Unified fragmented enterprise portal workflows",
+    problem: "Unified fragmented enterprise portals into a single ecosystem",
     impact: "Improved task completion by 30%+",
     role: "Principal UX Designer",
     link: "/upe-detail",
