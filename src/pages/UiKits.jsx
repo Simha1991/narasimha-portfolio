@@ -252,27 +252,17 @@ export default function UiKits() {
             </div>
           </section>
 
-          {/* Impact */}
+          {/* Impact and Reflection */}
           <section className="py-16 fade-in-section">
             <div className="mb-6">
-              <h2 className="text-2xl font-semibold tracking-tight">Impact</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">Impact & Reflection</h2>
               <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
             </div>
 
             <p className="text-gray-700 leading-relaxed">
-              The system was adopted widely across the organization, with over 2000 users accessing the library. More importantly, it changed how teams worked. Non-designers were able to express ideas clearly without worrying about design details, while designers were able to focus on higher-level problem solving.
-            </p>
-          </section>
-
-          {/* Reflection */}
-          <section className="py-16 fade-in-section">
-            <div className="mb-6">
-              <h2 className="text-2xl font-semibold tracking-tight">Reflection & Future</h2>
-              <div className="w-12 h-1 bg-indigo-500 mt-2 rounded"></div>
-            </div>
-
-            <p className="text-gray-700 leading-relaxed">
-              This project reshaped how I think about design systems. The real value of a system is not just in enforcing consistency, but in enabling participation. By removing complexity and focusing on clarity, we created a system that improved how teams think, collaborate, and build.
+              The system was adopted widely across the organization, with over 2000 users accessing the library. More importantly, it changed how teams worked.
+              Non-designers could express ideas clearly without worrying about design details, while designers shifted their focus to higher-level problem-solving. What improved was not just efficiency, but how teams collaborated and communicated.
+              This project reshaped how I think about design systems. The real value of a system is not just in enforcing consistency, but in enabling participation. By removing complexity and focusing on clarity, we created a system that improved how teams think, collaborate, and build.            
             </p>
           </section>
 
