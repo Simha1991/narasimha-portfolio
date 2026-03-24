@@ -35,7 +35,7 @@ export default function FeaturedWork() {
     {
     title: "Dell Design System (UI Kits)",
     problem: "Enabled teams to express product ideas without design dependency",
-    impact: "Adopted by 2000+ users across teams",
+    impact: "Adopted by 2000+ users, improving cross-team collaboration",
     role: "Principal UX Designer",
     link: "/ui-kits",
   }
