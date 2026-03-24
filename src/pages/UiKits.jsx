@@ -129,6 +129,13 @@ export default function UiKits() {
               Instead of starting with polished UI, we focused on building a system of low- and mid-fidelity components that represent structure—layouts, flows, and interaction patterns. By removing visual noise like colors and styling decisions, the system became easier to use and more accessible to non-designers.
             </p>
 
+            <br />
+            <img
+              src="/narasimha-portfolio/images/atomic-design.png"
+              alt="Atomic design"
+              className="w-full rounded-lg shadow-md image-hover"
+            />
+
             <p className="text-gray-700 leading-relaxed mb-4">
               To ensure scalability and consistency, we structured the system using atomic design principles. At its core, atomic design breaks interfaces into smaller building blocks—atoms, molecules, and organisms. This approach allowed us to create a system where components could be reused, combined, and extended without losing consistency.
             </p>
@@ -164,10 +171,11 @@ export default function UiKits() {
               {/* Foundations */}
               <div className="space-y-4">
                 <img
-                  src="/narasimha-portfolio/images/foundations.png"
+                  src="/narasimha-portfolio/images/foundation.png"
                   alt="Foundations"
-                  className="w-full rounded-xl border border-gray-200"
+                  className="w-full rounded-xl border border-gray-200 image-hover"
                 />
+                
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Foundations</h4>
                   <p className="text-sm text-gray-600 mt-2 leading-relaxed">
@@ -182,7 +190,7 @@ export default function UiKits() {
                 <img
                   src="/narasimha-portfolio/images/atoms.png"
                   alt="Atoms"
-                  className="w-full rounded-xl border border-gray-200"
+                  className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Atoms</h4>
@@ -198,7 +206,7 @@ export default function UiKits() {
                 <img
                   src="/narasimha-portfolio/images/molecules.png"
                   alt="Molecules"
-                  className="w-full rounded-xl border border-gray-200"
+                  className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Molecules</h4>
@@ -214,7 +222,7 @@ export default function UiKits() {
                 <img
                   src="/narasimha-portfolio/images/organisms.png"
                   alt="Organisms"
-                  className="w-full rounded-xl border border-gray-200"
+                  className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Organisms</h4>
@@ -230,7 +238,7 @@ export default function UiKits() {
                 <img
                   src="/narasimha-portfolio/images/templates.png"
                   alt="Templates"
-                  className="w-full rounded-xl border border-gray-200"
+                  className="w-full rounded-xl border border-gray-200 image-hover"
                 />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900">Templates</h4>
