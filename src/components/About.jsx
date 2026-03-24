@@ -13,52 +13,71 @@ export default function About() {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              I’m a Principal UX Designer with over a decade of experience designing enterprise products 
-              and platforms. I specialize in solving complex, ambiguous problems by bringing clarity through 
-              user-centered thinking, structured design, and close collaboration with stakeholders.
+              I’m a Principal UX Designer focused on bringing clarity to complex systems. I work on enterprise platforms where problems are often ambiguous, workflows are fragmented, and multiple stakeholders are involved. My role is to create structure—aligning teams, simplifying complexity, and designing solutions that scale.
             </p>
 
             <p className="mt-5 text-lg text-gray-700 leading-relaxed">
-              I don’t wait for answers — I actively explore, ask the right questions, and work across teams 
-              to uncover what’s needed. Whether it’s redefining workflows, simplifying systems, or enabling 
-              new ways of working, I focus on creating solutions that are intuitive for users and impactful 
-              for the business.
+              Over the years, I’ve worked across AI-driven products, support systems, and large platform experiences—helping organizations move faster by improving how decisions are made and how systems are designed. I actively explore, ask the right questions, and work across teams to uncover what truly matters.
             </p>
 
             <p className="mt-5 text-lg text-gray-700 leading-relaxed">
-              My approach combines strong UX fundamentals with an understanding of technology and delivery, 
-              allowing me to bridge design, product, and engineering. I’m an NN/g Certified UX Designer and 
-              have contributed to R&D-driven initiatives, bringing innovation into real-world products at scale.
+              My strength lies in bridging design, product, and engineering—ensuring that ideas are not only well-designed, but also practical, scalable, and ready for real-world impact.
             </p>
 
-            {/* Impact & Recognition (inline) */}
-            <div className="mt-8">
+            {/* What I Focus On */}
+            <div className="mt-10">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Impact & Recognition
+                What I Focus On
               </h3>
 
-              <ul className="space-y-3 text-gray-700 text-base">
-                <li>
-                  • Saved $37M+ through Digital Entry Point by shifting assisted support to self-service, earning Dell’s President’s Award
-                </li>
-                <li>
-                  • Improved Virtual Assistant success rate from ~8% to ~95% and reduced time-to-support by 71%
-                </li>
-                <li>
-                  • Selected for Dell’s Rising Leader (RLD) program for high-impact leadership and execution
-                </li>
-              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                I design for problems where scale and complexity matter—AI-driven experiences, enterprise platforms, design systems, and workflows that span across teams and lifecycle stages.
+              </p>
+            </div>
+
+            {/* Impact */}
+            <div className="mt-10">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Impact
+              </h3>
+
+              <p className="text-gray-700 leading-relaxed">
+                My work has delivered measurable business outcomes—saving $37M+ through Digital Entry Point, significantly improving support efficiency through AI-driven systems, and enabling faster, more scalable product development across teams. I’ve also been recognized through Dell’s President’s Award and selected for the Rising Leader program.
+              </p>
+            </div>
+
+            {/* Philosophy */}
+            <div className="mt-10">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Philosophy
+              </h3>
+
+              <p className="text-gray-700 leading-relaxed">
+                I believe design is not just about usability—it’s about clarity. When systems are clear, teams move faster, decisions improve, and products scale more effectively. Design, for me, is a way to bring alignment—to people, to systems, and to the problems we’re solving.
+              </p>
             </div>
 
           </div>
 
-          {/* Image */}
-          <div className="flex justify-center md:justify-end">
+          {/* Image + Identity */}
+          <div className="flex flex-col items-center md:items-end text-center md:text-right">
+            
             <img
               src="/narasimha-portfolio/images/headshot.jpg"
               alt="Narasimha Bhat"
               className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-lg"
             />
+
+            {/* Name */}
+            <p className="mt-4 text-lg font-semibold text-gray-900">
+              Narasimha Bhat
+            </p>
+
+            {/* Capabilities */}
+            <p className="text-sm text-gray-500 mt-1">
+              Award-winning designer · Enterprise platforms · AI-driven experiences
+            </p>
+
           </div>
 
         </div>
