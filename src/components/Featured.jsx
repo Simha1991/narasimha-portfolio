@@ -31,16 +31,15 @@ export default function FeaturedWork() {
     impact: "Improved task completion by 30%+",
     role: "Principal UX Designer",
     link: "/upe-detail",
+    },
+    {
+    title: "Dell Design System (UI Kits)",
+    problem: "Enabled teams to express product ideas without design dependency",
+    impact: "Adopted by 2000+ users across teams",
+    role: "Principal UX Designer",
+    link: "/ui-kits",
   }
   ];
-
-  const secondaryProject = {
-    title: "Unified Portal Experience (UPE)",
-    problem: "Unified fragmented enterprise portal workflows",
-    impact: "Improved task completion by 30%+",
-    role: "Lead UX Designer",
-    link: "/upe-detail",
-  };
 
   return (
     <section
