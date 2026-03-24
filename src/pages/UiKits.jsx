@@ -49,7 +49,7 @@ export default function UiKits() {
 
           <div className="mt-8 flex flex-wrap gap-4 text-sm">
             <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
-              <strong>Role:</strong> Principal UX Designer (Co-designed with Eric Martin)
+              <strong>Role:</strong> Principal UX Designer
             </span>
             <span className="bg-white px-4 py-2 rounded-lg shadow-sm">
               <strong>Scope:</strong> Design system · UI kits · Figma component library
