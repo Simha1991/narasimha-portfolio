@@ -15,6 +15,7 @@ import DepDetail from "./pages/DepDetail";
 import CommsStudio from "./pages/CommsStudio";
 import UpeDetail from "./pages/UpeDetail";
 import VaDetail from "./pages/VaDetail";
+import UiKits from "./pages/UiKits";
 
 import "./index.css";
 
@@ -86,6 +87,7 @@ function AppContent() {
           <Route path="/comms-studio" element={<CommsStudio />} />
           <Route path="/upe-detail" element={<UpeDetail />} />
           <Route path="/va-detail" element={<VaDetail />} />
+          <Route path="/ui-kits" element={<UiKits />} />
         </Routes>
       </main>
     </div>
